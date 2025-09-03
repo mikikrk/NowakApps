@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="630" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="g" x1="180" y1="450" x2="1020" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <rect x="72" y="120" width="280" height="280" rx="56" fill="url(#g)"/>
+  <path fill="#fff" fill-rule="evenodd" clip-rule="evenodd" d="M180 180h98c57 0 92 32 92 79 0 36-19 62-49 73l55 88h-70l-48-80h-28v80h-50V180Zm50 118h22c20 0 32-10 32-29 0-18-12-28-32-28h-22v57Z"/>
+  <text x="400" y="220" fill="#fff" font-family="'Inter',sans-serif" font-size="64" font-weight="600">Nowak Apps</text>
+  <text x="400" y="300" fill="#cbd5e1" font-family="'Inter',sans-serif" font-size="40" font-weight="500">Crafting Apps. Sharing Knowledge.</text>
+  <text x="400" y="360" fill="#94a3b8" font-family="'Inter',sans-serif" font-size="28">Kotlin • Compose • Architecture • Talks</text>
+</svg>
+

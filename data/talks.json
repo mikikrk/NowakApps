@@ -1,0 +1,48 @@
+[
+  {
+    "id": "kotlin-flow-operators",
+    "title": "Kotlin Flow Operators",
+    "abstractShort": "Understand Flow operators deeply so you can predict their behavior and build your own.",
+    "abstractLong": "Kotlin Flow can be both simple and complex at the same time. Operators are a great example of that: they do simple things, but depending on how we use them, they might change their effects, making their usage a complex task. I will guide you in the journey under the hood of their implementation. It will help to understand their concept. With that knowledge, you will be able to predict how they will behave. What’s more, you shall be able to write your operators that will be interoperable with the library ones.",
+    "audience": "Advanced Kotlin Developers",
+    "videos": [
+      { "label": "Main", "embed": "https://www.youtube.com/embed/VIDEO_ID_FLOW" }
+    ],
+    "downloads": [
+      { "label": "Slides PPTX", "url": "#FlowOperators.pptx" },
+      { "label": "Slides PDF", "url": "#FlowOperators.pdf" }
+    ],
+    "events": []
+  },
+  {
+    "id": "estimations-useful",
+    "title": "How to Make Estimations Useful",
+    "abstractShort": "Practical, psychology-aware approach to estimation that reduces stress and improves planning.",
+    "abstractLong": "Estimates are rarely spot-on – and they shouldn’t be. In this talk, we’ll demystify how estimation works in practice and how to make it useful instead of precise. From the psychology behind bad estimates, through Fibonacci-based story pointing, to calculating team capacity using velocity – this session gives you the tools to improve sprint planning, track progress meaningfully, and reduce stress in delivery forecasting.",
+    "audience": "Developers, QAs, PMs, Product Managers",
+    "videos": [
+      { "label": "Conference", "embed": "https://www.youtube.com/embed/VIDEO_ID_EST" }
+    ],
+    "downloads": [
+      { "label": "Slides PPTX", "url": "#Estimations.pptx" },
+      { "label": "Slides PDF", "url": "#Estimations.pdf" }
+    ],
+    "events": []
+  },
+  {
+    "id": "big-refactoring-story",
+    "title": "Big Refactoring Story",
+    "abstractShort": "Lessons and strategy from navigating and transforming large legacy codebases.",
+    "abstractLong": "Anyone who has been working in their career with a long-running project has come across some big, old, legacy piece of code that was hard to maintain. While you can often hear complaints about such code, it’s much less common to hear that someone actually managed to refactor it...",
+    "audience": "Developers, PMs, QAs",
+    "videos": [
+      { "label": "Recording", "embed": "https://www.youtube.com/embed/VIDEO_ID_REFACTOR" }
+    ],
+    "downloads": [
+      { "label": "Slides PPTX", "url": "#BigRefactor.pptx" },
+      { "label": "Slides PDF", "url": "#BigRefactor.pdf" }
+    ],
+    "events": ["Android Tech Talks", "Kraków JUG", "Pykonik"]
+  }
+]
+

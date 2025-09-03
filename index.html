@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nowak Apps – Crafting Apps. Sharing Knowledge.</title>
+  <meta name="description" content="Nowak Apps – Mobile applications & tech talks by Mikołaj Nowak. Kotlin-focused development, clean architecture, and knowledge sharing." />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <meta property="og:title" content="Nowak Apps – Crafting Apps. Sharing Knowledge." />
+  <meta property="og:description" content="Mobile apps & conference talks by Mikołaj Nowak. Kotlin, clean architecture & developer enablement." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nowakapps.dev/" />
+  <meta property="og:image" content="https://nowakapps.dev/assets/img/og-banner.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nowak Apps – Crafting Apps. Sharing Knowledge." />
+  <meta name="twitter:description" content="Mobile apps & conference talks by Mikołaj Nowak." />
+  <meta name="twitter:image" content="https://nowakapps.dev/assets/img/og-banner.svg" />
+</head>
+<body>
+  <a href="#content" class="skip-link">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <span class="brand-logo" aria-hidden="true">NA</span>
+        <span class="sr-only">Nowak Apps Home</span>
+        <strong>Nowak Apps</strong>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#home" data-nav="home" class="active">Home</a>
+        <a href="#apps" data-nav="apps">Apps</a>
+        <a href="#talks" data-nav="talks">Talks</a>
+      </nav>
+      <div class="grow"></div>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle color theme">🌞</button>
+    </div>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <section class="hero hero-grid" id="home">
+      <div>
+        <div class="badge-row">
+          <span class="badge">Kotlin</span>
+          <span class="badge">Compose</span>
+          <span class="badge">Clean Architecture</span>
+          <span class="badge">Talks</span>
+        </div>
+        <h1>Crafting <span class="headline-gradient">Apps</span>. Sharing <span class="headline-gradient">Knowledge</span>.</h1>
+        <p class="lead">Hi, I’m Mikołaj Nowak — a mobile developer focused on Kotlin Multiplatform, resilient architecture, developer experience and clear communication through conference talks and meetups.</p>
+      </div>
+      <div>
+        <div class="card" style="max-width:480px; margin:0 auto;">
+          <div class="card-media" aria-hidden="true">Showcase</div>
+          <div class="card-body">
+            <h3 style="margin:0 0 .2rem;">What I do</h3>
+            <p style="margin:0;">I design and build Kotlin-driven products with an obsessive focus on clarity, performance, and maintainability — then turn learnings into actionable, story‑driven talks.</p>
+            <div class="tech-tags">
+              <span>KMP</span><span>Compose</span><span>Coroutines</span><span>Flow</span><span>Architecture</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="apps" id="apps">
+      <h2 id="apps">Applications</h2>
+      <div class="cards-grid" id="homeApps">
+        <a class="card card-link" data-app="habit2goal" href="apps/Habit2Goal/">
+          <div class="card-media banner" aria-label="Habit2Goal marketing banner" style="background-image:url('assets/img/apps/habit2goal-banner.svg')">
+            <span class="card-media-label">App</span>
+          </div>
+          <div class="card-body">
+            <div class="app-header-line">
+              <div class="app-logo-box"><img src="apps/Habit2Goal/ic_launcher_foreground.webp" alt="Habit2Goal logo" /></div>
+              <div class="app-title-wrap">
+                <h3>Habit2Goal</h3>
+                <p class="app-tagline">Turn daily habits into achievable goals.</p>
+              </div>
+            </div>
+            <p>Turn daily habit energy into long‑term, trackable goal momentum across platforms.</p>
+            <div class="tech-tags"><span>Kotlin</span><span>Compose</span><span>KMP</span></div>
+          </div>
+        </a>
+        <noscript>
+          <a class="card card-link" href="apps/Habit2Goal/">
+            <div class="card-media">Habit2Goal</div>
+            <div class="card-body">
+              <h3>Habit2Goal</h3>
+              <p>Turn daily habit energy into long‑term, trackable goal momentum across platforms.</p>
+              <div class="tech-tags"><span>Kotlin</span><span>Compose</span><span>KMP</span></div>
+            </div>
+          </a>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="talks" id="talks">
+      <h2 id="talks">Talks & Presentations</h2>
+      <div id="homeTalks" class="cards-grid">
+        <noscript>
+          <article class="card">
+            <div class="card-media">Talk</div>
+            <div class="card-body">
+              <h3>Kotlin Flow Operators</h3>
+              <p>Dive under the hood of Flow operators and learn to predict behavior.</p>
+              <div class="card-actions"><a href="#talks">View</a></div>
+            </div>
+          </article>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand"><span class="brand-logo" aria-hidden="true">NA</span>Nowak Apps</div>
+        <p class="muted max-w-prose">Mobile applications & developer talks by Mikołaj Nowak. Focused on Kotlin ecosystems, architectural clarity, and sharing practical insights.</p>
+      </div>
+      <div class="socials" aria-label="Social links">
+        <a href="https://github.com/" aria-label="GitHub" rel="noopener" target="_blank">GH</a>
+        <a href="https://www.linkedin.com" aria-label="LinkedIn" rel="noopener" target="_blank">in</a>
+      </div>
+      <div class="footer-meta">
+        <div class="footer-bottom">© <span id="year"></span> Nowak Apps • <a href="mailto:contact@nowakapps.dev">contact@nowakapps.dev</a></div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

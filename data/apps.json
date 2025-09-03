@@ -1,0 +1,19 @@
+[
+  {
+    "id": "habit2goal",
+    "name": "Habit2Goal",
+    "tagline": "Turn daily habits into achievable goals.",
+    "description": "Turn daily habit energy into long‑term, trackable goal momentum across platforms.",
+    "tech": ["Kotlin", "Compose", "KMP"],
+    "banner": "assets/img/apps/habit2goal-banner.svg",
+    "logo": "apps/Habit2Goal/ic_launcher_foreground.webp",
+    "screens": ["apps/Habit2Goal/screens/goals.svg"],
+    "links": {
+      "page": "apps/Habit2Goal/",
+      "github": "",
+      "play": "",
+      "appstore": ""
+    },
+    "featured": true
+  }
+]

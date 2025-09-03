@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="h2g" x1="0" y1="450" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="400" y1="420" x2="400" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f172a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".35"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="32" fill="#0d1f1d"/>
+  <rect x="16" y="16" width="768" height="418" rx="28" fill="url(#h2g)"/>
+  <circle cx="400" cy="225" r="185" fill="url(#glow)" opacity="0.35"/>
+  <text x="400" y="210" font-family="'Inter',sans-serif" font-size="76" font-weight="700" text-anchor="middle" fill="#fff">Habit2Goal</text>
+  <text x="400" y="270" font-family="'Inter',sans-serif" font-size="28" font-weight="500" text-anchor="middle" fill="#dcfce7">Habits ➜ Progress ➜ Goals</text>
+  <text x="400" y="315" font-family="'Inter',sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#d1fae5">Kotlin • Compose • Multiplatform</text>
+</svg>
+
