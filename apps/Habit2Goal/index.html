@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Habit2Goal – Turn Habits Into Achievable Goals</title>
+  <meta name="description" content="Habit2Goal helps you transform consistent habits into meaningful goals with insightful stats and progress tracking across Android & iOS." />
+  <meta name="theme-color" content="#1C6A47" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="ic_launcher_foreground.webp" class="logo-img" alt="Habit2Goal logo" />
+        <span class="app-name">Habit2Goal</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#features">Features</a>
+        <a href="#screens">Screens</a>
+        <a href="#download">Download</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#download" class="cta-button">Get the App</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Turn daily habits into <span class="gradient">achievable goals</span></h1>
+        <p class="subtitle">Structure your routine, visualize progress, and stay motivated with data-driven insight across platforms.</p>
+        <div class="store-buttons" id="download">
+          <a class="store-btn gp" href="#" aria-label="Get it on Google Play (link coming soon)">
+            <span class="store-line1">Get it on</span>
+            <span class="store-line2">Google Play</span>
+          </a>
+          <a class="store-btn as" href="#" aria-label="Download on the App Store (link coming soon)">
+            <span class="store-line1">Download on the</span>
+            <span class="store-line2">App Store</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="screenshot-stack">
+          <div class="screenshot placeholder" data-label="Goal Screen"></div>
+          <div class="screenshot placeholder" data-label="Day Stats"></div>
+          <div class="screenshot placeholder" data-label="Habit Stats"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave" aria-hidden="true"></div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Everything you need to stay consistent</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Create & Refine Goals</h3>
+          <p>Define clear goals and structure them through repeatable, measurable habits. Adjust dynamically as you learn.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Daily Habit Tracking</h3>
+          <p>Log your progress effortlessly each day. Visual signals guide momentum and streak integrity.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Goal Progress Timeline</h3>
+          <p>Explore historical progress and completion history to understand long‑term patterns.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Rich Statistics</h3>
+          <p>Dive into dedicated stats screens: Day, Habit, Goal, and cumulative analytics to fine‑tune routines.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Positive & Negative Values</h3>
+          <p>Support for habits with increasing or decreasing target values; color feedback highlights direction.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Completion Insights</h3>
+          <p>Celebrate completed goals and learn from the path that got you there with review overlays.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Cross‑Platform Foundation</h3>
+          <p>Built with Kotlin Multiplatform + Compose. Consistent logic across Android & iOS (desktop ready).</p>
+        </div>
+        <div class="feature-card">
+          <h3>Dark & Light Themes</h3>
+          <p>Adaptive color system for clarity and accessibility in all lighting conditions.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Privacy Respect</h3>
+          <p>Your data stays on your device. Future optional sync will remain transparent & opt‑in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="screens" id="screens">
+    <div class="container">
+      <h2 class="section-title">App Screens</h2>
+      <p class="section-intro">Below are current screen previews. Replace SVG placeholders with actual PNG/WebP exports when ready.</p>
+      <div class="screens-grid">
+        <figure class="screen-item">
+          <picture>
+            <img src="screens/goals.svg" alt="Goals Overview screen" class="screenshot" loading="lazy" width="360" height="760" />
+          </picture>
+          <figcaption>Goals Overview</figcaption>
+        </figure>
+        <figure class="screen-item">
+          <picture>
+            <img src="screens/goal_detail.svg" alt="Goal Detail screen" class="screenshot" loading="lazy" width="360" height="760" />
+          </picture>
+          <figcaption>Goal Detail</figcaption>
+        </figure>
+        <figure class="screen-item">
+          <picture>
+            <img src="screens/day_stats.svg" alt="Day Stats screen" class="screenshot" loading="lazy" width="360" height="760" />
+          </picture>
+          <figcaption>Day Stats</figcaption>
+        </figure>
+        <figure class="screen-item">
+          <picture>
+            <img src="screens/habit_stats.svg" alt="Habit Stats screen" class="screenshot" loading="lazy" width="360" height="760" />
+          </picture>
+          <figcaption>Habit Stats</figcaption>
+        </figure>
+        <figure class="screen-item">
+          <picture>
+            <img src="screens/goal_stats.svg" alt="Goal Stats screen" class="screenshot" loading="lazy" width="360" height="760" />
+          </picture>
+          <figcaption>Goal Stats</figcaption>
+        </figure>
+        <figure class="screen-item">
+          <picture>
+            <img src="screens/history.svg" alt="Goal History screen" class="screenshot" loading="lazy" width="360" height="760" />
+          </picture>
+          <figcaption>Goal History</figcaption>
+        </figure>
+        <figure class="screen-item">
+          <picture>
+            <img src="screens/completed_goal.svg" alt="Completed Goal card" class="screenshot" loading="lazy" width="360" height="760" />
+          </picture>
+          <figcaption>Completed Goal Card</figcaption>
+        </figure>
+        <!-- Dark theme view can reuse one screenshot or be added later -->
+        <figure class="screen-item">
+          <picture>
+            <img src="screens/goals.svg" alt="Dark Theme example (placeholder)" class="screenshot" loading="lazy" width="360" height="760" />
+          </picture>
+          <figcaption>Dark Theme View</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits alt-bg">
+    <div class="container benefits-grid">
+      <div class="benefit-copy">
+        <h2 class="section-title">From intention to execution</h2>
+        <p>Habit2Goal bridges the gap between what you plan and what you actually do. By tightly integrating habit loops with long‑term targets, it enables meaningful progress without overwhelm.</p>
+        <ul class="checklist">
+          <li>Clarity: see exactly what moves each goal forward.</li>
+          <li>Focus: highlight the next impactful action.</li>
+          <li>Motivation: visual momentum & completion feedback.</li>
+          <li>Insight: granular stats per day, habit & goal.</li>
+          <li>Adaptation: iterate goals as habits evolve.</li>
+        </ul>
+      </div>
+      <div class="benefit-visual">
+        <div class="screenshot tall placeholder" data-label="Progress Chart"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-items">
+        <details open>
+          <summary>When will the app be available?</summary>
+          <p>Public store links will appear here once review passes. Current build targets Android & iOS.</p>
+        </details>
+        <details>
+          <summary>Does it require an account?</summary>
+          <p>No account required for core tracking. Future sync will be optional.</p>
+        </details>
+        <details>
+          <summary>Will my data sync across devices?</summary>
+          <p>Planned as an opt‑in encrypted feature. Local‑first remains the default.</p>
+        </details>
+        <details>
+          <summary>Is there a dark mode?</summary>
+          <p>Yes. Automatic based on system preference with accessible contrast ratios.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand"><img src="ic_launcher_foreground.webp" class="logo-img" alt="Habit2Goal logo" /><span class="app-name">Habit2Goal</span></div>
+        <p class="footer-text">Turn daily habit energy into goal momentum. Multi‑platform. Privacy‑respecting. Data‑driven.</p>
+      </div>
+      <nav class="footer-nav">
+        <strong>Explore</strong>
+        <a href="#features">Features</a>
+        <a href="#screens">Screens</a>
+        <a href="#download">Download</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <nav class="footer-nav">
+        <strong>Legal</strong>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="imprint.html">Imprint</a>
+      </nav>
+      <nav class="footer-nav">
+        <strong>Connect</strong>
+        <a href="mailto:contact@example.com">Email</a>
+        <a href="#" rel="noopener" target="_blank">GitHub</a>
+        <a href="#" rel="noopener" target="_blank">Twitter</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> Habit2Goal. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
