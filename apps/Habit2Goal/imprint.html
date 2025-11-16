@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Imprint — Habit2Goal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="ic_launcher_foreground.webp" class="logo-img" alt="Habit2Goal logo" />
+        <span class="app-name">Habit2Goal</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Imprint</h1>
+    <p>Company: NowakApps</p>
+    <p>Contact: <a href="mailto:contact@example.com">habit2goal@nowakapps.com</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-bottom">© <span id="year"></span> Habit2Goal. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

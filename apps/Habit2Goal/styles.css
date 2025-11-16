@@ -35,7 +35,8 @@ img {max-width:100%;display:block;}
 .site-header {position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--color-border);}
 @media (prefers-color-scheme:dark){.site-header{background:rgba(16,23,33,.72);}}
 .header-inner {display:flex;align-items:center;gap:2rem;min-height:70px;}
-.brand {display:flex;align-items:center;font-weight:600;font-size:1.05rem;letter-spacing:.5px;gap:.65rem;}
+.brand {display:flex;align-items:center;font-weight:600;font-size:1.05rem;letter-spacing:.5px;gap:.65rem;text-decoration:none;color:inherit;}
+.brand:focus {outline:none;box-shadow:0 0 0 3px rgba(28,106,71,0.12);border-radius:8px;}
 .logo-circle {display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--gradient);color:#fff;font-weight:600;font-size:.9rem;}
 .logo-circle.sm{width:34px;height:34px;font-size:.75rem;}
 .app-name {background:linear-gradient(90deg,#1C6A47,#4CAF50);-webkit-background-clip:text;color:transparent;font-weight:700;}
@@ -58,15 +59,44 @@ img {max-width:100%;display:block;}
 .store-buttons {display:flex;gap:1rem;flex-wrap:wrap;}
 .store-btn {flex:0 0 auto;display:flex;flex-direction:column;justify-content:center;min-width:150px;padding:.9rem 1.2rem;border-radius:16px;text-decoration:none;background:#111;color:#fff;font-weight:600;font-size:.8rem;letter-spacing:.5px;position:relative;overflow:hidden;isolation:isolate;}
 .store-btn:before{content:"";position:absolute;inset:0;opacity:.12;background:var(--gradient);mix-blend-mode:overlay;}
-.store-btn.gp {background:#121212;}
-.store-btn.as {background:#121212;}
-.store-line2 {font-size:1.05rem;margin-top:.15rem;letter-spacing:.3px;}
+
+/* Google Play button uses a horizontal layout with icon */
+.store-btn.gp {background:#121212;flex-direction:row;align-items:center;gap:.9rem;padding:.6rem 1rem;}
+.store-btn.gp .store-icon {width:20px;height:20px;flex:0 0 20px;display:block}
+.store-btn.gp .store-line1 {font-size:.75rem;margin:0;opacity:.9}
+.store-btn.gp .store-line2 {font-size:.95rem;margin:0;font-weight:700}
+
+/* Keep App Store button stacked */
+.store-btn.as {background:#121212;flex-direction:column;align-items:flex-start;padding:.9rem 1.2rem}
+.store-btn.as .store-line1 {font-size:.75rem}
+.store-btn.as .store-line2 {font-size:1.05rem;margin-top:.15rem}
+
+/* Improved focus ring for keyboard accessibility */
+.store-btn:focus {outline:none;box-shadow:0 0 0 3px rgba(76,175,80,0.12);}
+
+/* Hero Visual */
 .hero-visual {position:relative;}
 .screenshot-stack {display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.4rem;}
 .screenshot {aspect-ratio:9/19;border-radius:26px;border:1px solid var(--color-border);background:linear-gradient(135deg,#fafafa,#f0f0f0);position:relative;box-shadow:0 4px 18px -2px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:var(--color-text-soft);font-weight:600;text-transform:uppercase;letter-spacing:.5px;}
-@media (prefers-color-scheme:dark){.screenshot{background:linear-gradient(135deg,#172b2f,#13202b);border-color:#26343d;color:#8aa6b3;} }
-.screenshot.placeholder:after {content:attr(data-label);}
-.tall {aspect-ratio:9/16;}
+
+/* Images inside the hero screenshot stack should not be stretched by the .screenshot flex rules. */
+.hero-visual .screenshot-stack picture {display:flex;align-items:center;justify-content:center;}
+.hero-visual .screenshot-stack picture img.screenshot {
+  display:block;           /* ensure natural image layout */
+  width: auto;             /* preserve intrinsic width/height ratio */
+  max-height: 520px;       /* limit visual height so it fits the hero */
+  max-width: 320px;        /* optional cap so images don't grow too wide */
+  height: auto;            /* maintain aspect ratio */
+  border-radius:20px;      /* match overall look */
+  object-fit:cover;
+  box-shadow:0 6px 22px -6px rgba(0,0,0,.18);
+}
+@media (max-width:880px){
+  .hero-visual .screenshot-stack picture img.screenshot { max-height:420px; max-width:260px; }
+}
+@media (max-width:480px){
+  .hero-visual .screenshot-stack picture img.screenshot { max-height:320px; max-width:200px; }
+}
 /* Sections */
 section {scroll-margin-top:80px;}
 .section-title {font-size:clamp(1.9rem,3.2vw,2.4rem);margin:0 0 1rem;font-weight:700;letter-spacing:-.5px;}
@@ -84,6 +114,18 @@ section {scroll-margin-top:80px;}
 .screens-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1.7rem;margin-top:2.5rem;}
 .screen-item {text-align:center;}
 .screen-item figcaption {margin-top:.75rem;font-size:.8rem;font-weight:500;color:var(--color-text-soft);letter-spacing:.5px;text-transform:uppercase;}
+/* Ensure actual <img> screenshots inside the screens grid size consistently and responsively */
+.screens-grid picture img.screenshot {
+  display:block;            /* images behave like images, not flex containers */
+  width:100%;               /* fill the grid column */
+  max-width:320px;          /* limit maximum phone preview width */
+  height:auto;              /* preserve natural aspect ratio */
+  aspect-ratio:9/19;        /* enforce phone-like portrait ratio where supported */
+  border-radius:20px;       /* slightly smaller radius for img elements */
+  object-fit:cover;         /* crop to fit if needed */
+  box-shadow:var(--shadow-sm);
+  margin:0 auto;            /* center within column */
+}
 /* Benefits */
 .benefits {padding:4.5rem 0;}
 .alt-bg {background:linear-gradient(145deg,#ffffff 0%,#F8F9FA 70%,#E5E5E5 100%);}
@@ -126,3 +168,106 @@ section {scroll-margin-top:80px;}
   .feature-card:nth-child(odd){animation-delay:.05s;} .feature-card:nth-child(even){animation-delay:.12s;}
 }
 @keyframes fadeIn {from {opacity:0;transform:translateY(12px);} to {opacity:1;transform:translateY(0);} }
+
+/* Google Play badge sizing */
+.store-badge {
+  display: block;
+  height: 44px;        /* consistent height for both badges */
+  width: auto;
+  max-width: 260px;    /* allow scaling but limit width */
+}
+
+/* Make the Google Play badge a bit larger than the App Store badge */
+.store-btn.gp .store-badge {
+  height: 54px;      /* larger visual size for Google Play */
+  max-width: 320px;
+}
+
+@media (max-width:880px) {
+  /* slightly smaller on narrow screens */
+  .store-badge { height: 40px; max-width: 220px; }
+  .store-btn.gp .store-badge { height: 48px; max-width: 260px; }
+}
+@media (max-width:480px){
+  .store-badge { height: 36px; max-width: 180px; }
+  .store-btn.gp .store-badge { height: 40px; max-width: 200px; }
+}
+
+/* Normalize button paddings and alignment so badges center consistently */
+.store-btn.gp, .store-btn.as {
+  padding: .6rem 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.store-btn.as { flex-direction: row; }
+
+/* Fullscreen screenshot modal styles */
+.screen-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.85);
+  z-index: 1200;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .18s ease, visibility .18s ease;
+}
+.screen-modal.open { opacity: 1; visibility: visible; }
+.screen-modal .modal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 98vw;
+  max-height: 98vh;
+  /* add extra top padding so modal content doesn't sit flush to the top on some screens */
+  padding: 60px 20px 20px;
+}
+#modal-image {
+  display:block;
+  max-height: 100vh; /* fill full viewport height when image is tall */
+  width: auto;
+  max-width: calc(100vw - 48px);
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+.modal-caption {
+  color: #fff;
+  opacity: .9;
+  font-size: 0.95rem;
+  text-align: center;
+  max-width: 92vw;
+}
+
+/* Controls */
+.screen-modal .modal-close,
+.screen-modal .modal-prev,
+.screen-modal .modal-next {
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 32px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.screen-modal .modal-close { top: 14px; right: 18px; }
+.screen-modal .modal-prev { left: 8px; top: 50%; transform: translateY(-50%); }
+.screen-modal .modal-next { right: 8px; top: 50%; transform: translateY(-50%); }
+
+.screen-modal .modal-close:focus,
+.screen-modal .modal-prev:focus,
+.screen-modal .modal-next:focus { outline: 3px solid rgba(255,255,255,0.14); border-radius: 6px; }
+
+@media (max-width:880px) {
+  .screen-modal .modal-prev, .screen-modal .modal-next { font-size: 26px; }
+  #modal-image { max-width: calc(100vw - 32px); }
+}

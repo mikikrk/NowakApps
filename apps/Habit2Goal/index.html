@@ -1,207 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Habit2Goal – Turn Habits Into Achievable Goals</title>
-  <meta name="description" content="Habit2Goal helps you transform consistent habits into meaningful goals with insightful stats and progress tracking across Android & iOS." />
-  <meta name="theme-color" content="#1C6A47" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Habit2Goal – Turn Habits Into Achievable Goals</title>
+    <meta name="description"
+          content="Habit2Goal helps you transform consistent habits into meaningful goals with insightful stats and progress tracking across Android & iOS."/>
+    <meta name="theme-color" content="#1C6A47"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <header class="site-header">
+<header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <img src="ic_launcher_foreground.webp" class="logo-img" alt="Habit2Goal logo" />
-        <span class="app-name">Habit2Goal</span>
-      </div>
-      <nav class="main-nav">
-        <a href="#features">Features</a>
-        <a href="#screens">Screens</a>
-        <a href="#download">Download</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a href="#download" class="cta-button">Get the App</a>
+        <a href="#" id="brand-link" class="brand" aria-label="Go to top">
+            <img src="ic_launcher_foreground.webp" class="logo-img" alt="Habit2Goal logo"/>
+            <span class="app-name">Habit2Goal</span>
+        </a>
+        <nav class="main-nav">
+            <a href="#features">Features</a>
+            <a href="#screens">Screens</a>
+            <a href="#download">Download</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="#download" class="cta-button">Get the App</a>
     </div>
-  </header>
+</header>
 
-  <section class="hero">
+<section class="hero">
     <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1>Turn daily habits into <span class="gradient">achievable goals</span></h1>
-        <p class="subtitle">Structure your routine, visualize progress, and stay motivated with data-driven insight across platforms.</p>
-        <div class="store-buttons" id="download">
-          <a class="store-btn gp" href="#" aria-label="Get it on Google Play (link coming soon)">
-            <span class="store-line1">Get it on</span>
-            <span class="store-line2">Google Play</span>
-          </a>
-          <a class="store-btn as" href="#" aria-label="Download on the App Store (link coming soon)">
-            <span class="store-line1">Download on the</span>
-            <span class="store-line2">App Store</span>
-          </a>
+        <div class="hero-copy">
+            <h1>Turn daily habits into <span class="gradient">achievable goals</span></h1>
+            <p class="subtitle">Structure your routine, visualize progress, and stay motivated with data-driven insight
+                across platforms.</p>
+            <div class="store-buttons" id="download">
+                <a class="store-btn gp" href="https://play.google.com/store/apps/details?id=com.nowakapps.habit2goal"
+                   aria-label="Get it on Google Play" target="_blank" rel="noopener noreferrer">
+                    <img class="store-badge play-badge"
+                         src="badges/Get it on Google Play Badges/Digital/GetItOnGooglePlay_Badge_Web_color_English.svg"
+                         alt="Get it on Google Play" loading="lazy"/>
+                </a>
+                <a class="store-btn as" href="#" aria-label="Download on the App Store (link coming soon)">
+                    <img class="store-badge appstore-badge"
+                         src="badges/Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                         alt="Available on the App Store" loading="lazy"/>
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="hero-visual">
-        <div class="screenshot-stack">
-          <div class="screenshot placeholder" data-label="Goal Screen"></div>
-          <div class="screenshot placeholder" data-label="Day Stats"></div>
-          <div class="screenshot placeholder" data-label="Habit Stats"></div>
+        <div class="hero-visual">
+            <div class="screenshot-stack">
+                <figure class="screen-item">
+                    <picture>
+                        <img src="screens/GoalScreen.png" alt="Goal Screen" class="screenshot" loading="lazy"
+                             width="1080" height="2400"/>
+                    </picture>
+                </figure>
+
+                <figure class="screen-item">
+                    <picture>
+                        <img src="screens/AllHabitsStats.png" alt="All Habits Stats" class="screenshot" loading="lazy"
+                             width="1080" height="2400"/>
+                    </picture>
+                </figure>
+            </div>
         </div>
-      </div>
     </div>
     <div class="hero-wave" aria-hidden="true"></div>
-  </section>
+</section>
 
-  <section class="features" id="features">
+<section class="features" id="features">
     <div class="container">
-      <h2 class="section-title">Everything you need to stay consistent</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>Create & Refine Goals</h3>
-          <p>Define clear goals and structure them through repeatable, measurable habits. Adjust dynamically as you learn.</p>
+        <h2 class="section-title">Everything you need to stay consistent</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Create & Refine Goals</h3>
+                <p>Define clear goals and structure them through repeatable, measurable habits. Adjust dynamically as
+                    you learn.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Daily Habit Tracking</h3>
+                <p>Log your progress effortlessly each day. Visual signals guide momentum and streak integrity.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Goal Progress Timeline</h3>
+                <p>Explore historical progress and completion history to understand long‑term patterns.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Rich Statistics</h3>
+                <p>Dive into dedicated stats screens: Day, Habit, Goal, and cumulative analytics to fine‑tune
+                    routines.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Positive & Negative Values</h3>
+                <p>Support for habits with increasing or decreasing target values; color feedback highlights
+                    direction.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Completion Insights</h3>
+                <p>Celebrate completed goals and learn from the path that got you there with review overlays.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Cross‑Platform Foundation</h3>
+                <p>Built with Kotlin Multiplatform + Compose. Consistent logic across Android & iOS (desktop ready).</p>
+            </div>
+            <div class="feature-card">
+                <h3>Dark & Light Themes</h3>
+                <p>Adaptive color system for clarity and accessibility in all lighting conditions.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Privacy Respect</h3>
+                <p>Your data stays on your device. Future optional sync will remain transparent & opt‑in.</p>
+            </div>
         </div>
-        <div class="feature-card">
-          <h3>Daily Habit Tracking</h3>
-          <p>Log your progress effortlessly each day. Visual signals guide momentum and streak integrity.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Goal Progress Timeline</h3>
-          <p>Explore historical progress and completion history to understand long‑term patterns.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Rich Statistics</h3>
-          <p>Dive into dedicated stats screens: Day, Habit, Goal, and cumulative analytics to fine‑tune routines.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Positive & Negative Values</h3>
-          <p>Support for habits with increasing or decreasing target values; color feedback highlights direction.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Completion Insights</h3>
-          <p>Celebrate completed goals and learn from the path that got you there with review overlays.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Cross‑Platform Foundation</h3>
-          <p>Built with Kotlin Multiplatform + Compose. Consistent logic across Android & iOS (desktop ready).</p>
-        </div>
-        <div class="feature-card">
-          <h3>Dark & Light Themes</h3>
-          <p>Adaptive color system for clarity and accessibility in all lighting conditions.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Privacy Respect</h3>
-          <p>Your data stays on your device. Future optional sync will remain transparent & opt‑in.</p>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <section class="screens" id="screens">
+<section class="screens" id="screens">
     <div class="container">
-      <h2 class="section-title">App Screens</h2>
-      <p class="section-intro">Below are current screen previews. Replace SVG placeholders with actual PNG/WebP exports when ready.</p>
-      <div class="screens-grid">
-        <figure class="screen-item">
-          <picture>
-            <img src="screens/goals.svg" alt="Goals Overview screen" class="screenshot" loading="lazy" width="360" height="760" />
-          </picture>
-          <figcaption>Goals Overview</figcaption>
-        </figure>
-        <figure class="screen-item">
-          <picture>
-            <img src="screens/goal_detail.svg" alt="Goal Detail screen" class="screenshot" loading="lazy" width="360" height="760" />
-          </picture>
-          <figcaption>Goal Detail</figcaption>
-        </figure>
-        <figure class="screen-item">
-          <picture>
-            <img src="screens/day_stats.svg" alt="Day Stats screen" class="screenshot" loading="lazy" width="360" height="760" />
-          </picture>
-          <figcaption>Day Stats</figcaption>
-        </figure>
-        <figure class="screen-item">
-          <picture>
-            <img src="screens/habit_stats.svg" alt="Habit Stats screen" class="screenshot" loading="lazy" width="360" height="760" />
-          </picture>
-          <figcaption>Habit Stats</figcaption>
-        </figure>
-        <figure class="screen-item">
-          <picture>
-            <img src="screens/goal_stats.svg" alt="Goal Stats screen" class="screenshot" loading="lazy" width="360" height="760" />
-          </picture>
-          <figcaption>Goal Stats</figcaption>
-        </figure>
-        <figure class="screen-item">
-          <picture>
-            <img src="screens/history.svg" alt="Goal History screen" class="screenshot" loading="lazy" width="360" height="760" />
-          </picture>
-          <figcaption>Goal History</figcaption>
-        </figure>
-        <figure class="screen-item">
-          <picture>
-            <img src="screens/completed_goal.svg" alt="Completed Goal card" class="screenshot" loading="lazy" width="360" height="760" />
-          </picture>
-          <figcaption>Completed Goal Card</figcaption>
-        </figure>
-        <!-- Dark theme view can reuse one screenshot or be added later -->
-        <figure class="screen-item">
-          <picture>
-            <img src="screens/goals.svg" alt="Dark Theme example (placeholder)" class="screenshot" loading="lazy" width="360" height="760" />
-          </picture>
-          <figcaption>Dark Theme View</figcaption>
-        </figure>
-      </div>
+        <h2 class="section-title">App Screens</h2>
+        <div class="screens-grid">
+            <figure class="screen-item">
+                <picture>
+                    <img src="screens/GoalScreen.png" alt="Goal Screen" class="screenshot" loading="lazy" width="1080"
+                         height="2400"/>
+                </picture>
+                <figcaption>Goal Screen</figcaption>
+            </figure>
+            <figure class="screen-item">
+                <picture>
+                    <img src="screens/Goals.png" alt="Goals Overview screen" class="screenshot" loading="lazy"
+                         width="1080" height="2400"/>
+                </picture>
+                <figcaption>Goals Overview</figcaption>
+            </figure>
+            <figure class="screen-item">
+                <picture>
+                    <img src="screens/AllHabitsStats.png" alt="All Habits Stats" class="screenshot" loading="lazy"
+                         width="1080" height="2400"/>
+                </picture>
+                <figcaption>Progress Calendar</figcaption>
+            </figure>
+            <figure class="screen-item">
+                <picture>
+                    <img src="screens/AllHabitsCollapsedCalendar.png" alt="All Habits Collapsed Calendar"
+                         class="screenshot" loading="lazy" width="1080" height="2400"/>
+                </picture>
+                <figcaption>Habit Stats</figcaption>
+            </figure>
+            <figure class="screen-item">
+                <picture>
+                    <img src="screens/DayStats.png" alt="Day Stats screen" class="screenshot" loading="lazy"
+                         width="1080" height="2400"/>
+                </picture>
+                <figcaption>Day Stats</figcaption>
+            </figure>
+            <figure class="screen-item">
+                <picture>
+                    <img src="screens/AddForgottenClicksInPast.png" alt="Add Forgotten Clicks (Past)" class="screenshot"
+                         loading="lazy" width="1080" height="2400"/>
+                </picture>
+                <figcaption>Forgotten Clicks (Past)</figcaption>
+            </figure>
+            <figure class="screen-item">
+                <picture>
+                    <img src="screens/EditClicks.png" alt="Edit Clicks screen" class="screenshot" loading="lazy"
+                         width="1080" height="2400"/>
+                </picture>
+                <figcaption>Edit Clicks</figcaption>
+            </figure>
+            <figure class="screen-item">
+                <picture>
+                    <img src="screens/GoalStats.png" alt="Goal Stats screen" class="screenshot" loading="lazy"
+                         width="1080" height="2400"/>
+                </picture>
+                <figcaption>Goal Stats</figcaption>
+            </figure>
+            <figure class="screen-item">
+                <picture>
+                    <img src="screens/Settings.png" alt="Settings screen" class="screenshot" loading="lazy" width="1080"
+                         height="2400"/>
+                </picture>
+                <figcaption>Settings</figcaption>
+            </figure>
+        </div>
     </div>
-  </section>
+</section>
 
-  <section class="benefits alt-bg">
+<section class="benefits alt-bg">
     <div class="container benefits-grid">
-      <div class="benefit-copy">
-        <h2 class="section-title">From intention to execution</h2>
-        <p>Habit2Goal bridges the gap between what you plan and what you actually do. By tightly integrating habit loops with long‑term targets, it enables meaningful progress without overwhelm.</p>
-        <ul class="checklist">
-          <li>Clarity: see exactly what moves each goal forward.</li>
-          <li>Focus: highlight the next impactful action.</li>
-          <li>Motivation: visual momentum & completion feedback.</li>
-          <li>Insight: granular stats per day, habit & goal.</li>
-          <li>Adaptation: iterate goals as habits evolve.</li>
-        </ul>
-      </div>
-      <div class="benefit-visual">
-        <div class="screenshot tall placeholder" data-label="Progress Chart"></div>
-      </div>
+        <div class="benefit-copy">
+            <h2 class="section-title">From intention to execution</h2>
+            <p>Habit2Goal bridges the gap between what you plan and what you actually do. By tightly integrating habit
+                loops with long‑term targets, it enables meaningful progress without overwhelm.</p>
+            <ul class="checklist">
+                <li>Clarity: see exactly what moves each goal forward.</li>
+                <li>Focus: highlight the next impactful action.</li>
+                <li>Motivation: visual momentum & completion feedback.</li>
+                <li>Insight: granular stats per day, habit & goal.</li>
+                <li>Adaptation: iterate goals as habits evolve.</li>
+            </ul>
+        </div>
+        <div class="benefit-visual">
+            <div class="screenshot tall placeholder" data-label="Progress Chart"></div>
+        </div>
     </div>
-  </section>
+</section>
 
-  <section class="faq" id="faq">
+<section class="faq" id="faq">
     <div class="container">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <div class="faq-items">
-        <details open>
-          <summary>When will the app be available?</summary>
-          <p>Public store links will appear here once review passes. Current build targets Android & iOS.</p>
-        </details>
-        <details>
-          <summary>Does it require an account?</summary>
-          <p>No account required for core tracking. Future sync will be optional.</p>
-        </details>
-        <details>
-          <summary>Will my data sync across devices?</summary>
-          <p>Planned as an opt‑in encrypted feature. Local‑first remains the default.</p>
-        </details>
-        <details>
-          <summary>Is there a dark mode?</summary>
-          <p>Yes. Automatic based on system preference with accessible contrast ratios.</p>
-        </details>
-      </div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-items">
+            <details open>
+                <summary>When will the app be available?</summary>
+                <p>Public store links will appear here once review passes. Current build targets Android & iOS.</p>
+            </details>
+            <details>
+                <summary>Does it require an account?</summary>
+                <p>No account required. For the best privacy all data is stored locally on the device. There are tools
+                    to transfer current state from device to device on the device migration.</p>
+            </details>
+            <details>
+                <summary>Will my data sync across devices?</summary>
+                <p>No, in order to grant the best privacy for your habits, they are stored solely on you device. There
+                    is though an option to export them to file and import it on another device in case you'd like to
+                    migrate your data.</p>
+            </details>
+            <details>
+                <summary>Is there a dark/light mode?</summary>
+                <p>Yes. Automatic based on system preference with accessible contrast ratios.</p>
+            </details>
+        </div>
     </div>
-  </section>
+</section>
 
-  <footer class="site-footer" id="contact">
+<footer class="site-footer" id="contact">
     <div class="container footer-grid">
       <div>
         <div class="brand footer-brand"><img src="ic_launcher_foreground.webp" class="logo-img" alt="Habit2Goal logo" /><span class="app-name">Habit2Goal</span></div>
@@ -216,9 +251,9 @@
       </nav>
       <nav class="footer-nav">
         <strong>Legal</strong>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-        <a href="imprint.html">Imprint</a>
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Use</a>
+        <a href="./imprint.html">Imprint</a>
       </nav>
       <nav class="footer-nav">
         <strong>Connect</strong>
@@ -230,8 +265,92 @@
     <div class="footer-bottom">© <span id="year"></span> Habit2Goal. All rights reserved.</div>
   </footer>
 
+  <!-- Fullscreen screenshot modal -->
+  <div id="screen-modal" class="screen-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="modal-close" aria-label="Close preview">×</button>
+    <div class="modal-inner">
+      <img id="modal-image" src="" alt="" />
+      <div class="modal-caption" id="modal-caption"></div>
+    </div>
+    <button class="modal-prev" aria-label="Previous">‹</button>
+    <button class="modal-next" aria-label="Next">›</button>
+  </div>
+
   <script>
+    // year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll to top when header brand/icon clicked
+    var brand = document.getElementById('brand-link');
+    if (brand) {
+      brand.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Fullscreen screenshot modal logic
+    (function () {
+      var modal = document.getElementById('screen-modal');
+      var modalImage = document.getElementById('modal-image');
+      var modalCaption = document.getElementById('modal-caption');
+      var closeBtn = modal.querySelector('.modal-close');
+      var nextBtn = modal.querySelector('.modal-next');
+      var prevBtn = modal.querySelector('.modal-prev');
+      // select all screen thumbnails across the page (hero + grid)
+      var items = Array.from(document.querySelectorAll('.screen-item img.screenshot'));
+      var currentIndex = -1;
+
+      function openAt(index) {
+        if (index < 0 || index >= items.length) return;
+        var img = items[index];
+        modalImage.src = img.src;
+        modalImage.alt = img.alt || '';
+        modalCaption.textContent = img.alt || '';
+        currentIndex = index;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        // focus close button for accessibility
+        closeBtn.focus();
+      }
+
+      function close() {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        modalImage.src = '';
+        currentIndex = -1;
+        document.body.style.overflow = '';
+      }
+
+      function showNext() { if (currentIndex >= 0) openAt((currentIndex + 1) % items.length); }
+      function showPrev() { if (currentIndex >= 0) openAt((currentIndex - 1 + items.length) % items.length); }
+
+      // click handlers on thumbnails
+      items.forEach(function (img, idx) {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function (e) {
+          e.preventDefault();
+          openAt(idx);
+        });
+      });
+
+      // close on overlay click (but not when clicking inner image)
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) close();
+      });
+      closeBtn.addEventListener('click', close);
+      nextBtn.addEventListener('click', function (e) { e.stopPropagation(); showNext(); });
+      prevBtn.addEventListener('click', function (e) { e.stopPropagation(); showPrev(); });
+
+      // keyboard
+      document.addEventListener('keydown', function (e) {
+        if (!modal.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
+      });
+    })();
   </script>
 </body>
 </html>
