@@ -179,19 +179,19 @@ section {scroll-margin-top:80px;}
 
 /* Make the Google Play badge a bit larger than the App Store badge */
 .store-btn.gp .store-badge {
-  height: 54px;      /* larger visual size for Google Play */
-  max-width: 320px;
+  height: 64px;      /* slightly larger visual size for Google Play */
+  max-width: 380px;
 }
 
 @media (max-width:880px) {
   /* slightly smaller on narrow screens */
-  .store-badge { height: 40px; max-width: 220px; }
-  .store-btn.gp .store-badge { height: 48px; max-width: 260px; }
-}
-@media (max-width:480px){
+  .store-badge { height: 44px; max-width: 260px; }
+  .store-btn.gp .store-badge { height: 56px; max-width: 320px; }
+ }
+ @media (max-width:480px){
   .store-badge { height: 36px; max-width: 180px; }
-  .store-btn.gp .store-badge { height: 40px; max-width: 200px; }
-}
+  .store-btn.gp .store-badge { height: 44px; max-width: 220px; }
+ }
 
 /* Normalize button paddings and alignment so badges center consistently */
 .store-btn.gp, .store-btn.as {
