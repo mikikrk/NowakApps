@@ -1,357 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <title>Habit2Goal – Turn Habits Into Achievable Goals</title>
-    <meta name="description"
-          content="Habit2Goal helps you transform consistent habits into meaningful goals with insightful stats and progress tracking across Android & iOS."/>
-    <meta name="theme-color" content="#1C6A47"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Habit2Goal — Build habits. Earn points. Buy yourself the things you actually want.</title>
+<meta name="description" content="Habit2Goal turns your daily habits into points that fund real-world rewards you set for yourself. A habit tracker with a goal economy — not just streaks." />
+<meta name="theme-color" content="#0D1B2A" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Habit2Goal — The Habit Economy" />
+<meta property="og:description" content="Every habit has a value. Every goal has a price. Stop tracking streaks. Start earning the things you want." />
+<meta property="og:image" content="https://habit2goal.app/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Habit2Goal — Build habits. Earn points. Buy the thing." />
+<meta property="og:url" content="https://habit2goal.app/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Habit2Goal" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Habit2Goal — The Habit Economy" />
+<meta name="twitter:description" content="Build habits. Earn points. Buy yourself the things you actually want." />
+<meta name="twitter:image" content="https://habit2goal.app/assets/og-image.png" />
+<meta name="twitter:image:alt" content="Habit2Goal — Build habits. Earn points. Buy the thing." />
+<link rel="canonical" href="https://habit2goal.app/" />
+
+<!-- Structured data: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Habit2Goal",
+  "operatingSystem": "ANDROID, IOS",
+  "applicationCategory": "HealthApplication",
+  "description": "Habit2Goal is a habit tracker built around a goal economy: every habit has a point value, every goal has a price, and your daily discipline compounds into the real-world rewards you actually want.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "name": "Free core loop"
+  },
+  "downloadUrl": [
+    "https://play.google.com/store/apps/details?id=com.nowakapps.habit2goal"
+  ]
+}
+</script>
+
+<link rel="icon" type="image/png" href="assets/app-icon.png" />
+<link rel="apple-touch-icon" href="assets/app-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="site-header">
-    <div class="container header-inner">
-        <a href="#" id="brand-link" class="brand" aria-label="Go to top">
-            <img src="ic_launcher_foreground.webp" class="logo-img" alt="Habit2Goal logo"/>
-            <span class="app-name">Habit2Goal</span>
-        </a>
-        <nav class="main-nav">
-            <a href="#features">Features</a>
-            <a href="#screens">Screens</a>
-            <a href="#download">Download</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <a href="#download" class="cta-button">Get the App</a>
-    </div>
+
+<!-- Background ornaments -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--teal" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--orange" aria-hidden="true"></div>
+
+<!-- ====== NAV ====== -->
+<header class="nav">
+  <a class="nav__brand" href="#top" aria-label="Habit2Goal home">
+    <img src="assets/app-icon.png" alt="" width="36" height="36" />
+    <span>Habit2Goal</span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#economy">The Idea</a>
+    <a href="#features">Features</a>
+    <a href="#stats">Stats</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a href="#download" class="btn btn--primary btn--sm">Get the app</a>
 </header>
 
-<section class="hero">
-    <div class="container hero-grid">
-        <div class="hero-copy">
-            <h1>Turn daily habits into <span class="gradient">achievable goals</span></h1>
-            <p class="subtitle">Structure your routine, visualize progress, and stay motivated with data-driven insight
-                across platforms.</p>
-            <div class="store-buttons" id="download">
-                <a class="store-btn gp" href="https://play.google.com/store/apps/details?id=com.nowakapps.habit2goal"
-                   aria-label="Get it on Google Play" target="_blank" rel="noopener noreferrer">
-                    <img class="store-badge play-badge"
-                         src="badges/Get it on Google Play Badges/Digital/GetItOnGooglePlay_Badge_Web_color_English.svg"
-                         alt="Get it on Google Play" loading="lazy"/>
-                </a>
-                <a class="store-btn as" href="#" aria-label="Download on the App Store (link coming soon)">
-                    <img class="store-badge appstore-badge"
-                         src="badges/Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
-                         alt="Available on the App Store" loading="lazy"/>
-                </a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="screenshot-stack">
-                <figure class="screen-item">
-                    <picture>
-                        <img src="screens/GoalScreen.png" alt="Goal Screen" class="screenshot" loading="lazy"
-                             width="1080" height="2400"/>
-                    </picture>
-                </figure>
+<!-- ====== HERO ====== -->
+<section class="hero" id="top">
+  <div class="hero__copy">
+    <span class="eyebrow">
+      <span class="eyebrow__dot"></span>
+      The Habit Economy
+    </span>
 
-                <figure class="screen-item">
-                    <picture>
-                        <img src="screens/AllHabitsStats.png" alt="All Habits Stats" class="screenshot" loading="lazy"
-                             width="1080" height="2400"/>
-                    </picture>
-                </figure>
-            </div>
-        </div>
-    </div>
-    <div class="hero-wave" aria-hidden="true"></div>
-</section>
+    <h1 class="hero__headline">
+      What if every good habit
+      <span class="grad-teal">earned credit</span>
+      toward your next reward?
+    </h1>
 
-<section class="features" id="features">
-    <div class="container">
-        <h2 class="section-title">Everything you need to stay consistent</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>Establish Habits</h3>
-                <p>Build new habits in your live thanks to real reward motivation.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Treat yourself after good work</h3>
-                <p>Give yourself some pleasure after you successfully follow your habits.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Daily Habit Tracking</h3>
-                <p>Log your progress effortlessly each day. Visual signals guide momentum and streak integrity.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Goal Progress Timeline</h3>
-                <p>Explore historical progress and completion history to understand long‑term patterns.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Rich Statistics</h3>
-                <p>Dive into dedicated stats screens: Habit, Goal, Day and cumulative analytics to fine‑tune routines.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Predict goal achievement</h3>
-                <p>Use predictions based on you habits pace on when given goals can be riched.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Positive & Negative Values</h3>
-                <p>Support for habits with increasing or decreasing target values; color feedback highlights direction.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Completion Insights</h3>
-                <p>Celebrate completed goals and learn from the path that got you there with review overlays.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Privacy Respect</h3>
-                <p>Your habits stay on your device. There is no risk that they would be leaked in the network.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Migrate if needed</h3>
-                <p>Even if data stays on the device, you can easily migrate it to new device once needed.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    <p class="hero__sub">
+      Habit2Goal isn’t another streak counter. Assign a value to every habit. Set a goal with a real-world price. Watch your discipline compound into the exact things you set out to earn — a vacation, a gym membership, the coffee machine you keep almost-buying.
+    </p>
 
-<section class="screens" id="screens">
-    <div class="container">
-        <h2 class="section-title">App Screens</h2>
-        <div class="screens-grid">
-            <figure class="screen-item">
-                <picture>
-                    <img src="screens/GoalScreen.png" alt="Goal Screen" class="screenshot" loading="lazy" width="1080"
-                         height="2400"/>
-                </picture>
-                <figcaption>Goal Screen</figcaption>
-            </figure>
-            <figure class="screen-item">
-                <picture>
-                    <img src="screens/Goals.png" alt="Goals Overview screen" class="screenshot" loading="lazy"
-                         width="1080" height="2400"/>
-                </picture>
-                <figcaption>Goals Overview</figcaption>
-            </figure>
-            <figure class="screen-item">
-                <picture>
-                    <img src="screens/AllHabitsStats.png" alt="All Habits Stats" class="screenshot" loading="lazy"
-                         width="1080" height="2400"/>
-                </picture>
-                <figcaption>Progress Calendar</figcaption>
-            </figure>
-            <figure class="screen-item">
-                <picture>
-                    <img src="screens/AllHabitsCollapsedCalendar.png" alt="All Habits Collapsed Calendar"
-                         class="screenshot" loading="lazy" width="1080" height="2400"/>
-                </picture>
-                <figcaption>Habit Stats</figcaption>
-            </figure>
-            <figure class="screen-item">
-                <picture>
-                    <img src="screens/DayStats.png" alt="Day Stats screen" class="screenshot" loading="lazy"
-                         width="1080" height="2400"/>
-                </picture>
-                <figcaption>Day Stats</figcaption>
-            </figure>
-            <figure class="screen-item">
-                <picture>
-                    <img src="screens/AddForgottenClicksInPast.png" alt="Add Forgotten Clicks (Past)" class="screenshot"
-                         loading="lazy" width="1080" height="2400"/>
-                </picture>
-                <figcaption>Forgotten Clicks (Past)</figcaption>
-            </figure>
-            <figure class="screen-item">
-                <picture>
-                    <img src="screens/EditClicks.png" alt="Edit Clicks screen" class="screenshot" loading="lazy"
-                         width="1080" height="2400"/>
-                </picture>
-                <figcaption>Edit Clicks</figcaption>
-            </figure>
-            <figure class="screen-item">
-                <picture>
-                    <img src="screens/GoalStats.png" alt="Goal Stats screen" class="screenshot" loading="lazy"
-                         width="1080" height="2400"/>
-                </picture>
-                <figcaption>Goal Stats</figcaption>
-            </figure>
-            <figure class="screen-item">
-                <picture>
-                    <img src="screens/Settings.png" alt="Settings screen" class="screenshot" loading="lazy" width="1080"
-                         height="2400"/>
-                </picture>
-                <figcaption>Settings</figcaption>
-            </figure>
-        </div>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#download">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 20.5V3.5a1 1 0 0 1 1.55-.83l13 8.5a1 1 0 0 1 0 1.66l-13 8.5A1 1 0 0 1 3 20.5Z"/></svg>
+        Download Habit2Goal
+      </a>
+      <a class="btn btn--ghost" href="#economy">See how it works</a>
     </div>
-</section>
 
-<section class="benefits alt-bg">
-    <div class="container benefits-grid">
-        <div class="benefit-copy">
-            <h2 class="section-title">From intention to execution</h2>
-            <p>Habit2Goal bridges the gap between what you plan and what you actually do. By tightly integrating habit
-                loops with long‑term targets, it enables meaningful progress without overwhelm.</p>
-            <ul class="checklist">
-                <li>Clarity: see exactly what moves each goal forward.</li>
-                <li>Focus: highlight the next impactful action.</li>
-                <li>Motivation: visual momentum & completion feedback.</li>
-                <li>Insight: granular stats per day, habit & goal.</li>
-                <li>Adaptation: iterate goals as habits evolve.</li>
-            </ul>
-        </div>
-        <div class="benefit-visual">
-            <div class="screenshot tall placeholder" data-label="Progress Chart"></div>
-        </div>
-    </div>
-</section>
-
-<section class="faq" id="faq">
-    <div class="container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <div class="faq-items">
-            <details open>
-                <summary>When will the app be available?</summary>
-                <p>Public store links will appear here once review passes. Current build targets Android & iOS.</p>
-            </details>
-            <details>
-                <summary>Does it require an account?</summary>
-                <p>No account required. For the best privacy all data is stored locally on the device. There are tools
-                    to transfer current state from device to device on the device migration.</p>
-            </details>
-            <details>
-                <summary>Will my data sync across devices?</summary>
-                <p>No, in order to grant the best privacy for your habits, they are stored solely on you device. There
-                    is though an option to export them to file and import it on another device in case you'd like to
-                    migrate your data.</p>
-            </details>
-            <details>
-                <summary>Is there a dark/light mode?</summary>
-                <p>Yes. Automatic based on system preference with accessible contrast ratios.</p>
-            </details>
-        </div>
-    </div>
-</section>
-
-<footer class="site-footer" id="contact">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand footer-brand"><img src="ic_launcher_foreground.webp" class="logo-img" alt="Habit2Goal logo" /><span class="app-name">Habit2Goal</span></div>
-        <p class="footer-text">Turn daily habit energy into goal momentum. Multi‑platform. Privacy‑respecting. Data‑driven.</p>
-      </div>
-      <nav class="footer-nav">
-        <strong>Explore</strong>
-        <a href="#features">Features</a>
-        <a href="#screens">Screens</a>
-        <a href="#download">Download</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <nav class="footer-nav">
-        <strong>Legal</strong>
-        <a href="./privacy.html">Privacy Policy</a>
-        <a href="./terms.html">Terms of Use</a>
-        <a href="./imprint.html">Imprint</a>
-      </nav>
-      <nav class="footer-nav">
-        <strong>Connect</strong>
-        <a href="mailto:contact@example.com">Email</a>
-        <a href="#" rel="noopener" target="_blank">GitHub</a>
-        <a href="#" rel="noopener" target="_blank">Twitter</a>
-      </nav>
-    </div>
-    <div class="footer-bottom">© <span id="year"></span> Habit2Goal. All rights reserved.</div>
-  </footer>
-
-  <!-- Fullscreen screenshot modal -->
-  <div id="screen-modal" class="screen-modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <button class="modal-close" aria-label="Close preview">×</button>
-    <div class="modal-inner">
-      <img id="modal-image" src="" alt="" />
-      <div class="modal-caption" id="modal-caption"></div>
-    </div>
-    <button class="modal-prev" aria-label="Previous">‹</button>
-    <button class="modal-next" aria-label="Next">›</button>
   </div>
 
-  <script>
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <!-- Phone composition -->
+  <div class="hero__phones" aria-hidden="true">
+    <div class="phone phone--back">
+      <img src="assets/screenshots/goal-progress.png" alt="" loading="eager" />
+    </div>
+    <div class="phone phone--front">
+      <div class="phone__notch"></div>
+      <img src="assets/screenshots/today.png" alt="" loading="eager" />
+    </div>
+    <div class="float-card float-card--points">
+      <div class="float-card__row">
+        <span class="float-card__label">+14 pts</span>
+        <span class="float-card__habit">Gym session</span>
+      </div>
+      <div class="float-card__row float-card__row--minor">
+        <span class="float-card__label float-card__label--neg">−5 pts</span>
+        <span class="float-card__habit">Impulse buy</span>
+      </div>
+    </div>
+    <div class="float-card float-card--goal">
+      <div class="float-card__title">New espresso machine</div>
+      <div class="float-card__bar">
+        <div class="float-card__bar-fill"></div>
+      </div>
+      <div class="float-card__meta">
+        <span>368 / 600 pts</span>
+        <span class="float-card__pace">↗ on pace</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    // Smooth scroll to top when header brand/icon clicked
-    var brand = document.getElementById('brand-link');
-    if (brand) {
-      brand.addEventListener('click', function (e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
+<!-- ====== ECONOMY ====== -->
+<section class="section section--economy" id="economy">
+  <div class="section__head">
+    <span class="eyebrow">How it works</span>
+    <h2>Three steps. One feedback loop that finally <em>means</em> something.</h2>
+  </div>
 
-    // Fullscreen screenshot modal logic
-    (function () {
-      var modal = document.getElementById('screen-modal');
-      var modalImage = document.getElementById('modal-image');
-      var modalCaption = document.getElementById('modal-caption');
-      var closeBtn = modal.querySelector('.modal-close');
-      var nextBtn = modal.querySelector('.modal-next');
-      var prevBtn = modal.querySelector('.modal-prev');
-      // select all screen thumbnails across the page (hero + grid)
-      var items = Array.from(document.querySelectorAll('.screen-item img.screenshot'));
-      var currentIndex = -1;
+  <ol class="steps">
+    <li class="step">
+      <div class="step__num">01</div>
+      <h3>Set the price of the thing you want</h3>
+      <p>Name your goal. Drop in a cover photo. Decide how many habit-points it should cost — a weekend trip, a new gadget, six months of guilt-free coffee.</p>
+      <div class="step__chip">🎯 Goal · 600 pts</div>
+    </li>
+    <li class="step">
+      <div class="step__num">02</div>
+      <h3>Give every habit a real value</h3>
+      <p>8 glasses of water = +5. Gym = +14. Skipped the coffee shop = +5. Slipped on a no-go habit? Lose points. Accountability with teeth, not just a checkbox.</p>
+      <div class="step__chip">💧 +5 · 🏋️ +14 · 🛍️ −5</div>
+    </li>
+    <li class="step">
+      <div class="step__num">03</div>
+      <h3>Cash in when you’ve actually earned it</h3>
+      <p>Hit the target. Buy the thing. <strong>Guilt-free.</strong> The goal moves to your history — a permanent receipt of the discipline that paid for it.</p>
+      <div class="step__chip">✅ Goal complete · history saved</div>
+    </li>
+  </ol>
+</section>
 
-      function openAt(index) {
-        if (index < 0 || index >= items.length) return;
-        var img = items[index];
-        modalImage.src = img.src;
-        modalImage.alt = img.alt || '';
-        modalCaption.textContent = img.alt || '';
-        currentIndex = index;
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-        // focus close button for accessibility
-        closeBtn.focus();
-      }
+<!-- ====== FEATURE GRID ====== -->
+<section class="section" id="features">
+  <div class="section__head">
+    <span class="eyebrow">Features</span>
+    <h2>Built for people who are <span class="grad-teal">going somewhere</span> — not just staying busy.</h2>
+  </div>
 
-      function close() {
-        modal.classList.remove('open');
-        modal.setAttribute('aria-hidden', 'true');
-        modalImage.src = '';
-        currentIndex = -1;
-        document.body.style.overflow = '';
-      }
+  <div class="feature">
+    <div class="feature__copy">
+      <h3>Today, with a goal in view</h3>
+      <p>Your active goal sits at the top of the home screen with a real-time progress ring and on-pace forecast. Below it, today’s habits — tap <strong>+</strong> to claim points if you succeed with a habit, <strong>−</strong> to remove when you feel you have failed in it. The whole routine fits on one thumb-reachable screen.</p>
+      <ul class="bullets">
+        <li>Live progress ring per active goal</li>
+        <li>On-pace days-to-completion forecast</li>
+        <li>Each habit can give you both positive and negative points — you choose</li>
+      </ul>
+    </div>
+    <div class="feature__media">
+      <div class="phone phone--standalone">
+        <div class="phone__notch"></div>
+        <img src="assets/screenshots/today.png" alt="Today screen with active goal and habit list" loading="lazy" />
+      </div>
+    </div>
+  </div>
 
-      function showNext() { if (currentIndex >= 0) openAt((currentIndex + 1) % items.length); }
-      function showPrev() { if (currentIndex >= 0) openAt((currentIndex - 1 + items.length) % items.length); }
+  <div class="feature feature--reverse">
+    <div class="feature__copy">
+      <h3>Per-goal deep stats</h3>
+      <p>Each goal earns its own progress ring, activity timeline, consistency report, active rate, best-month and forecast. The kind of depth that makes progress feel tangible.</p>
+      <ul class="bullets">
+        <li>Progress ring + on-pace forecast</li>
+        <li>Cross-habit contribution breakdown</li>
+        <li>Activity timeline + consistency score</li>
+      </ul>
+    </div>
+    <div class="feature__media">
+      <div class="phone phone--standalone">
+        <div class="phone__notch"></div>
+        <img src="assets/screenshots/goal-progress.png" alt="Goal detail with progress ring and stats" loading="lazy" />
+      </div>
+    </div>
+  </div>
 
-      // click handlers on thumbnails
-      items.forEach(function (img, idx) {
-        img.style.cursor = 'zoom-in';
-        img.addEventListener('click', function (e) {
-          e.preventDefault();
-          openAt(idx);
-        });
-      });
+  <div class="feature">
+    <div class="feature__copy">
+      <h3>Your year, painted in dots</h3>
+      <p>Every habit gets its own calendar — month grid for context, full-year view to step back and see the pattern. Green dots are wins, orange dots are slips. The picture tells you the truth long before any single day does.</p>
+      <ul class="bullets">
+        <li>Month grid with per-day point totals</li>
+        <li>Full-year overview at a glance</li>
+        <li>Tap any month to drill down into a day</li>
+      </ul>
+    </div>
+    <div class="feature__media feature__media--duo">
+      <div class="phone phone--standalone phone--duo phone--duo-back">
+        <div class="phone__notch"></div>
+        <img src="assets/screenshots/year-view.png" alt="Full-year habit calendar with green and orange dots per month" loading="lazy" />
+      </div>
+      <div class="phone phone--standalone phone--duo phone--duo-front">
+        <div class="phone__notch"></div>
+        <img src="assets/screenshots/calendar-month.png" alt="Monthly calendar grid showing daily habit results" loading="lazy" />
+      </div>
+    </div>
+  </div>
 
-      // close on overlay click (but not when clicking inner image)
-      modal.addEventListener('click', function (e) {
-        if (e.target === modal) close();
-      });
-      closeBtn.addEventListener('click', close);
-      nextBtn.addEventListener('click', function (e) { e.stopPropagation(); showNext(); });
-      prevBtn.addEventListener('click', function (e) { e.stopPropagation(); showPrev(); });
+  <div class="feature feature--reverse">
+    <div class="feature__copy">
+      <h3>A history worth scrolling through</h3>
+      <p>Every goal you’ve ever completed lives in Goal History — cover photo, completion date, full contribution data. See exactly which habits paid for each milestone. On hard days, this is the screen that reminds you why you started.</p>
+      <ul class="bullets">
+        <li>Permanent record of completed goals</li>
+        <li>Cover photos + completion dates</li>
+        <li>Re-open any goal to revisit the data</li>
+      </ul>
+    </div>
+    <div class="feature__media">
+      <div class="phone phone--standalone">
+        <div class="phone__notch"></div>
+        <img src="assets/screenshots/history.png" alt="Goal history list" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
 
-      // keyboard
-      document.addEventListener('keydown', function (e) {
-        if (!modal.classList.contains('open')) return;
-        if (e.key === 'Escape') close();
-        if (e.key === 'ArrowRight') showNext();
-        if (e.key === 'ArrowLeft') showPrev();
-      });
-    })();
-  </script>
+<!-- ====== STATS STRIP ====== -->
+<section class="section section--stats" id="stats">
+  <div class="section__head">
+    <span class="eyebrow">Stats &amp; insights</span>
+    <h2>Charts that reveal which habits are <span class="grad-orange">actually</span> moving the needle.</h2>
+    <p class="section__lead">Streaks tell you <em>if</em> you showed up. Habit2Goal tells you <em>which</em> showing-up is paying for the next thing on your list.</p>
+  </div>
+
+  <div class="stats-grid">
+    <article class="stat-card">
+      <div class="stat-card__shot stat-card__shot--donut"><img src="assets/screenshots/donut.png" alt="Lifetime donut chart showing positive vs negative point share" loading="lazy" /></div>
+      <h4>Lifetime breakdown</h4>
+      <p>Positive vs. negative point share, all-time. See your behaviour as a portfolio.</p>
+    </article>
+    <article class="stat-card">
+      <div class="stat-card__shot stat-card__shot--bars"><img src="assets/screenshots/per-habit.png" alt="Per-habit contribution breakdown" loading="lazy" /></div>
+      <h4>Per-habit contribution</h4>
+      <p>Which habits do the heavy lifting — and which ones quietly drag you backwards.</p>
+    </article>
+    <article class="stat-card">
+      <div class="stat-card__shot stat-card__shot--month"><img src="assets/screenshots/stats-bars.png" alt="Monthly bar chart with daily totals" loading="lazy" /></div>
+      <h4>Monthly bar chart</h4>
+      <p>Day-by-day output for any month — not just a binary did-I-tap-the-circle.</p>
+    </article>
+  </div>
+
+  <ul class="stat-pills">
+    <li>↑ Trend indicators</li>
+    <li>Streak + personal best</li>
+    <li>Best day · best month · best year</li>
+    <li>Recent 30-day rolling stats</li>
+    <li>Cross-habit momentum</li>
+  </ul>
+</section>
+
+<!-- ====== TWO COLUMN: WHO IT'S FOR / WHO IT'S NOT ====== -->
+<section class="section section--split">
+  <div class="split">
+    <div class="split__col split__col--for">
+      <h3>You’ll love it if you…</h3>
+      <ul>
+        <li>Want to <strong>save money</strong> while building healthy habits</li>
+        <li>Need a system that connects small daily actions to big life goals</li>
+        <li>Like data and love seeing progress in numbers</li>
+        <li>Have tried streak apps and want something with <strong>real meaning</strong> behind it</li>
+      </ul>
+    </div>
+    <div class="split__col split__col--not">
+      <h3>It’s probably not for you if…</h3>
+      <ul>
+        <li>You prefer a pure “did I do it today” checkbox with no scoring or context.</li>
+        <li>You don’t want to think about <em>why</em> you’re doing the habits in the first place.</li>
+        <li>You want an app that nags. Habit2Goal is built around momentum, not guilt.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA / DOWNLOAD ====== -->
+<section class="section section--cta" id="download">
+  <div class="cta-card">
+    <div class="cta-card__inner">
+      <span class="eyebrow">Ready when you are</span>
+      <h2>Build the habits. Hit the goals. <br/><span class="grad-teal">Buy the thing.</span></h2>
+      <p>Available on iOS and Android. Install in under a minute and start your first habit today.</p>
+
+      <div class="store-row">
+        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.nowakapps.habit2goal" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#00C896"/><stop offset="1" stop-color="#00A47A"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#g1)" d="M3.6 2.3c-.4.3-.6.8-.6 1.4v16.6c0 .6.2 1.1.6 1.4l9.3-9.7L3.6 2.3Zm10.7 11.2 2.7 2.7-9.7 5.5c-.5.3-1 .2-1.4 0l8.4-8.2Zm0-3 -8.4-8.2c.4-.2.9-.3 1.4 0l9.7 5.5-2.7 2.7Zm6.3 1.8-2.6 1.5-3-3 3-3 2.6 1.5c1 .6 1 2.4 0 3Z"/>
+          </svg>
+          <span>
+            <small>Get it on</small>
+            <strong>Google Play</strong>
+          </span>
+        </a>
+        <a class="store-btn" href="https://apps.apple.com/pl/app/youtube/id544007664?l=pl" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path fill="#FFFFFF" d="M16.4 12.5c0-2.4 2-3.5 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.6.9-.8 0-1.9-.9-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.1 1.8 2.4 3.1 2.4 1.2-.1 1.7-.8 3.2-.8s2 .8 3.2.8c1.3 0 2.2-1.2 3-2.3.9-1.3 1.3-2.6 1.3-2.7-.1-.1-2.5-1-2.5-3.9-.1 0-.5 0-.5 0Zm-2.5-7.2c.7-.8 1.1-1.9 1-3-1 0-2.2.6-2.9 1.5-.6.7-1.2 1.9-1 2.9 1.1.1 2.2-.6 2.9-1.4Z"/>
+          </svg>
+          <span>
+            <small>Download on the</small>
+            <strong>App Store</strong>
+          </span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section class="section section--faq" id="faq">
+  <div class="section__head">
+    <span class="eyebrow">FAQ</span>
+    <h2>Quick questions, honest answers.</h2>
+  </div>
+
+  <div class="faq">
+    <details>
+      <summary>Is it free, or do I have to subscribe?</summary>
+      <p>
+        <strong>Free forever:</strong> one active habit, your active goal, and the essential daily stats.
+      </p>
+      <p>
+        <strong>Premium</strong> unlocks unlimited habits and the full statistics suite (lifetime donut, per-habit contribution, monthly trends, best/worst day records, cross-habit momentum).
+      </p>
+    </details>
+    <details>
+      <summary>Wait — does the app actually give me money?</summary>
+      <p>No. Habit2Goal is a self-reward concept. You decide what each goal “costs” in points and what real-world reward unlocks when you hit it. We just keep the books honest so you don’t cheat past-you out of the win.</p>
+    </details>
+    <details>
+      <summary>How is this different from a streak tracker?</summary>
+      <p>Streaks tell you <em>if</em> you showed up. Habit2Goal tells you <em>what your showing up is buying you</em>. Each habit has a weighted point value; each goal has a price. Your discipline compounds into named, real outcomes — not a number that only matters to your phone.</p>
+    </details>
+    <details>
+      <summary>Can I track habits I want to avoid?</summary>
+      <p>Yes. Negative habits (impulse buying, skipping workouts, late-night doomscroll) can be assigned negative point values. Slip up and your goal gets further away. Honest accountability beats vibes.</p>
+    </details>
+    <details>
+      <summary>Where can I get it?</summary>
+      <p>Habit2Goal is available on Google Play and the App Store — tap either store badge above to install.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="footer__row">
+    <div class="footer__brand">
+      <img src="assets/app-icon.png" alt="" width="32" height="32" />
+      <strong>Habit2Goal</strong>
+      <span>· The Habit Economy</span>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="#economy">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+  <p class="footer__legal">
+    © <span id="year"></span> Habit2Goal · Made by an indie developer who believes the best reward systems are the ones you build for yourself.
+  </p>
+</footer>
+
+<script src="script.js" defer></script>
 </body>
 </html>

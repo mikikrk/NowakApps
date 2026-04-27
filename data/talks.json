@@ -1,48 +1,52 @@
 [
   {
-    "id": "kotlin-flow-operators",
-    "title": "Kotlin Flow Operators",
-    "abstractShort": "Understand Flow operators deeply so you can predict their behavior and build your own.",
-    "abstractLong": "Kotlin Flow can be both simple and complex at the same time. Operators are a great example of that: they do simple things, but depending on how we use them, they might change their effects, making their usage a complex task. I will guide you in the journey under the hood of their implementation. It will help to understand their concept. With that knowledge, you will be able to predict how they will behave. What’s more, you shall be able to write your operators that will be interoperable with the library ones.",
-    "audience": "Advanced Kotlin Developers",
-    "videos": [
-      { "label": "Main", "embed": "https://www.youtube.com/embed/VIDEO_ID_FLOW" }
-    ],
-    "downloads": [
-      { "label": "Slides PPTX", "url": "#FlowOperators.pptx" },
-      { "label": "Slides PDF", "url": "#FlowOperators.pdf" }
-    ],
-    "events": []
-  },
-  {
-    "id": "estimations-useful",
-    "title": "How to Make Estimations Useful",
-    "abstractShort": "Practical, psychology-aware approach to estimation that reduces stress and improves planning.",
-    "abstractLong": "Estimates are rarely spot-on – and they shouldn’t be. In this talk, we’ll demystify how estimation works in practice and how to make it useful instead of precise. From the psychology behind bad estimates, through Fibonacci-based story pointing, to calculating team capacity using velocity – this session gives you the tools to improve sprint planning, track progress meaningfully, and reduce stress in delivery forecasting.",
-    "audience": "Developers, QAs, PMs, Product Managers",
-    "videos": [
-      { "label": "Conference", "embed": "https://www.youtube.com/embed/VIDEO_ID_EST" }
-    ],
-    "downloads": [
-      { "label": "Slides PPTX", "url": "#Estimations.pptx" },
-      { "label": "Slides PDF", "url": "#Estimations.pdf" }
-    ],
-    "events": []
-  },
-  {
     "id": "big-refactoring-story",
     "title": "Big Refactoring Story",
-    "abstractShort": "Lessons and strategy from navigating and transforming large legacy codebases.",
-    "abstractLong": "Anyone who has been working in their career with a long-running project has come across some big, old, legacy piece of code that was hard to maintain. While you can often hear complaints about such code, it’s much less common to hear that someone actually managed to refactor it...",
-    "audience": "Developers, PMs, QAs",
-    "videos": [
-      { "label": "Recording", "embed": "https://www.youtube.com/embed/VIDEO_ID_REFACTOR" }
-    ],
-    "downloads": [
-      { "label": "Slides PPTX", "url": "#BigRefactor.pptx" },
-      { "label": "Slides PDF", "url": "#BigRefactor.pdf" }
-    ],
-    "events": ["Android Tech Talks", "Kraków JUG", "Pykonik"]
+    "year": 2024,
+    "abstract": "Anyone who has worked on a long-running project has met that one big, old, legacy piece of code that is hard to maintain. While complaints about such code are common, it's much rarer to hear that someone actually managed to refactor it. The first challenge is convincing the business to give you time. But a big refactor brings even more challenges: how to make sure you won't start complaining again after a few months, how to deliver in an acceptable time, how to involve the whole team, how not to lose features hidden in the legacy code, and how not to drift from the planned solution while refactoring. My team managed to get the time and find solutions to all of the above. I share how we did it from both the code and the process perspective, and the tips we worked out along the way. Spoiler: the refactor went so smoothly it became a success story rather than a trial-and-error one.",
+    "tags": ["Refactoring", "Architecture", "Process", "Leadership"],
+    "video": "https://www.youtube.com/embed/PCIU1O_g_L8?start=5687",
+    "videoUrl": "https://youtu.be/PCIU1O_g_L8?t=5687",
+    "events": ["Conference talk"]
+  },
+  {
+    "id": "kotlin-flow-operators",
+    "title": "Kotlin Flow Operators",
+    "year": 2024,
+    "abstract": "Kotlin Flow can be both simple and complex at the same time. Operators are a great example: they do simple things, but depending on how you use them they can change behavior in subtle ways. I take you on a journey under the hood of their implementation so you can predict how they behave — and write your own operators that interoperate with the standard library.",
+    "tags": ["Kotlin", "Coroutines", "Flow", "Advanced"],
+    "events": ["Conference talk"]
+  },
+  {
+    "id": "ai-tools-intro",
+    "title": "Introduction to AI Skills & Agents",
+    "year": 2025,
+    "abstract": "A 20-minute introduction for developers, testers and product owners preparing for an AI hackathon. From the basics of LLMs and GPT, through agentic tools (IDE agents, Copilot CLI, Claude Code), to customizing them with instructions, reusable prompts, custom agents, skills and MCP servers. Covers token usage and context windows, when to use sub-agents for parallelization, teaching agents with your own patterns, and the importance of security review across multiple models.",
+    "tags": ["AI", "LLM", "Agents", "Copilot", "Hackathon"],
+    "events": ["Internal tech talk"]
+  },
+  {
+    "id": "chromecast",
+    "title": "Building Chromecast Experiences on Android",
+    "year": 2019,
+    "abstract": "A practical look at integrating Google Cast into Android apps — what the Cast SDK gives you for free, where the rough edges are, and how to design a great second-screen experience that feels native both on the phone and on the TV.",
+    "tags": ["Android", "Chromecast", "Cast SDK"],
+    "events": ["Droidcon"]
+  },
+  {
+    "id": "good-kotlin-with-java",
+    "title": "Good Kotlin Code in a Java Codebase",
+    "year": 2020,
+    "abstract": "Most Kotlin codebases don't start green-field — they grow inside long-living Java projects. This talk covers patterns and pitfalls of writing idiomatic, safe Kotlin that interoperates cleanly with Java: nullability, default arguments, extension functions, coroutines on the boundary, and how to keep both languages honest.",
+    "tags": ["Kotlin", "Java", "Interop"],
+    "events": ["Internal tech talk"]
+  },
+  {
+    "id": "usb-api-android",
+    "title": "USB API on Android",
+    "year": 2018,
+    "abstract": "A walk through Android's USB Host and Accessory APIs — connecting to external hardware, handling permissions, dealing with quirky devices, and the lessons learned shipping production apps that talk to physical peripherals.",
+    "tags": ["Android", "USB", "Hardware"],
+    "events": ["Internal tech talk"]
   }
 ]
-

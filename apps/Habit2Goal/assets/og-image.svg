@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D1B2A"/>
+      <stop offset="0.5" stop-color="#112236"/>
+      <stop offset="1" stop-color="#0A1622"/>
+    </linearGradient>
+    <radialGradient id="glow-teal" cx="0.15" cy="0.15" r="0.6">
+      <stop offset="0" stop-color="#00C896" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#00C896" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-orange" cx="0.92" cy="0.85" r="0.5">
+      <stop offset="0" stop-color="#FF8C42" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#FF8C42" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="teal-text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00C896"/>
+      <stop offset="1" stop-color="#5FF1C5"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00C896"/>
+      <stop offset="1" stop-color="#5FF1C5"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#00C896" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="14"/>
+      <feOffset dx="0" dy="14" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow-teal)"/>
+  <rect width="1200" height="630" fill="url(#glow-orange)"/>
+
+  <!-- Decorative ring (top-right) -->
+  <g transform="translate(1060 90)" opacity="0.85">
+    <circle cx="0" cy="0" r="46" fill="none" stroke="#00C896" stroke-opacity="0.18" stroke-width="8"/>
+    <circle cx="0" cy="0" r="46" fill="none" stroke="url(#teal-text)" stroke-width="8"
+            stroke-dasharray="289" stroke-dashoffset="98" stroke-linecap="round"
+            transform="rotate(-90)"/>
+    <text x="0" y="6" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+          font-size="20" font-weight="700" fill="#FFFFFF">66%</text>
+  </g>
+
+  <!-- ===== Left column: copy ===== -->
+  <g font-family="Helvetica, Arial, sans-serif">
+    <!-- Eyebrow -->
+    <g transform="translate(72 96)">
+      <rect x="0" y="0" width="240" height="36" rx="18" fill="#00C896" fill-opacity="0.10" stroke="#00C896" stroke-opacity="0.30"/>
+      <circle cx="20" cy="18" r="4" fill="#00C896"/>
+      <text x="36" y="24" font-size="14" font-weight="700" fill="#00C896" letter-spacing="2.5">THE HABIT ECONOMY</text>
+    </g>
+
+    <!-- Headline -->
+    <text x="72" y="222" font-size="68" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">Build habits.</text>
+    <text x="72" y="296" font-size="68" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">Earn points.</text>
+    <text x="72" y="370" font-size="68" font-weight="900" fill="url(#teal-text)" letter-spacing="-1.5">Buy the thing.</text>
+
+    <!-- Subline -->
+    <text x="72" y="426" font-size="22" fill="#FFFFFF" fill-opacity="0.72">
+      A habit tracker with a real goal economy —
+    </text>
+    <text x="72" y="456" font-size="22" fill="#FFFFFF" fill-opacity="0.72">
+      not just another streak counter.
+    </text>
+
+    <!-- Pills -->
+    <g transform="translate(72 510)">
+      <g>
+        <rect x="0" y="0" width="170" height="38" rx="19" fill="#00C896" fill-opacity="0.10" stroke="#00C896" stroke-opacity="0.28"/>
+        <circle cx="18" cy="19" r="4" fill="#00C896"/>
+        <text x="32" y="25" font-size="14" font-weight="600" fill="#FFFFFF" fill-opacity="0.92">Free core loop</text>
+      </g>
+      <g transform="translate(184 0)">
+        <rect x="0" y="0" width="190" height="38" rx="19" fill="#FF8C42" fill-opacity="0.10" stroke="#FF8C42" stroke-opacity="0.28"/>
+        <circle cx="18" cy="19" r="4" fill="#FF8C42"/>
+        <text x="32" y="25" font-size="14" font-weight="600" fill="#FFFFFF" fill-opacity="0.92">+ / − habits</text>
+      </g>
+      <g transform="translate(394 0)">
+        <rect x="0" y="0" width="170" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.18"/>
+        <text x="22" y="25" font-size="14" font-weight="600" fill="#FFFFFF" fill-opacity="0.92">iOS &amp; Android</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ===== Right column: stacked cards mock ===== -->
+  <g transform="translate(740 110)" font-family="Helvetica, Arial, sans-serif" filter="url(#card-shadow)">
+
+    <!-- Goal card -->
+    <g transform="translate(20 0)">
+      <rect x="0" y="0" width="380" height="170" rx="22"
+            fill="#142031" stroke="#FFFFFF" stroke-opacity="0.10"/>
+      <text x="28" y="44" font-size="14" font-weight="700" fill="#00C896" letter-spacing="2">ACTIVE GOAL</text>
+      <text x="28" y="80" font-size="26" font-weight="800" fill="#FFFFFF">New espresso machine</text>
+
+      <!-- progress bar bg -->
+      <rect x="28" y="106" width="324" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.08"/>
+      <rect x="28" y="106" width="200" height="10" rx="5" fill="url(#bar)"/>
+
+      <!-- meta -->
+      <text x="28" y="146" font-size="14" font-family="Menlo, Consolas, monospace"
+            font-weight="600" fill="#FFFFFF" fill-opacity="0.65">368 / 600 pts</text>
+      <text x="352" y="146" text-anchor="end" font-size="14" font-family="Menlo, Consolas, monospace"
+            font-weight="700" fill="#00C896">↗ on pace</text>
+    </g>
+
+    <!-- Points card (offset, overlapping below) -->
+    <g transform="translate(0 200)">
+      <rect x="0" y="0" width="420" height="180" rx="22"
+            fill="#0F1C2C" stroke="#FFFFFF" stroke-opacity="0.10"/>
+      <text x="28" y="44" font-size="14" font-weight="700" fill="#FF8C42" letter-spacing="2">TODAY · POINTS LEDGER</text>
+
+      <!-- Row 1 -->
+      <g transform="translate(28 70)">
+        <rect x="0" y="0" width="64" height="26" rx="6"
+              fill="#00C896" fill-opacity="0.14" stroke="#00C896" stroke-opacity="0.30"/>
+        <text x="32" y="18" text-anchor="middle" font-size="14" font-weight="800"
+              font-family="Menlo, Consolas, monospace" fill="#00C896">+14</text>
+        <text x="80" y="18" font-size="16" font-weight="600" fill="#FFFFFF" fill-opacity="0.92">Gym session</text>
+      </g>
+
+      <!-- Row 2 -->
+      <g transform="translate(28 108)">
+        <rect x="0" y="0" width="64" height="26" rx="6"
+              fill="#00C896" fill-opacity="0.14" stroke="#00C896" stroke-opacity="0.30"/>
+        <text x="32" y="18" text-anchor="middle" font-size="14" font-weight="800"
+              font-family="Menlo, Consolas, monospace" fill="#00C896">+5</text>
+        <text x="80" y="18" font-size="16" font-weight="600" fill="#FFFFFF" fill-opacity="0.92">Drank 8 glasses of water</text>
+      </g>
+
+      <!-- Row 3 (negative) -->
+      <g transform="translate(28 146)">
+        <rect x="0" y="0" width="64" height="26" rx="6"
+              fill="#FF8C42" fill-opacity="0.14" stroke="#FF8C42" stroke-opacity="0.30"/>
+        <text x="32" y="18" text-anchor="middle" font-size="14" font-weight="800"
+              font-family="Menlo, Consolas, monospace" fill="#FF8C42">−5</text>
+        <text x="80" y="18" font-size="16" font-weight="600" fill="#FFFFFF" fill-opacity="0.65">Impulse buy</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ===== Footer: app brand row ===== -->
+  <g transform="translate(72 575)" font-family="Helvetica, Arial, sans-serif">
+    <rect x="0" y="-26" width="48" height="48" rx="11" fill="#00C896"/>
+    <text x="24" y="6" text-anchor="middle" font-size="26" font-weight="900" fill="#0A1622">H2G</text>
+    <text x="64" y="-2" font-size="22" font-weight="800" fill="#FFFFFF">Habit2Goal</text>
+    <text x="64" y="22" font-size="14" fill="#FFFFFF" fill-opacity="0.55" letter-spacing="0.5">habit2goal.app · iOS &amp; Android</text>
+  </g>
+</svg>
