@@ -3,14 +3,15 @@
     "id": "habit2goal",
     "name": "Habit2Goal",
     "tagline": "Build habits. Earn points. Buy yourself the things you actually want.",
-    "description": "A habit tracker with a goal economy. Every habit has a value, every reward has a price — turn daily consistency into the things that actually matter to you.",
-    "tech": ["Android", "Kotlin", "Compose"],
-    "logo": "apps/Habit2Goal/assets/app-icon.png",
-    "accent": "#22D3A6",
+    "description": "A habit tracker built around a goal economy: every habit has a point value, every goal has a price, and your daily discipline compounds into the real-world rewards you actually want.",
+    "icon": "/apps/Habit2Goal/assets/app-icon.png",
+    "accent": "teal",
+    "platforms": ["Android", "iOS"],
     "links": {
-      "page": "/apps/Habit2Goal/",
-      "play": "https://play.google.com/store/apps/details?id=com.nowakapps.habit2goal"
+      "site": "/apps/Habit2Goal/",
+      "play": "https://play.google.com/store/apps/details?id=com.nowakapps.habit2goal",
+      "appStore": null
     },
-    "status": "live"
+    "status": "available"
   }
 ]

@@ -1,52 +1,65 @@
 [
   {
+    "id": "ai-skills-intro",
+    "title": "Introduction to AI Skills & Agents",
+    "year": 2026,
+    "venue": "Internal tech talk",
+    "audience": "Developers, QA engineers, product engineers",
+    "length": "20 min",
+    "tags": ["AI", "LLM", "Agents", "Copilot", "MCP"],
+    "abstract": "What an LLM actually is vs. an agentic tool: IDE-based coding agents, GitHub Copilot, Copilot CLI, Claude Code. How to extend a generic LLM with custom instructions, reusable prompts, custom agents, skills, and MCP servers. Tokens, context windows, sub-agent orchestration, parallelization tradeoffs, teaching agents with your own patterns (Jira tickets, presentation files), and security considerations including cross-model review.",
+    "links": {}
+  },
+  {
     "id": "big-refactoring-story",
     "title": "Big Refactoring Story",
-    "year": 2024,
-    "abstract": "Anyone who has worked on a long-running project has met that one big, old, legacy piece of code that is hard to maintain. While complaints about such code are common, it's much rarer to hear that someone actually managed to refactor it. The first challenge is convincing the business to give you time. But a big refactor brings even more challenges: how to make sure you won't start complaining again after a few months, how to deliver in an acceptable time, how to involve the whole team, how not to lose features hidden in the legacy code, and how not to drift from the planned solution while refactoring. My team managed to get the time and find solutions to all of the above. I share how we did it from both the code and the process perspective, and the tips we worked out along the way. Spoiler: the refactor went so smoothly it became a success story rather than a trial-and-error one.",
-    "tags": ["Refactoring", "Architecture", "Process", "Leadership"],
-    "video": "https://www.youtube.com/embed/PCIU1O_g_L8?start=5687",
-    "videoUrl": "https://youtu.be/PCIU1O_g_L8?t=5687",
-    "events": ["Conference talk"]
+    "year": 2022,
+    "venue": "Conference talk",
+    "tags": ["Refactoring", "Legacy code", "Engineering process"],
+    "abstract": "Anyone who has been working on a long-running project has come across a big, old, legacy piece of code that was hard to maintain. Complaints are common; actual successful rewrites are rare. The first challenge is convincing the business to give you the time. But a big refactor brings even more significant challenges: how to make sure you won't start complaining again about that code in a few months, how to deliver in an acceptable amount of time, how to involve the whole team, how not to lose features hidden in the legacy code, and how not to drift the planned solution mid-flight. My team got the time and solved all of these. I'll share how — from the code and from the process side — and the tips we worked out along the way. Spoiler: the refactor went so smoothly it became more of a success story than a trial-and-error one.",
+    "links": {
+      "video": "https://youtu.be/PCIU1O_g_L8?t=5687",
+      "code": "https://github.com/mikikrk/BigRefactoringStory"
+    }
   },
   {
     "id": "kotlin-flow-operators",
     "title": "Kotlin Flow Operators",
     "year": 2024,
-    "abstract": "Kotlin Flow can be both simple and complex at the same time. Operators are a great example: they do simple things, but depending on how you use them they can change behavior in subtle ways. I take you on a journey under the hood of their implementation so you can predict how they behave — and write your own operators that interoperate with the standard library.",
-    "tags": ["Kotlin", "Coroutines", "Flow", "Advanced"],
-    "events": ["Conference talk"]
-  },
-  {
-    "id": "ai-tools-intro",
-    "title": "Introduction to AI Skills & Agents",
-    "year": 2025,
-    "abstract": "A 20-minute introduction for developers, testers and product owners preparing for an AI hackathon. From the basics of LLMs and GPT, through agentic tools (IDE agents, Copilot CLI, Claude Code), to customizing them with instructions, reusable prompts, custom agents, skills and MCP servers. Covers token usage and context windows, when to use sub-agents for parallelization, teaching agents with your own patterns, and the importance of security review across multiple models.",
-    "tags": ["AI", "LLM", "Agents", "Copilot", "Hackathon"],
-    "events": ["Internal tech talk"]
-  },
-  {
-    "id": "chromecast",
-    "title": "Building Chromecast Experiences on Android",
-    "year": 2019,
-    "abstract": "A practical look at integrating Google Cast into Android apps — what the Cast SDK gives you for free, where the rough edges are, and how to design a great second-screen experience that feels native both on the phone and on the TV.",
-    "tags": ["Android", "Chromecast", "Cast SDK"],
-    "events": ["Droidcon"]
+    "venue": "Conference talk",
+    "tags": ["Kotlin", "Coroutines", "Flow"],
+    "abstract": "Kotlin Flow can be both simple and complex at the same time. Operators are a great example: they do simple things, but depending on how we use them they change their effects, making their usage tricky. I'll guide you under the hood of their implementation. With that knowledge you'll be able to predict how they will behave — and to write your own operators that interoperate with the library ones.",
+    "links": {}
   },
   {
     "id": "good-kotlin-with-java",
-    "title": "Good Kotlin Code in a Java Codebase",
-    "year": 2020,
-    "abstract": "Most Kotlin codebases don't start green-field — they grow inside long-living Java projects. This talk covers patterns and pitfalls of writing idiomatic, safe Kotlin that interoperates cleanly with Java: nullability, default arguments, extension functions, coroutines on the boundary, and how to keep both languages honest.",
+    "title": "Good Kotlin with Java",
+    "year": 2019,
+    "venue": "Tech meetup",
     "tags": ["Kotlin", "Java", "Interop"],
-    "events": ["Internal tech talk"]
+    "abstract": "Kotlin and Java live happily in the same codebase — until they don't. Patterns and pitfalls when writing Kotlin that has to be consumed cleanly from Java, and vice versa.",
+    "links": {
+      "slides": "https://github.com/mikikrk/presentation-kotlin"
+    }
+  },
+  {
+    "id": "chromecast-droidcon",
+    "title": "Chromecast for Android Developers",
+    "year": 2016,
+    "venue": "Droidcon",
+    "tags": ["Android", "Chromecast"],
+    "abstract": "How the Chromecast SDK works, and what it takes to integrate cast support into a real Android app — sender, receiver, media routing, and the gotchas that aren't in the docs.",
+    "links": {
+      "code": "https://github.com/mikikrk/chromecast_presentation"
+    }
   },
   {
     "id": "usb-api-android",
     "title": "USB API on Android",
     "year": 2018,
-    "abstract": "A walk through Android's USB Host and Accessory APIs — connecting to external hardware, handling permissions, dealing with quirky devices, and the lessons learned shipping production apps that talk to physical peripherals.",
+    "venue": "Tech meetup",
     "tags": ["Android", "USB", "Hardware"],
-    "events": ["Internal tech talk"]
+    "abstract": "A practical walkthrough of Android's USB host and accessory APIs — connecting to external hardware, permissions, and dealing with vendor quirks.",
+    "links": {}
   }
 ]

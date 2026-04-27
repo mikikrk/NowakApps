@@ -1,45 +1,38 @@
-# Nowak Apps — Website
+# NowakApps
 
-Personal site for **Nowak Apps** (Mikołaj Nowak). Showcases mobile applications and conference talks. Static site, no build step.
-
-Live: https://nowakapps.com
+Personal/company website of **Mikołaj Nowak** — indie apps and conference talks.
+Hosted on GitHub Pages at [nowakapps.com](https://nowakapps.com).
 
 ## Structure
 
 ```
-.
-├── index.html               # Home (hero, apps, talks, about)
-├── apps/
-│   ├── index.html           # All apps listing
-│   └── Habit2Goal/          # Standalone Habit2Goal microsite
-├── talks/
-│   └── index.html           # All talks listing
-├── habit2goal/index.html    # Legacy redirect → /apps/Habit2Goal/
-├── data/
-│   ├── apps.json            # Apps metadata
-│   └── talks.json           # Talks metadata
-├── assets/
-│   ├── css/style.css        # Design system
-│   ├── js/main.js           # Theme toggle + JSON rendering
-│   └── img/                 # Favicon + OG image
-├── CNAME                    # nowakapps.com
-└── .nojekyll
+/                  → home (apps grid, talks teaser, AI tools teaser)
+/apps/             → full apps listing
+/apps/Habit2Goal/  → standalone Habit2Goal microsite
+/talks/            → talks list with abstracts and links
+/ai-tools/         → AI skills & custom agents (coming soon)
+/habit2goal/       → redirect to /apps/Habit2Goal/
 ```
 
-## Adding content
+## Data
 
-- **App** → add an entry to `data/apps.json`. Optionally drop a microsite into `apps/<Name>/` and link it via `links.page`.
-- **Talk** → add an entry to `data/talks.json`. Talks are sorted by `year` descending.
+Apps and talks are rendered from JSON:
+
+- `data/apps.json`
+- `data/talks.json`
+- `data/ai-tools.json`
+
+To add a new app/talk/tool, append an entry to the relevant JSON file — no markup
+changes required.
 
 ## Local preview
 
-JSON is fetched at runtime, so use a static server:
-
-```sh
-python3 -m http.server 5173
-# open http://localhost:5173
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
 ```
 
-## Deploy
+## Deployment
 
-GitHub Pages serves directly from `main`. The `CNAME` file points the site at `nowakapps.com`.
+Pushes to `main` are served automatically by GitHub Pages. Custom domain:
+`nowakapps.com` (see `CNAME`).

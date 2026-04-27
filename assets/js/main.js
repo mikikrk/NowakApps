@@ -1,111 +1,144 @@
-// Theme toggle with persistence + auto detection
-(function () {
-  const KEY = 'na-theme';
-  const root = document.documentElement;
-  const saved = localStorage.getItem(KEY);
-  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-  const initial = saved || (prefersLight ? 'light' : 'dark');
-  root.setAttribute('data-theme', initial);
+// Tiny renderer for apps.json / talks.json / ai-tools.json
+const escapeHtml = (s = "") =>
+  String(s).replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('themeToggle');
-    if (!btn) return;
-    const setIcon = () => {
-      btn.textContent = root.getAttribute('data-theme') === 'dark' ? '🌞' : '🌙';
-    };
-    setIcon();
-    btn.addEventListener('click', () => {
-      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem(KEY, next);
-      setIcon();
-    });
-  });
-})();
-
-// Pointer-tracked card glow
-document.addEventListener('mousemove', (e) => {
-  document.querySelectorAll('.app-card').forEach((card) => {
-    const r = card.getBoundingClientRect();
-    if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) return;
-    card.style.setProperty('--mx', `${e.clientX - r.left}px`);
-    card.style.setProperty('--my', `${e.clientY - r.top}px`);
-  });
-});
-
-// Render apps into a grid
-async function renderApps(targetId, opts = {}) {
-  const target = document.getElementById(targetId);
-  if (!target) return;
+async function loadJson(path) {
   try {
-    const res = await fetch('/data/apps.json', { cache: 'no-store' });
-    const apps = await res.json();
-    target.innerHTML = apps.map(appCard).join('');
+    const res = await fetch(path, { cache: "no-cache" });
+    if (!res.ok) throw new Error(res.statusText);
+    return await res.json();
   } catch (e) {
-    target.innerHTML = '<p style="color:var(--text-mute)">Could not load apps.</p>';
+    console.warn("Failed to load", path, e);
+    return [];
   }
 }
 
-function appCard(a) {
-  const accent = a.accent || 'var(--accent)';
-  const tags = (a.tech || []).map((t) => `<span class="tag">${t}</span>`).join('');
-  const links = a.links || {};
-  const actions = [];
-  if (links.page) actions.push(`<a class="pill" href="${links.page}">Visit page →</a>`);
-  if (links.play) actions.push(`<a class="pill" target="_blank" rel="noopener" href="${links.play}">Google Play</a>`);
-  if (links.appstore) actions.push(`<a class="pill" target="_blank" rel="noopener" href="${links.appstore}">App Store</a>`);
-  if (links.github) actions.push(`<a class="pill" target="_blank" rel="noopener" href="${links.github}">GitHub</a>`);
+function appCard(app) {
+  const links = [];
+  if (app.links?.site) links.push(`<a href="${escapeHtml(app.links.site)}">Open site</a>`);
+  if (app.links?.play) links.push(`<a href="${escapeHtml(app.links.play)}" target="_blank" rel="noopener">Google Play</a>`);
+  if (app.links?.appStore) links.push(`<a href="${escapeHtml(app.links.appStore)}" target="_blank" rel="noopener">App Store</a>`);
+  const platforms = (app.platforms || []).map((p) => `<span class="chip">${escapeHtml(p)}</span>`).join("");
+  const iconHtml = app.icon
+    ? `<img src="${escapeHtml(app.icon)}" alt="${escapeHtml(app.name)} icon" loading="lazy">`
+    : escapeHtml((app.name || "?").charAt(0));
   return `
-    <a class="app-card" href="${links.page || '#'}" style="--card-accent:${accent}">
-      <div class="app-head">
-        <div class="app-icon">${a.logo ? `<img src="${a.logo}" alt="${a.name} logo" loading="lazy" />` : ''}</div>
+    <article class="card">
+      <div class="card__head">
+        <div class="card__icon">${iconHtml}</div>
         <div>
-          <h3>${a.name}</h3>
-          <p class="app-tagline">${a.tagline || ''}</p>
+          <h3 class="card__title">${escapeHtml(app.name)}</h3>
+          <p class="card__sub">${escapeHtml(app.tagline || "")}</p>
         </div>
       </div>
-      <p class="app-desc">${a.description || ''}</p>
-      <div class="tags">${tags}</div>
-      <div class="app-actions">${actions.join('')}</div>
-    </a>
-  `;
+      <p class="card__body">${escapeHtml(app.description || "")}</p>
+      <div class="card__meta">${platforms}</div>
+      <div class="card__cta">${links.join("")}</div>
+    </article>`;
 }
 
-// Render talks
-async function renderTalks(targetId, opts = {}) {
-  const target = document.getElementById(targetId);
-  if (!target) return;
-  try {
-    const res = await fetch('/data/talks.json', { cache: 'no-store' });
-    let talks = await res.json();
-    talks = talks.sort((a, b) => (b.year || 0) - (a.year || 0));
-    if (opts.limit) talks = talks.slice(0, opts.limit);
-    target.innerHTML = talks.map(talkCard).join('');
-  } catch (e) {
-    target.innerHTML = '<p style="color:var(--text-mute)">Could not load talks.</p>';
+function talkCard(talk, { compact = false } = {}) {
+  const tags = (talk.tags || []).map((t) => `<span class="chip">${escapeHtml(t)}</span>`).join("");
+  const links = [];
+  if (talk.links?.video) links.push(`<a href="${escapeHtml(talk.links.video)}" target="_blank" rel="noopener">▶ Watch recording</a>`);
+  if (talk.links?.slides) links.push(`<a href="${escapeHtml(talk.links.slides)}" target="_blank" rel="noopener">Slides</a>`);
+  if (talk.links?.code) links.push(`<a href="${escapeHtml(talk.links.code)}" target="_blank" rel="noopener">Sample code</a>`);
+  if (compact) {
+    return `
+      <article class="card">
+        <div class="card__head">
+          <div>
+            <h3 class="card__title">${escapeHtml(talk.title)}</h3>
+            <p class="card__sub">${escapeHtml(talk.venue || "")} · ${escapeHtml(String(talk.year || ""))}</p>
+          </div>
+        </div>
+        <p class="card__body">${escapeHtml((talk.abstract || "").slice(0, 180))}${(talk.abstract || "").length > 180 ? "…" : ""}</p>
+        <div class="card__meta">${tags}</div>
+        <div class="card__cta">${links.join("")}<a href="/talks/#${escapeHtml(talk.id)}">Read more</a></div>
+      </article>`;
+  }
+  return `
+    <article class="talk" id="${escapeHtml(talk.id)}">
+      <div class="talk__head">
+        <h3 class="talk__title">${escapeHtml(talk.title)}</h3>
+        <span class="talk__year">${escapeHtml(String(talk.year || ""))}</span>
+        <span class="talk__venue">${escapeHtml(talk.venue || "")}${talk.length ? " · " + escapeHtml(talk.length) : ""}${talk.audience ? " · " + escapeHtml(talk.audience) : ""}</span>
+      </div>
+      <div class="talk__tags">${tags}</div>
+      <p class="talk__abstract">${escapeHtml(talk.abstract || "")}</p>
+      <div class="talk__links">${links.join("")}</div>
+    </article>`;
+}
+
+function aiToolCard(tool) {
+  const tags = (tool.tags || []).map((t) => `<span class="chip">${escapeHtml(t)}</span>`).join("");
+  const links = [];
+  if (tool.links?.github) links.push(`<a href="${escapeHtml(tool.links.github)}" target="_blank" rel="noopener">GitHub</a>`);
+  if (tool.links?.docs) links.push(`<a href="${escapeHtml(tool.links.docs)}" target="_blank" rel="noopener">Docs</a>`);
+  return `
+    <article class="card">
+      <div class="card__head">
+        <div class="card__icon">${escapeHtml((tool.kind || "S").charAt(0).toUpperCase())}</div>
+        <div>
+          <h3 class="card__title">${escapeHtml(tool.name)}</h3>
+          <p class="card__sub">${escapeHtml(tool.kind || "")}</p>
+        </div>
+      </div>
+      <p class="card__body">${escapeHtml(tool.description || "")}</p>
+      <div class="card__meta">${tags}</div>
+      <div class="card__cta">${links.join("")}</div>
+    </article>`;
+}
+
+async function renderApps(target, { limit } = {}) {
+  const el = document.querySelector(target);
+  if (!el) return;
+  const apps = await loadJson("/data/apps.json");
+  const list = limit ? apps.slice(0, limit) : apps;
+  el.innerHTML = list.map(appCard).join("") || `<div class="empty">No apps yet.</div>`;
+}
+
+async function renderTalks(target, opts = {}) {
+  const el = document.querySelector(target);
+  if (!el) return;
+  const talks = await loadJson("/data/talks.json");
+  const list = opts.limit ? talks.slice(0, opts.limit) : talks;
+  if (opts.compact) {
+    el.classList.add("grid", "grid--talks");
+    el.innerHTML = list.map((t) => talkCard(t, { compact: true })).join("") || `<div class="empty">No talks yet.</div>`;
+  } else {
+    el.classList.add("talks-list");
+    el.innerHTML = list.map((t) => talkCard(t)).join("") || `<div class="empty">No talks yet.</div>`;
   }
 }
 
-function talkCard(t) {
-  const tags = (t.tags || []).map((tg) => `<span class="tag">${tg}</span>`).join('');
-  const events = (t.events || []).map((e) => `<span class="tag">${e}</span>`).join('');
-  const actions = [];
-  if (t.videoUrl) actions.push(`<a class="pill" target="_blank" rel="noopener" href="${t.videoUrl}">▶ Watch</a>`);
-  if (t.slides) actions.push(`<a class="pill" target="_blank" rel="noopener" href="${t.slides}">Slides</a>`);
-  return `
-    <article class="talk-card">
-      <div class="talk-year">${t.year || ''}</div>
-      <div class="talk-body">
-        <h3>${t.title}</h3>
-        <p class="talk-abstract">${t.abstract}</p>
-        <div class="talk-meta">${tags}${events}</div>
-      </div>
-      <div class="talk-actions">${actions.join('')}</div>
-    </article>
-  `;
+async function renderAiTools(target) {
+  const el = document.querySelector(target);
+  if (!el) return;
+  const tools = await loadJson("/data/ai-tools.json");
+  if (!tools.length) {
+    el.innerHTML = `
+      <div class="empty">
+        <p><strong>Coming soon.</strong> I'm curating a set of reusable Copilot CLI skills and custom agents.<br/>
+        Once they're polished and published, they'll show up here with a one-line description and a link to GitHub.</p>
+      </div>`;
+    return;
+  }
+  el.classList.add("grid", "grid--apps");
+  el.innerHTML = tools.map(aiToolCard).join("");
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderApps('appsGrid');
-  renderTalks('talksList', { limit: window.__talksLimit });
+function setYear() {
+  const y = document.getElementById("year");
+  if (y) y.textContent = new Date().getFullYear();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setYear();
+  renderApps("[data-render='apps']", { limit: 6 });
+  renderTalks("[data-render='talks-compact']", { compact: true, limit: 4 });
+  renderTalks("[data-render='talks-full']");
+  renderAiTools("[data-render='ai-tools']");
 });

@@ -182,6 +182,35 @@ strong { color: #fff; }
   .nav__links { display: none; }
 }
 
+/* Mobile-only jumplinks under hero CTA, since main nav links are hidden */
+.hero__jumplinks {
+  display: none;
+}
+@media (max-width: 720px) {
+  .hero__jumplinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+  }
+  .hero__jumplinks a {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--muted);
+    padding: 7px 13px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.02);
+    transition: border-color .2s ease, color .2s ease, background .2s ease;
+  }
+  .hero__jumplinks a:hover,
+  .hero__jumplinks a:focus-visible {
+    color: #fff;
+    border-color: rgba(0,200,150,0.45);
+    background: rgba(0,200,150,0.08);
+  }
+}
+
 /* ============================================================
    Hero
 ============================================================ */
@@ -214,21 +243,6 @@ strong { color: #fff; }
   flex-wrap: wrap;
   margin-bottom: 36px;
 }
-.hero__stats {
-  display: flex;
-  gap: 36px;
-  border-top: 1px solid var(--line);
-  padding-top: 22px;
-}
-.stat strong {
-  display: block;
-  font-size: clamp(22px, 2.2vw, 30px);
-  font-weight: 900;
-  color: var(--teal);
-  font-family: 'JetBrains Mono', monospace;
-}
-.stat span { font-size: 13px; color: var(--muted-2); }
-
 /* Phone composition */
 .hero__phones {
   position: relative;
@@ -767,19 +781,6 @@ strong { color: #fff; }
 }
 .faq p + p { padding-top: 0; }
 .faq p:last-child { padding-bottom: 22px; }
-.faq__note {
-  font-size: 12px !important;
-  color: var(--muted-2) !important;
-}
-[data-pricing-amount] {
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--teal);
-  background: rgba(0,200,150,0.10);
-  border: 1px solid rgba(0,200,150,0.22);
-  padding: 1px 8px;
-  border-radius: 6px;
-  white-space: nowrap;
-}
 
 /* ============================================================
    Footer

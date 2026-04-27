@@ -37,7 +37,7 @@
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD",
-    "name": "Free core loop"
+    "name": "Free download. Premium add-ons available in-app."
   },
   "downloadUrl": [
     "https://play.google.com/store/apps/details?id=com.nowakapps.habit2goal"
@@ -45,8 +45,8 @@
 }
 </script>
 
-<link rel="icon" type="image/png" href="assets/app-icon.png" />
-<link rel="apple-touch-icon" href="assets/app-icon.png" />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -89,7 +89,7 @@
     </h1>
 
     <p class="hero__sub">
-      Habit2Goal isn’t another streak counter. Assign a value to every habit. Set a goal with a real-world price. Watch your discipline compound into the exact things you set out to earn — a vacation, a gym membership, the coffee machine you keep almost-buying.
+      Assign points to your habits. Price your goals in points. Spend earned discipline on the rewards you chose — a vacation, a gym membership, the coffee machine you keep almost-buying.
     </p>
 
     <div class="hero__cta">
@@ -100,16 +100,23 @@
       <a class="btn btn--ghost" href="#economy">See how it works</a>
     </div>
 
+    <nav class="hero__jumplinks" aria-label="Jump to section">
+      <a href="#economy">The Idea</a>
+      <a href="#features">Features</a>
+      <a href="#stats">Stats</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
   </div>
 
   <!-- Phone composition -->
   <div class="hero__phones" aria-hidden="true">
     <div class="phone phone--back">
-      <img src="assets/screenshots/goal-progress.png" alt="" loading="eager" />
+      <picture><source srcset="assets/screenshots/goal-progress.webp" type="image/webp"><img src="assets/screenshots/goal-progress.png" alt="" loading="eager" /></picture>
     </div>
     <div class="phone phone--front">
       <div class="phone__notch"></div>
-      <img src="assets/screenshots/today.png" alt="" loading="eager" />
+      <picture><source srcset="assets/screenshots/today.webp" type="image/webp"><img src="assets/screenshots/today.png" alt="" loading="eager" /></picture>
     </div>
     <div class="float-card float-card--points">
       <div class="float-card__row">
@@ -183,7 +190,7 @@
     <div class="feature__media">
       <div class="phone phone--standalone">
         <div class="phone__notch"></div>
-        <img src="assets/screenshots/today.png" alt="Today screen with active goal and habit list" loading="lazy" />
+        <picture><source srcset="assets/screenshots/today.webp" type="image/webp"><img src="assets/screenshots/today.png" alt="Today screen with active goal and habit list" loading="lazy" /></picture>
       </div>
     </div>
   </div>
@@ -201,7 +208,7 @@
     <div class="feature__media">
       <div class="phone phone--standalone">
         <div class="phone__notch"></div>
-        <img src="assets/screenshots/goal-progress.png" alt="Goal detail with progress ring and stats" loading="lazy" />
+        <picture><source srcset="assets/screenshots/goal-progress.webp" type="image/webp"><img src="assets/screenshots/goal-progress.png" alt="Goal detail with progress ring and stats" loading="lazy" /></picture>
       </div>
     </div>
   </div>
@@ -219,11 +226,11 @@
     <div class="feature__media feature__media--duo">
       <div class="phone phone--standalone phone--duo phone--duo-back">
         <div class="phone__notch"></div>
-        <img src="assets/screenshots/year-view.png" alt="Full-year habit calendar with green and orange dots per month" loading="lazy" />
+        <picture><source srcset="assets/screenshots/year-view.webp" type="image/webp"><img src="assets/screenshots/year-view.png" alt="Full-year habit calendar with green and orange dots per month" loading="lazy" /></picture>
       </div>
       <div class="phone phone--standalone phone--duo phone--duo-front">
         <div class="phone__notch"></div>
-        <img src="assets/screenshots/calendar-month.png" alt="Monthly calendar grid showing daily habit results" loading="lazy" />
+        <picture><source srcset="assets/screenshots/calendar-month.webp" type="image/webp"><img src="assets/screenshots/calendar-month.png" alt="Monthly calendar grid showing daily habit results" loading="lazy" /></picture>
       </div>
     </div>
   </div>
@@ -241,7 +248,7 @@
     <div class="feature__media">
       <div class="phone phone--standalone">
         <div class="phone__notch"></div>
-        <img src="assets/screenshots/history.png" alt="Goal history list" loading="lazy" />
+        <picture><source srcset="assets/screenshots/history.webp" type="image/webp"><img src="assets/screenshots/history.png" alt="Goal history list" loading="lazy" /></picture>
       </div>
     </div>
   </div>
@@ -257,17 +264,17 @@
 
   <div class="stats-grid">
     <article class="stat-card">
-      <div class="stat-card__shot stat-card__shot--donut"><img src="assets/screenshots/donut.png" alt="Lifetime donut chart showing positive vs negative point share" loading="lazy" /></div>
+      <div class="stat-card__shot stat-card__shot--donut"><picture><source srcset="assets/screenshots/donut.webp" type="image/webp"><img src="assets/screenshots/donut.png" alt="Lifetime donut chart showing positive vs negative point share" loading="lazy" /></picture></div>
       <h4>Lifetime breakdown</h4>
       <p>Positive vs. negative point share, all-time. See your behaviour as a portfolio.</p>
     </article>
     <article class="stat-card">
-      <div class="stat-card__shot stat-card__shot--bars"><img src="assets/screenshots/per-habit.png" alt="Per-habit contribution breakdown" loading="lazy" /></div>
+      <div class="stat-card__shot stat-card__shot--bars"><picture><source srcset="assets/screenshots/per-habit.webp" type="image/webp"><img src="assets/screenshots/per-habit.png" alt="Per-habit contribution breakdown" loading="lazy" /></picture></div>
       <h4>Per-habit contribution</h4>
       <p>Which habits do the heavy lifting — and which ones quietly drag you backwards.</p>
     </article>
     <article class="stat-card">
-      <div class="stat-card__shot stat-card__shot--month"><img src="assets/screenshots/stats-bars.png" alt="Monthly bar chart with daily totals" loading="lazy" /></div>
+      <div class="stat-card__shot stat-card__shot--month"><picture><source srcset="assets/screenshots/stats-bars.webp" type="image/webp"><img src="assets/screenshots/stats-bars.png" alt="Monthly bar chart with daily totals" loading="lazy" /></picture></div>
       <h4>Monthly bar chart</h4>
       <p>Day-by-day output for any month — not just a binary did-I-tap-the-circle.</p>
     </article>
@@ -288,7 +295,7 @@
     <div class="split__col split__col--for">
       <h3>You’ll love it if you…</h3>
       <ul>
-        <li>Want to <strong>save money</strong> while building healthy habits</li>
+        <li>Want purchases and rewards to <strong>feel earned</strong>, not impulsive</li>
         <li>Need a system that connects small daily actions to big life goals</li>
         <li>Like data and love seeing progress in numbers</li>
         <li>Have tried streak apps and want something with <strong>real meaning</strong> behind it</li>
