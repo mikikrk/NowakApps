@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy · Habit2Goal</title>
+<meta name="description" content="Habit2Goal privacy policy. We don't collect your data. Habits, goals, points and history live on your device." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://habit2goal.app/privacy.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Privacy Policy · Habit2Goal" />
+<meta property="og:description" content="Habit2Goal stores your habits and goals on your device. No accounts, no analytics, no ads." />
+<meta property="og:url" content="https://habit2goal.app/privacy.html" />
+<meta property="og:image" content="https://habit2goal.app/assets/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<style>
+  /* Page-scoped layout for the legal/long-form page */
+  .legal {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: clamp(40px, 6vw, 80px) clamp(20px, 4vw, 48px) 64px;
+  }
+  .legal h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(34px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+  }
+  .legal .legal__meta {
+    color: var(--muted-2);
+    font-size: 13px;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 36px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .legal .legal__lede {
+    font-size: clamp(17px, 1.6vw, 19px);
+    color: #d8e7f5;
+    line-height: 1.55;
+    border-left: 3px solid var(--teal);
+    padding: 4px 0 4px 18px;
+    margin: 0 0 44px;
+  }
+  .legal h2 {
+    font-size: clamp(22px, 2.2vw, 28px);
+    font-weight: 800;
+    margin: 48px 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+    letter-spacing: -0.01em;
+  }
+  .legal h2 .legal__num {
+    color: var(--teal);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 0.7em;
+    margin-right: 12px;
+    vertical-align: 2px;
+  }
+  .legal h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 22px 0 8px;
+    color: #fff;
+  }
+  .legal p, .legal li {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .legal ul, .legal ol {
+    margin: 8px 0 18px;
+    padding-left: 22px;
+  }
+  .legal li { margin-bottom: 6px; }
+  .legal strong { color: #fff; font-weight: 600; }
+  .legal a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+  .legal a:hover { color: #fff; }
+  .legal code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.92em;
+    background: rgba(0,200,150,0.08);
+    border: 1px solid rgba(0,200,150,0.18);
+    padding: 1px 7px;
+    border-radius: 5px;
+    color: #cdebde;
+  }
+  .legal__summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 0 0 8px;
+    padding: 0;
+    list-style: none;
+  }
+  .legal__summary li {
+    background: rgba(255,255,255,0.025);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px 18px;
+    color: var(--muted);
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+  .legal__summary li strong {
+    display: block;
+    color: var(--teal);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .legal__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+  .legal__back:hover { color: var(--teal); }
+</style>
+</head>
+<body>
+
+<div class="bg-glow bg-glow--teal" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--orange" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="nav__brand" href="/" aria-label="Habit2Goal home">
+    <img src="assets/app-icon.png" alt="" width="36" height="36" />
+    <span>Habit2Goal</span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="/#economy">The Idea</a>
+    <a href="/#features">Features</a>
+    <a href="/#stats">Stats</a>
+    <a href="/#faq">FAQ</a>
+  </nav>
+  <a href="/#download" class="btn btn--primary btn--sm">Get the app</a>
+</header>
+
+<main class="legal">
+  <a class="legal__back" href="/">← Back to home</a>
+
+  <h1>Privacy Policy</h1>
+  <div class="legal__meta">
+    <span>Effective: 27 April 2026</span>
+    <span>Last updated: 27 April 2026</span>
+  </div>
+
+  <p class="legal__lede">
+    Habit2Goal stores your habits, goals, points and history <strong>on your device only</strong>. We do not run servers, do not collect personal data, do not use analytics, do not show ads, and do not share or sell anything.
+  </p>
+
+  <ul class="legal__summary" aria-label="Privacy summary">
+    <li><strong>Data collected by us</strong>None. We have no servers and no accounts.</li>
+    <li><strong>Where data lives</strong>On your device, in app-private storage.</li>
+    <li><strong>Analytics / tracking</strong>None. No SDKs of any kind.</li>
+    <li><strong>Ads</strong>None.</li>
+    <li><strong>Account required</strong>No.</li>
+    <li><strong>Children</strong>Suitable for ages 13+.</li>
+  </ul>
+
+  <h2><span class="legal__num">01</span>Who we are</h2>
+  <p>
+    Habit2Goal (the "App") is published by <strong>NowakApps</strong> ("we", "us", "our"), an independent developer. You can reach us at
+    <a href="mailto:habit2goal@nowakapps.com">habit2goal@nowakapps.com</a>.
+  </p>
+  <p>
+    For the purposes of the EU General Data Protection Regulation (GDPR) and the UK GDPR, NowakApps is the data controller for the limited interactions described below. For users in California, this notice serves as our CCPA/CPRA disclosure.
+  </p>
+
+  <h2><span class="legal__num">02</span>What information we collect</h2>
+  <p>
+    <strong>We do not collect, transmit, or receive any personal data through the App.</strong> Specifically:
+  </p>
+  <ul>
+    <li><strong>No accounts.</strong> Habit2Goal has no sign-up, no login, no email collection, and no user IDs.</li>
+    <li><strong>No analytics.</strong> The App contains no Firebase Analytics, Google Analytics, Crashlytics, Sentry, Mixpanel, Amplitude, or any other analytics or telemetry SDK.</li>
+    <li><strong>No advertising.</strong> The App contains no ad networks, ad SDKs, ad identifiers, or third-party tracking.</li>
+    <li><strong>No diagnostics.</strong> The App does not send crash reports, performance traces, device identifiers, or usage statistics to us or to any third party.</li>
+  </ul>
+
+  <h2><span class="legal__num">03</span>Information that stays on your device</h2>
+  <p>
+    Everything you create in Habit2Goal — habits, goals, point values, claimed points, history, calendar entries, settings — is written to <strong>app-private local storage</strong> managed by your operating system (Android internal storage / iOS app sandbox). It never leaves your device through any code we wrote.
+  </p>
+
+  <h2><span class="legal__num">04</span>System-level backups (optional, controlled by you)</h2>
+  <p>
+    Because the App stores data with your operating system, that data may be included in backups <strong>you have configured at the OS level</strong>:
+  </p>
+  <ul>
+    <li><strong>Android.</strong> The App allows Android Auto Backup (<code>allowBackup="true"</code>), which means your habit data may be included in your <em>own</em> Google Drive backup if you have Android backup enabled in system settings. Google is the data controller for those backups; see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+    <li><strong>iOS.</strong> Your habit data may be included in your <em>own</em> iCloud or local iTunes/Finder device backup if you have iCloud Backup enabled. Apple is the data controller for those backups; see the <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>.</li>
+  </ul>
+  <p>
+    These backups go from your device directly to your own cloud account. We have no access to them and do not receive any data through them.
+  </p>
+
+  <h2><span class="legal__num">05</span>Purchases (Premium add-ons)</h2>
+  <p>
+    Habit2Goal may offer optional in-app purchases or subscriptions (the "Premium" upgrade). Payments are processed entirely by:
+  </p>
+  <ul>
+    <li><strong>Google Play Billing</strong> on Android — see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+    <li><strong>Apple App Store / StoreKit</strong> on iOS — see <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>.</li>
+  </ul>
+  <p>
+    Google or Apple receives your payment information directly. <strong>Habit2Goal never sees your name, billing address, payment method, or transaction details.</strong> The App only receives a yes/no entitlement signal from the store telling it whether your Premium purchase is active. That signal is processed locally and is not stored or transmitted by us.
+  </p>
+
+  <h2><span class="legal__num">06</span>Network access</h2>
+  <p>
+    The App requests the <code>INTERNET</code> permission on Android. The only network use is communication between the App and the platform's billing service (Google Play Billing / StoreKit) to verify your Premium entitlement. <strong>No other network requests are made.</strong>
+  </p>
+
+  <h2><span class="legal__num">07</span>Permissions we request</h2>
+  <ul>
+    <li><strong><code>INTERNET</code></strong> — required by Google Play Billing.</li>
+    <li><strong><code>BILLING</code></strong> — required to offer in-app purchases via Google Play.</li>
+  </ul>
+  <p>
+    The App does <strong>not</strong> request access to your camera, microphone, contacts, location, photos, files, calendar, health data, notifications-history, accounts, SMS, call logs, advertising ID, or any other sensitive permission.
+  </p>
+
+  <h2><span class="legal__num">08</span>Data sharing</h2>
+  <p>
+    Because we do not collect any data, we do not sell, rent, share, disclose, or transfer any personal data to any third party — including for cross-context behavioural advertising. There is nothing on our side to share.
+  </p>
+
+  <h2><span class="legal__num">09</span>Data retention &amp; deletion</h2>
+  <p>
+    Your data lives on your device for as long as the App is installed. To delete everything:
+  </p>
+  <ul>
+    <li><strong>Uninstall the App.</strong> The OS removes all app-private storage.</li>
+    <li>Or open <strong>Settings → Apps → Habit2Goal → Storage → Clear data</strong> (Android) / delete the app from your home screen (iOS).</li>
+  </ul>
+  <p>
+    To delete OS-level cloud backups, use your Google Drive or iCloud settings. We cannot delete those for you because we don't have access to them.
+  </p>
+
+  <h2><span class="legal__num">10</span>Your rights</h2>
+  <p>
+    Under GDPR, UK GDPR, CCPA/CPRA and similar laws, you may have rights to access, correct, delete, port, or object to the processing of personal data about you. Because we do not hold any personal data about you, there is nothing for us to access, correct, delete, or export. If you nonetheless wish to ask us a question about your rights, contact us at <a href="mailto:habit2goal@nowakapps.com">habit2goal@nowakapps.com</a> and we will reply.
+  </p>
+
+  <h2><span class="legal__num">11</span>Children</h2>
+  <p>
+    The App is not directed at children under 13 (or under 16 in the EEA). We do not knowingly collect personal information from children. Because we don't collect personal information from anyone, we don't collect it from children either.
+  </p>
+
+  <h2><span class="legal__num">12</span>International users</h2>
+  <p>
+    The App can be downloaded worldwide. Since no personal data is sent to us, no international data transfers are performed by Habit2Goal. Any transfers performed by Google or Apple in connection with the app store, billing, or your device backups are governed by their respective privacy policies linked above.
+  </p>
+
+  <h2><span class="legal__num">13</span>Changes to this policy</h2>
+  <p>
+    If we ever change how the App handles data (for example, if a future version adds optional cloud sync or anonymous crash reporting), we will update this page, change the "Last updated" date at the top, and — when the change is material — surface it in the App so you see it before it takes effect.
+  </p>
+
+  <h2><span class="legal__num">14</span>Contact</h2>
+  <p>
+    Questions, complaints, or data-rights requests:
+    <br />
+    <a href="mailto:habit2goal@nowakapps.com">habit2goal@nowakapps.com</a>
+  </p>
+</main>
+
+<footer class="footer">
+  <div class="footer__row">
+    <div class="footer__brand">
+      <img src="assets/app-icon.png" alt="" width="32" height="32" />
+      <strong>Habit2Goal</strong>
+      <span>· The Habit Economy</span>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/#features">Features</a>
+      <a href="/#download">Download</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+  </div>
+  <p class="footer__legal">
+    © <span id="year"></span> Habit2Goal · Made by an indie developer who believes the best reward systems are the ones you build for yourself.
+  </p>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
