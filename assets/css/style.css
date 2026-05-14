@@ -113,7 +113,7 @@ img{max-width:100%;display:block}
 .hero__card p{margin:0;color:var(--text-dim);font-size:14px}
 .hero__card-row{display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px dashed var(--border)}
 .hero__card-row:first-of-type{border-top:0;padding-top:6px}
-.hero__card-row img{width:42px;height:42px;border-radius:10px}
+.hero__card-row img{width:46px;height:46px;padding:4px;border-radius:12px;background:#0a1424;border:1px solid var(--border);object-fit:contain;flex-shrink:0}
 .hero__card .badge{margin-left:auto;font-size:11px;padding:4px 8px;border-radius:999px;background:rgba(47,214,177,.12);color:var(--teal);border:1px solid rgba(47,214,177,.25)}
 
 /* Card grid */

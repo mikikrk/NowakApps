@@ -104,7 +104,20 @@ async function renderTalks(target, opts = {}) {
   const el = document.querySelector(target);
   if (!el) return;
   const talks = await loadJson("/data/talks.json");
-  const list = opts.limit ? talks.slice(0, opts.limit) : talks;
+  const talkTimestamp = (talk) => {
+    if (talk?.date) {
+      const parsed = Date.parse(talk.date);
+      if (!Number.isNaN(parsed)) return parsed;
+    }
+    const year = Number(talk?.year);
+    return Number.isFinite(year) ? Date.UTC(year, 0, 1) : 0;
+  };
+  const sortedTalks = [...talks].sort((a, b) => {
+    const diff = talkTimestamp(b) - talkTimestamp(a);
+    if (diff !== 0) return diff;
+    return String(a?.title || "").localeCompare(String(b?.title || ""));
+  });
+  const list = opts.limit ? sortedTalks.slice(0, opts.limit) : sortedTalks;
   if (opts.compact) {
     el.classList.add("grid", "grid--talks");
     el.innerHTML = list.map((t) => talkCard(t, { compact: true })).join("") || `<div class="empty">No talks yet.</div>`;

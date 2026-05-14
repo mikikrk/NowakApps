@@ -4,8 +4,6 @@
     "title": "Introduction to AI Skills & Agents",
     "year": 2026,
     "venue": "Internal tech talk",
-    "audience": "Developers, QA engineers, product engineers",
-    "length": "20 min",
     "tags": ["AI", "LLM", "Agents", "Copilot", "MCP"],
     "abstract": "What an LLM actually is vs. an agentic tool: IDE-based coding agents, GitHub Copilot, Copilot CLI, Claude Code. How to extend a generic LLM with custom instructions, reusable prompts, custom agents, skills, and MCP servers. Tokens, context windows, sub-agent orchestration, parallelization tradeoffs, teaching agents with your own patterns (Jira tickets, presentation files), and security considerations including cross-model review.",
     "links": {}

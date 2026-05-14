@@ -8,7 +8,7 @@ Hosted on GitHub Pages at [nowakapps.com](https://nowakapps.com).
 ```
 /                  → home (apps grid, talks teaser, AI tools teaser)
 /apps/             → full apps listing
-/apps/Habit2Goal/  → standalone Habit2Goal microsite
+/apps/Habit2Goal/  → standalone Habit2Goal project page
 /talks/            → talks list with abstracts and links
 /ai-tools/         → AI skills & custom agents (coming soon)
 /habit2goal/       → redirect to /apps/Habit2Goal/
