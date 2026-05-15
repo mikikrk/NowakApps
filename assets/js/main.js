@@ -26,12 +26,10 @@ function appCard(app) {
     : escapeHtml((app.name || "?").charAt(0));
   return `
     <article class="card">
-      <div class="card__head">
-        <div class="card__icon">${iconHtml}</div>
-        <div>
-          <h3 class="card__title">${escapeHtml(app.name)}</h3>
-          <p class="card__sub">${escapeHtml(app.tagline || "")}</p>
-        </div>
+      <div class="card__icon card__icon--prominent">${iconHtml}</div>
+      <div>
+        <h3 class="card__title">${escapeHtml(app.name)}</h3>
+        <p class="card__sub">${escapeHtml(app.tagline || "")}</p>
       </div>
       <p class="card__body">${escapeHtml(app.description || "")}</p>
       <div class="card__meta">${platforms}</div>
