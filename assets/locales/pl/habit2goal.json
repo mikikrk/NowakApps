@@ -31,5 +31,11 @@
   "feature3_desc": "Każdy nawyk ma kalendarz: siatka miesięczna i widok roczny. Zielone kropki to wygrane, pomarańczowe — poślizgi. Obraz mówi prawdę dłużej niż jeden dzień.",
   "stats_heading": "Wizualizacje pokazujące, które nawyki napędzają postęp.",
   "faq_heading": "Szybkie pytania, szczere odpowiedzi.",
-  "footer_brand_line": "Habit2Goal · Ekonomia nawyków"
+  "footer_brand_line": "Habit2Goal · Ekonomia nawyków",
+  "app_store_short": "Zamień nawyki w punkty i zdobądź realne nagrody.",
+  "app_store_long": "Habit2Goal to tracker nawyków oparty na ekonomii celów: przypisuj punkty, wyceń cele i wymieniaj zgromadzone punkty na nagrody. Proste, motywujące i zaprojektowane dla długotrwałej zmiany.",
+  "hero_variations": {
+    "A": "A gdyby każdy dobry nawyk <span class=\"grad-teal\">zarabiał</span> punkty na nagrodę, której naprawdę chcesz?",
+    "B": "Wyobraź sobie, że każdy dobry nawyk <span class=\"grad-teal\">daje punkty</span> na realizację celu — mały krok za dużą nagrodą."
+  }
 }

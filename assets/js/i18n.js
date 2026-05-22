@@ -37,6 +37,27 @@
     const nav = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || '';
     return nav.toLowerCase().startsWith('pl');
   }
+
+  // sanitize small set of HTML tags from translations to prevent XSS
+  function sanitizeHTML(input){
+    if (!input) return '';
+    const tmp = document.createElement('template');
+    tmp.innerHTML = input;
+    const ALLOWED = ['SPAN','EM','STRONG','BR'];
+    const nodes = tmp.content.querySelectorAll('*');
+    for (const n of Array.from(nodes)){
+      if (!ALLOWED.includes(n.tagName)) {
+        n.replaceWith(document.createTextNode(n.textContent || ''));
+      } else {
+        if (n.tagName === 'SPAN') {
+          const cls = n.getAttribute('class') || '';
+          if (!/grad-(teal|orange)/.test(cls)) n.removeAttribute('class');
+        }
+      }
+    }
+    return tmp.innerHTML;
+  }
+
   const translations = {
     pl: {
       title: 'NowakApps — Mikołaj Nowak · Aplikacje indie, prelekcje, narzędzia AI',
@@ -44,7 +65,7 @@
       nav: ['Aplikacje','Prelekcje','Narzędzia AI','O mnie'],
       hero: {
         eyebrow: 'NowakApps · Mikołaj Nowak',
-        h1: 'Tworzę <span class="grad-teal">aplikacje indie</span>, prowadzę <span class="grad-orange">prelekcje</span> i eksperymentuję z narzędziami AI.',
+        h1: 'Tworzę <span class="grad-teal">aplikacje indie</span>, prowadzę praktyczne prelekcje i tworzę użyteczne narzędzia AI.',
         lead: 'Jednoosobowe studio tworzące aplikacje mobilne i materiały konferencyjne. Tutaj znajdziesz moje aplikacje, nagrania z wystąpień i narzędzia AI.',
         ctaBrowse: 'Przeglądaj aplikacje',
         ctaTalks: 'Zobacz prelekcje'
@@ -101,7 +122,7 @@
       const eyebrow = document.querySelector('.eyebrow');
       if (eyebrow && t.hero.eyebrow) eyebrow.textContent = t.hero.eyebrow;
       const h1 = document.querySelector('.hero h1');
-      if (h1 && t.hero.h1) h1.innerHTML = t.hero.h1;
+      if (h1 && t.hero.h1) h1.innerHTML = sanitizeHTML(t.hero.h1);
       const lead = document.querySelector('.lead');
       if (lead && t.hero.lead) lead.textContent = t.hero.lead;
       const ctas = document.querySelectorAll('.hero__cta a');

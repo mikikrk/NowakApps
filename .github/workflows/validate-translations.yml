@@ -1,0 +1,26 @@
+name: Validate translations sync
+
+on: [pull_request, push]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate translation keys
+        run: |
+          set -euo pipefail
+          MIKI=.miki/Plan/bilingual-site/translations/habit2goal.gpt-5.5.json
+          ASSET=assets/locales/pl/habit2goal.json
+          if [ ! -f "$MIKI" ] || [ ! -f "$ASSET" ]; then echo "Missing translation files" >&2; exit 1; fi
+          missing=0
+          for k in $(jq -r 'keys[]' "$MIKI"); do
+            if ! jq -e --arg k "$k" 'has($k)' "$ASSET" >/dev/null; then
+              echo "Missing key in assets: $k" >&2
+              missing=1
+            fi
+          done
+          if [ "$missing" -eq 1 ]; then echo "Translation sync check failed" >&2; exit 1; fi
+          echo "Translations in sync"
+      - name: Success
+        run: echo "OK"

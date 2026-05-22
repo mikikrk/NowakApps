@@ -82,7 +82,23 @@
     try { const eyebrow = document.querySelector('.hero .eyebrow'); if (eyebrow && t.hero_eyebrow) eyebrow.textContent = t.hero_eyebrow; } catch (e) {}
     try { const h1 = document.querySelector('.hero__headline'); if (h1 && t.hero_h1) h1.innerHTML = sanitizeHTML(t.hero_h1); } catch (e) {}
     try { const sub = document.querySelector('.hero__sub'); if (sub && t.hero_sub) sub.textContent = t.hero_sub; } catch (e) {}
-    try { const ctaPri = document.querySelector('.hero__cta .btn--primary'); setButtonText(ctaPri, t.hero_cta_primary); const ctaSec = document.querySelector('.hero__cta .btn--ghost'); if (ctaSec && t.hero_cta_secondary) ctaSec.textContent = t.hero_cta_secondary; } catch (e) {}
+    try {
+      const ctaPri = document.querySelector('.hero__cta .btn--primary');
+      setButtonText(ctaPri, t.hero_cta_primary);
+      const ctaSec = document.querySelector('.hero__cta .btn--ghost');
+      if (ctaSec && t.hero_cta_secondary) ctaSec.textContent = t.hero_cta_secondary;
+
+      // Map hero jump links to the same nav labels to avoid untranslated duplicates
+      try {
+        const jumpLinks = document.querySelectorAll('.hero__jumplinks a');
+        if (jumpLinks && jumpLinks.length >= 4) {
+          if (t.nav_economy) jumpLinks[0].textContent = t.nav_economy;
+          if (t.nav_features) jumpLinks[1].textContent = t.nav_features;
+          if (t.nav_stats) jumpLinks[2].textContent = t.nav_stats;
+          if (t.nav_faq) jumpLinks[3].textContent = t.nav_faq;
+        }
+      } catch (ee) {}
+    } catch (e) {}
 
     // Steps section
     try {
