@@ -136,5 +136,4 @@
   window.addEventListener('site:lang', function (e) { if (e && e.detail && e.detail.lang === 'pl') loadAndApply(); });
   if (initialLang && initialLang.startsWith('pl')) loadAndApply();
   // also attempt a passive load so returning users get translations quickly
-  loadAndApply();
 })();
