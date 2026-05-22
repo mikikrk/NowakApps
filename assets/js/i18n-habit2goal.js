@@ -1,36 +1,7 @@
-/* i18n-habit2goal.js: applies Polish translations for Habit2Goal page when data-site-lang === 'pl' */
+/* i18n-habit2goal.js: load canonical Polish JSON at runtime and apply translations */
 (function () {
   'use strict';
-  const t = {
-    "title": "Habit2Goal — Buduj nawyki. Zbieraj punkty. Kup sobie rzeczy, które naprawdę chcesz.",
-    "meta_description": "Habit2Goal zamienia Twoje codzienne nawyki w punkty, które finansują realne nagrody wybrane przez Ciebie. Tracker nawyków z ekonomią celów — nie tylko liczeniem serii.",
-    "og_title": "Habit2Goal — Ekonomia nawyków",
-    "og_description": "Każdy nawyk ma wartość. Każdy cel ma cenę. Przestań śledzić serie. Zacznij zdobywać rzeczy, których pragniesz.",
-    "hero_eyebrow": "Ekonomia nawyków",
-    "hero_h1": "A gdyby każdy dobry nawyk <span class=\"grad-teal\">zarabiał punkty</span> na Twoją następną nagrodę?",
-    "hero_sub": "Przypisz punkty do swoich nawyków. Wyceń swoje cele w punktach. Wydaj zdobytą dyscyplinę na nagrody, które wybrałeś — wakacje, karnet na siłownię, ekspres do kawy, który ciągle prawie kupujesz.",
-    "hero_cta_primary": "Pobierz Habit2Goal",
-    "hero_cta_secondary": "Zobacz, jak to działa",
-    "nav_economy": "Idea",
-    "nav_features": "Funkcje",
-    "nav_stats": "Statystyki",
-    "nav_faq": "FAQ",
-    "steps_heading": "Trzy kroki. Jedna pętla informacji zwrotnej, która wreszcie <em>ma</em> znaczenie.",
-    "step1_title": "Ustal cenę rzeczy, którą chcesz",
-    "step1_desc": "Nazwij swój cel. Dodaj zdjęcie okładkowe. Zdecyduj, ile punktów ma kosztować — weekendowy wyjazd, nowy gadżet, sześć miesięcy kawy bez wyrzutów sumienia.",
-    "step2_title": "Nadaj każdemu nawykowi realną wartość",
-    "step2_desc": "8 szklanek wody = +5. Siłownia = +14. Pominąłeś kawiarnię = +5. Złamałeś zakazany nawyk? Tracisz punkty. Rozliczalność z pazurem, nie tylko pole wyboru.",
-    "step3_title": "Odbierz nagrodę, gdy naprawdę na nią zapracujesz",
-    "step3_desc": "Osiągnij cel. Kup to. <strong>Bez wyrzutów sumienia.</strong> Cel trafia do Twojej historii — trwały dowód dyscypliny, która go sfinansowała.",
-    "features_headline": "Stworzony dla ludzi, którzy <span class=\"grad-teal\">idą do przodu</span> — nie tylko są zajęci.",
-    "feature1_title": "Dziś, z celem na widoku",
-    "feature1_desc": "Twój aktywny cel znajduje się u góry ekranu głównego z pierścieniem postępu w czasie rzeczywistym i prognozą tempa. Poniżej — dzisiejsze nawyki: stuknij +, aby przypisać punkty, jeśli wykonasz nawyk, − aby odjąć, gdy poczujesz, że zawiodłeś. Cała rutyna mieści się na jednym ekranie w zasięgu kciuka.",
-    "cta_eyebrow": "Gotowe, kiedy Ty będziesz",
-    "cta_h2": "Buduj nawyki. Osiągaj cele. <br/><span class=\"grad-teal\">Kup to.</span>",
-    "cta_p": "Dostępne na iOS i Android. Zainstaluj w mniej niż minutę i rozpocznij pierwszy nawyk już dziś.",
-    "faq_heading": "Szybkie pytania, szczere odpowiedzi.",
-    "footer_brand_line": "Habit2Goal · Ekonomia nawyków"
-  };
+  const URL = '/assets/locales/pl/habit2goal.json';
 
   function setButtonText(btn, label) {
     if (!btn) return;
@@ -41,7 +12,7 @@
     } catch (e) {}
   }
 
-  function apply() {
+  function applyTranslations(t) {
     try { document.documentElement.lang = 'pl'; document.documentElement.setAttribute('data-site-lang','pl'); } catch(e) {}
     try { if (t.title) document.title = t.title; } catch(e) {}
     try { const md = document.querySelector('meta[name="description"]'); if (md && t.meta_description) md.setAttribute('content', t.meta_description); } catch(e) {}
@@ -66,6 +37,18 @@
     window.dispatchEvent(new CustomEvent('site:lang', {detail:{lang:'pl'}}));
   }
 
-  if (document.documentElement.getAttribute('data-site-lang') === 'pl') apply();
-  window.addEventListener('site:lang', function (e) { if (e && e.detail && e.detail.lang === 'pl') apply(); });
+  async function loadAndApply() {
+    try {
+      const res = await fetch(URL, {cache: 'no-cache'});
+      if (!res.ok) return;
+      const json = await res.json();
+      applyTranslations(json);
+    } catch (e) { /* fail silently — keep original English */ }
+  }
+
+  // Apply if site already set to pl, and always attempt to load (no-op if not used)
+  if (document.documentElement.getAttribute('data-site-lang') === 'pl') loadAndApply();
+  window.addEventListener('site:lang', function (e) { if (e && e.detail && e.detail.lang === 'pl') loadAndApply(); });
+  // Also try to load proactively to ensure translations apply even if data-site-lang was set earlier
+  loadAndApply();
 })();
