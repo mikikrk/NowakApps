@@ -20,6 +20,26 @@
     } catch (e) { /* fallback to absolute */ }
   }
 
+  // sanitize small set of HTML tags from translations to prevent XSS
+  function sanitizeHTML(input){
+    if (!input) return '';
+    const tmp = document.createElement('template');
+    tmp.innerHTML = input;
+    const ALLOWED = ['SPAN','EM','STRONG','BR'];
+    const nodes = tmp.content.querySelectorAll('*');
+    for (const n of Array.from(nodes)){
+      if (!ALLOWED.includes(n.tagName)) {
+        n.replaceWith(document.createTextNode(n.textContent || ''));
+      } else {
+        if (n.tagName === 'SPAN') {
+          const cls = n.getAttribute('class') || '';
+          if (!/grad-(teal|orange)/.test(cls)) n.removeAttribute('class');
+        }
+      }
+    }
+    return tmp.innerHTML;
+  }
+
   // Quick FOUC mitigation: if cookie or ?lang=pl is present, set lang before fetch
   const initialLang = (urlLang() || getCookie('site_lang') || '').toLowerCase();
   if (initialLang && initialLang.startsWith('pl')) {
@@ -31,7 +51,10 @@
     try {
       const svg = btn.querySelector('svg');
       const svgHtml = svg ? svg.outerHTML : '';
-      btn.innerHTML = svgHtml + ' ' + label;
+      // insert svg markup, then append a text node for the label (prevents HTML injection)
+      btn.innerHTML = svgHtml;
+      const textNode = document.createTextNode(' ' + (label || ''));
+      btn.appendChild(textNode);
     } catch (e) {}
   }
 
@@ -57,7 +80,7 @@
 
     // Hero
     try { const eyebrow = document.querySelector('.hero .eyebrow'); if (eyebrow && t.hero_eyebrow) eyebrow.textContent = t.hero_eyebrow; } catch (e) {}
-    try { const h1 = document.querySelector('.hero__headline'); if (h1 && t.hero_h1) h1.innerHTML = t.hero_h1; } catch (e) {}
+    try { const h1 = document.querySelector('.hero__headline'); if (h1 && t.hero_h1) h1.innerHTML = sanitizeHTML(t.hero_h1); } catch (e) {}
     try { const sub = document.querySelector('.hero__sub'); if (sub && t.hero_sub) sub.textContent = t.hero_sub; } catch (e) {}
     try { const ctaPri = document.querySelector('.hero__cta .btn--primary'); setButtonText(ctaPri, t.hero_cta_primary); const ctaSec = document.querySelector('.hero__cta .btn--ghost'); if (ctaSec && t.hero_cta_secondary) ctaSec.textContent = t.hero_cta_secondary; } catch (e) {}
 
@@ -74,12 +97,12 @@
       }
       // Steps heading
       const economyH2 = document.querySelector('#economy .section__head h2');
-      if (economyH2 && t.steps_heading) economyH2.innerHTML = t.steps_heading;
+      if (economyH2 && t.steps_heading) economyH2.innerHTML = sanitizeHTML(t.steps_heading);
     } catch (e) {}
 
     // Features
     try {
-      const featHead = document.querySelector('#features .section__head h2'); if (featHead && t.features_headline) featHead.innerHTML = t.features_headline;
+      const featHead = document.querySelector('#features .section__head h2'); if (featHead && t.features_headline) featHead.innerHTML = sanitizeHTML(t.features_headline);
       const featureCopies = document.querySelectorAll('#features .feature .feature__copy');
       if (featureCopies.length) {
         if (t.feature1_title) { const el = featureCopies[0].querySelector('h3'); if (el) el.textContent = t.feature1_title; }
@@ -97,10 +120,10 @@
     } catch (e) {}
 
     // Stats section heading (if provided)
-    try { const statsH2 = document.querySelector('#stats .section__head h2'); if (statsH2 && t.stats_heading) statsH2.innerHTML = t.stats_heading; } catch (e) {}
+    try { const statsH2 = document.querySelector('#stats .section__head h2'); if (statsH2 && t.stats_heading) statsH2.innerHTML = sanitizeHTML(t.stats_heading); } catch (e) {}
 
     // CTA card
-    try { const ctaEyebrow = document.querySelector('.cta-card .eyebrow'); if (ctaEyebrow && t.cta_eyebrow) ctaEyebrow.textContent = t.cta_eyebrow; const ctaH2 = document.querySelector('.cta-card h2'); if (ctaH2 && t.cta_h2) ctaH2.innerHTML = t.cta_h2; const ctaP = document.querySelector('.cta-card p'); if (ctaP && t.cta_p) ctaP.textContent = t.cta_p; } catch (e) {}
+    try { const ctaEyebrow = document.querySelector('.cta-card .eyebrow'); if (ctaEyebrow && t.cta_eyebrow) ctaEyebrow.textContent = t.cta_eyebrow; const ctaH2 = document.querySelector('.cta-card h2'); if (ctaH2 && t.cta_h2) ctaH2.innerHTML = sanitizeHTML(t.cta_h2); const ctaP = document.querySelector('.cta-card p'); if (ctaP && t.cta_p) ctaP.textContent = t.cta_p; } catch (e) {}
 
     // FAQ
     try { const faqH2 = document.querySelector('#faq .section__head h2'); if (faqH2 && t.faq_heading) faqH2.textContent = t.faq_heading; } catch (e) {}
