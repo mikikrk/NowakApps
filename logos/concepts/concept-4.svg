@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 1024">
+  <defs>
+    <!-- Primary gradient: teal → purple → orange -->
+    <linearGradient id="premiumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2fd6b1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8a3d;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Secondary radial gradient for depth -->
+    <radialGradient id="depthGradient" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#2fd6b1;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ff8a3d;stop-opacity:0.1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- LIGHT VARIANT (y: 0-512) -->
+  <g id="light">
+    <!-- White background -->
+    <rect width="512" height="512" fill="#FFFFFF"/>
+    
+    <!-- Decorative outer circle (subtle depth) -->
+    <circle cx="256" cy="256" r="220" fill="none" stroke="url(#depthGradient)" stroke-width="1" opacity="0.4"/>
+    
+    <!-- Main geometric form: Abstract "N" with dual layers -->
+    <!-- Left diagonal bar (back layer for depth) -->
+    <path d="M 140 380 L 220 140" stroke="url(#premiumGradient)" stroke-width="48" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    
+    <!-- Left diagonal bar (front layer) -->
+    <path d="M 140 380 L 220 140" stroke="url(#premiumGradient)" stroke-width="40" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Right diagonal bar (back layer) -->
+    <path d="M 292 380 L 372 140" stroke="url(#premiumGradient)" stroke-width="48" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    
+    <!-- Right diagonal bar (front layer) -->
+    <path d="M 292 380 L 372 140" stroke="url(#premiumGradient)" stroke-width="40" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Horizontal connecting bridge (suggests sophistication) -->
+    <path d="M 165 280 L 347 280" stroke="url(#premiumGradient)" stroke-width="36" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+    
+    <!-- Bottom accent: horizontal bar anchoring the design -->
+    <path d="M 130 390 L 382 390" stroke="url(#premiumGradient)" stroke-width="32" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Premium highlight: small circle accent -->
+    <circle cx="256" cy="140" r="20" fill="url(#premiumGradient)" opacity="0.8"/>
+  </g>
+  
+  <!-- DARK VARIANT (y: 512-1024) -->
+  <g id="dark">
+    <!-- Deep navy background -->
+    <rect y="512" width="512" height="512" fill="#0D1B2A"/>
+    
+    <!-- Decorative outer circle (subtle depth) -->
+    <circle cx="256" cy="768" r="220" fill="none" stroke="url(#depthGradient)" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Main geometric form: Abstract "N" with dual layers -->
+    <!-- Left diagonal bar (back layer for depth) -->
+    <path d="M 140 892 L 220 652" stroke="url(#premiumGradient)" stroke-width="48" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    
+    <!-- Left diagonal bar (front layer) -->
+    <path d="M 140 892 L 220 652" stroke="url(#premiumGradient)" stroke-width="40" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Right diagonal bar (back layer) -->
+    <path d="M 292 892 L 372 652" stroke="url(#premiumGradient)" stroke-width="48" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    
+    <!-- Right diagonal bar (front layer) -->
+    <path d="M 292 892 L 372 652" stroke="url(#premiumGradient)" stroke-width="40" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Horizontal connecting bridge -->
+    <path d="M 165 792 L 347 792" stroke="url(#premiumGradient)" stroke-width="36" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+    
+    <!-- Bottom accent: horizontal bar anchoring the design -->
+    <path d="M 130 902 L 382 902" stroke="url(#premiumGradient)" stroke-width="32" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Premium highlight: small circle accent -->
+    <circle cx="256" cy="652" r="20" fill="url(#premiumGradient)" opacity="0.8"/>
+  </g>
+</svg>

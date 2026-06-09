@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 1024">
+  <!-- LIGHT VARIANT (0-512) -->
+  <g id="light">
+    <rect width="512" height="512" fill="#FFFFFF"/>
+    
+    <!-- Main app icon body (rounded square) -->
+    <rect x="140" y="80" width="232" height="272" rx="40" fill="none" stroke="#2fd6b1" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Speech bubble tail (represents talks/conference) -->
+    <path d="M 280 340 L 220 420 L 280 400 Z" fill="#ff8a3d" stroke="none"/>
+    <path d="M 280 340 Q 300 380 320 420" stroke="#ff8a3d" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- AI circuit elements inside app (sparkle/circuit pattern) -->
+    <!-- Center circuit node -->
+    <circle cx="256" cy="160" r="20" fill="#ff8a3d"/>
+    <circle cx="256" cy="160" r="12" fill="#FFFFFF"/>
+    
+    <!-- Top-left circuit branch -->
+    <line x1="256" y1="160" x2="200" y2="130" stroke="#2fd6b1" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="200" cy="130" r="14" fill="#2fd6b1"/>
+    
+    <!-- Top-right circuit branch -->
+    <line x1="256" y1="160" x2="312" y2="130" stroke="#2fd6b1" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="312" cy="130" r="14" fill="#2fd6b1"/>
+    
+    <!-- Bottom circuit branch -->
+    <line x1="256" y1="160" x2="256" y2="250" stroke="#ff8a3d" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="256" cy="250" r="14" fill="#ff8a3d"/>
+    
+    <!-- Sparkle accents (AI magic) -->
+    <g>
+      <line x1="170" y1="220" x2="180" y2="220" stroke="#ff8a3d" stroke-width="8" stroke-linecap="round"/>
+      <line x1="175" y1="215" x2="175" y2="225" stroke="#ff8a3d" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <g>
+      <line x1="342" y1="200" x2="352" y2="200" stroke="#2fd6b1" stroke-width="8" stroke-linecap="round"/>
+      <line x1="347" y1="195" x2="347" y2="205" stroke="#2fd6b1" stroke-width="8" stroke-linecap="round"/>
+    </g>
+  </g>
+  
+  <!-- DARK VARIANT (512-1024) -->
+  <g id="dark">
+    <rect y="512" width="512" height="512" fill="#0D1B2A"/>
+    
+    <!-- Main app icon body (rounded square) -->
+    <rect x="140" y="592" width="232" height="272" rx="40" fill="none" stroke="#2fd6b1" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Speech bubble tail (represents talks/conference) -->
+    <path d="M 280 852 L 220 932 L 280 912 Z" fill="#ff8a3d" stroke="none"/>
+    <path d="M 280 852 Q 300 892 320 932" stroke="#ff8a3d" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- AI circuit elements inside app (sparkle/circuit pattern) -->
+    <!-- Center circuit node -->
+    <circle cx="256" cy="672" r="20" fill="#ff8a3d"/>
+    <circle cx="256" cy="672" r="12" fill="#0D1B2A"/>
+    
+    <!-- Top-left circuit branch -->
+    <line x1="256" y1="672" x2="200" y2="642" stroke="#2fd6b1" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="200" cy="642" r="14" fill="#2fd6b1"/>
+    
+    <!-- Top-right circuit branch -->
+    <line x1="256" y1="672" x2="312" y2="642" stroke="#2fd6b1" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="312" cy="642" r="14" fill="#2fd6b1"/>
+    
+    <!-- Bottom circuit branch -->
+    <line x1="256" y1="672" x2="256" y2="762" stroke="#ff8a3d" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="256" cy="762" r="14" fill="#ff8a3d"/>
+    
+    <!-- Sparkle accents (AI magic) -->
+    <g>
+      <line x1="170" y1="732" x2="180" y2="732" stroke="#ff8a3d" stroke-width="8" stroke-linecap="round"/>
+      <line x1="175" y1="727" x2="175" y2="737" stroke="#ff8a3d" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <g>
+      <line x1="342" y1="712" x2="352" y2="712" stroke="#2fd6b1" stroke-width="8" stroke-linecap="round"/>
+      <line x1="347" y1="707" x2="347" y2="717" stroke="#2fd6b1" stroke-width="8" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

@@ -132,17 +132,75 @@
           if (t.feature3_title) { const el = featureCopies[2].querySelector('h3'); if (el) el.textContent = t.feature3_title; }
           if (t.feature3_desc) { const el = featureCopies[2].querySelector('p'); if (el) el.textContent = t.feature3_desc; }
         }
+        if (featureCopies[3]) {
+          if (t.feature4_title) { const el = featureCopies[3].querySelector('h3'); if (el) el.textContent = t.feature4_title; }
+          if (t.feature4_desc) { const el = featureCopies[3].querySelector('p'); if (el) el.textContent = t.feature4_desc; }
+        }
+        // Bullet lists for all features
+        const bulletMap = [
+          ['feature1_bullet1','feature1_bullet2','feature1_bullet3'],
+          ['feature2_bullet1','feature2_bullet2','feature2_bullet3'],
+          ['feature3_bullet1','feature3_bullet2','feature3_bullet3'],
+          ['feature4_bullet1','feature4_bullet2','feature4_bullet3'],
+        ];
+        Array.from(featureCopies).forEach(function(fc, i) {
+          if (!bulletMap[i]) return;
+          const lis = fc.querySelectorAll('.bullets li');
+          bulletMap[i].forEach(function(key, j) { if (lis[j] && t[key]) lis[j].textContent = t[key]; });
+        });
       }
     } catch (e) {}
 
-    // Stats section heading (if provided)
-    try { const statsH2 = document.querySelector('#stats .section__head h2'); if (statsH2 && t.stats_heading) statsH2.innerHTML = sanitizeHTML(t.stats_heading); } catch (e) {}
+    // Stats section
+    try {
+      const statsH2 = document.querySelector('#stats .section__head h2'); if (statsH2 && t.stats_heading) statsH2.innerHTML = sanitizeHTML(t.stats_heading);
+      const statsEyebrow = document.querySelector('#stats .section__head .eyebrow'); if (statsEyebrow && t.stats_eyebrow) statsEyebrow.textContent = t.stats_eyebrow;
+      const statsLead = document.querySelector('#stats .section__head .section__lead'); if (statsLead && t.stats_lead) statsLead.textContent = t.stats_lead;
+      const statCards = document.querySelectorAll('#stats .stat-card');
+      if (statCards[0]) { const h = statCards[0].querySelector('h4'); const p = statCards[0].querySelector('p'); if (h && t.stat1_title) h.textContent = t.stat1_title; if (p && t.stat1_desc) p.textContent = t.stat1_desc; }
+      if (statCards[1]) { const h = statCards[1].querySelector('h4'); const p = statCards[1].querySelector('p'); if (h && t.stat2_title) h.textContent = t.stat2_title; if (p && t.stat2_desc) p.textContent = t.stat2_desc; }
+      if (statCards[2]) { const h = statCards[2].querySelector('h4'); const p = statCards[2].querySelector('p'); if (h && t.stat3_title) h.textContent = t.stat3_title; if (p && t.stat3_desc) p.textContent = t.stat3_desc; }
+      const statPills = document.querySelectorAll('#stats .stat-pills li');
+      ['stat_pill1','stat_pill2','stat_pill3','stat_pill4','stat_pill5'].forEach(function(k, i) { if (statPills[i] && t[k]) statPills[i].textContent = t[k]; });
+    } catch (e) {}
 
     // CTA card
     try { const ctaEyebrow = document.querySelector('.cta-card .eyebrow'); if (ctaEyebrow && t.cta_eyebrow) ctaEyebrow.textContent = t.cta_eyebrow; const ctaH2 = document.querySelector('.cta-card h2'); if (ctaH2 && t.cta_h2) ctaH2.innerHTML = sanitizeHTML(t.cta_h2); const ctaP = document.querySelector('.cta-card p'); if (ctaP && t.cta_p) ctaP.textContent = t.cta_p; } catch (e) {}
 
-    // FAQ
-    try { const faqH2 = document.querySelector('#faq .section__head h2'); if (faqH2 && t.faq_heading) faqH2.textContent = t.faq_heading; } catch (e) {}
+    // Split section (who it's for / who it's not for)
+    try {
+      const forCol = document.querySelector('.split__col--for');
+      if (forCol) {
+        const h = forCol.querySelector('h3'); if (h && t.split_for_heading) h.textContent = t.split_for_heading;
+        const lis = forCol.querySelectorAll('li');
+        ['split_for_li1','split_for_li2','split_for_li3','split_for_li4'].forEach(function(k, i) { if (lis[i] && t[k]) lis[i].innerHTML = sanitizeHTML(t[k]); });
+      }
+      const notCol = document.querySelector('.split__col--not');
+      if (notCol) {
+        const h = notCol.querySelector('h3'); if (h && t.split_not_heading) h.textContent = t.split_not_heading;
+        const lis = notCol.querySelectorAll('li');
+        ['split_not_li1','split_not_li2','split_not_li3'].forEach(function(k, i) { if (lis[i] && t[k]) lis[i].innerHTML = sanitizeHTML(t[k]); });
+      }
+    } catch (e) {}
+
+    // FAQ heading + individual questions and answers
+    try {
+      const faqH2 = document.querySelector('#faq .section__head h2'); if (faqH2 && t.faq_heading) faqH2.textContent = t.faq_heading;
+      const faqDetails = document.querySelectorAll('#faq .faq details');
+      const faqData = [
+        { q: 'faq_q1', ps: ['faq_a1_free', 'faq_a1_premium'] },
+        { q: 'faq_q2', ps: ['faq_a2'] },
+        { q: 'faq_q3', ps: ['faq_a3'] },
+        { q: 'faq_q4', ps: ['faq_a4'] },
+        { q: 'faq_q5', ps: ['faq_a5'] },
+      ];
+      faqData.forEach(function(item, i) {
+        const det = faqDetails[i]; if (!det) return;
+        const summary = det.querySelector('summary'); if (summary && t[item.q]) summary.textContent = t[item.q];
+        const ps = det.querySelectorAll('p');
+        item.ps.forEach(function(key, j) { if (ps[j] && t[key]) ps[j].innerHTML = sanitizeHTML(t[key]); });
+      });
+    } catch (e) {}
 
     // Footer brand line — preserve <strong> brand element and set the following span
     try {

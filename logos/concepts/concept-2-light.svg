@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+    <!-- White background -->
+    <rect width="512" height="512" fill="#FFFFFF"/>
+    
+    <!-- Central cube structure (3D effect with 3 faces) -->
+    <!-- Left face (teal) -->
+    <path d="M 180 200 L 240 160 L 240 280 L 180 320 Z" fill="#2fd6b1" stroke="#2fd6b1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Top face (orange) -->
+    <path d="M 180 200 L 240 160 L 320 200 L 260 240 Z" fill="#ff8a3d" stroke="#ff8a3d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Right face (darker orange) -->
+    <path d="M 320 200 L 260 240 L 260 360 L 320 320 Z" fill="#ff8a3d" stroke="#ff8a3d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Connected nodes - top left -->
+    <circle cx="120" cy="140" r="40" fill="#2fd6b1" stroke="#2fd6b1" stroke-width="8"/>
+    <line x1="160" y1="160" x2="180" y2="200" stroke="#ff8a3d" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Connected nodes - top right -->
+    <circle cx="380" cy="140" r="40" fill="#ff8a3d" stroke="#ff8a3d" stroke-width="8"/>
+    <line x1="340" y1="160" x2="320" y2="200" stroke="#2fd6b1" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Connected nodes - bottom left -->
+    <circle cx="100" cy="380" r="40" fill="#ff8a3d" stroke="#ff8a3d" stroke-width="8"/>
+    <line x1="140" y1="360" x2="180" y2="320" stroke="#2fd6b1" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Connected nodes - bottom right -->
+    <circle cx="400" cy="380" r="40" fill="#2fd6b1" stroke="#2fd6b1" stroke-width="8"/>
+    <line x1="360" y1="360" x2="320" y2="320" stroke="#ff8a3d" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Center connection hexagon accent -->
+    <circle cx="256" cy="280" r="50" fill="none" stroke="#2fd6b1" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="256" cy="280" r="30" fill="none" stroke="#ff8a3d" stroke-width="8" stroke-linecap="round"/>
+  
+</svg>

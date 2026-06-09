@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<g transform="translate(0,-512)">
+    <!-- Deep navy background -->
+    <rect width="512" height="512" y="512" fill="#0D1B2A"/>
+    
+    <!-- Central cube structure (same geometry, y offset +512) -->
+    <!-- Left face (teal) -->
+    <path d="M 180 712 L 240 672 L 240 792 L 180 832 Z" fill="#2fd6b1" stroke="#2fd6b1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Top face (orange) -->
+    <path d="M 180 712 L 240 672 L 320 712 L 260 752 Z" fill="#ff8a3d" stroke="#ff8a3d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Right face (darker orange) -->
+    <path d="M 320 712 L 260 752 L 260 872 L 320 832 Z" fill="#ff8a3d" stroke="#ff8a3d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Connected nodes - top left -->
+    <circle cx="120" cy="652" r="40" fill="#2fd6b1" stroke="#2fd6b1" stroke-width="8"/>
+    <line x1="160" y1="672" x2="180" y2="712" stroke="#ff8a3d" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Connected nodes - top right -->
+    <circle cx="380" cy="652" r="40" fill="#ff8a3d" stroke="#ff8a3d" stroke-width="8"/>
+    <line x1="340" y1="672" x2="320" y2="712" stroke="#2fd6b1" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Connected nodes - bottom left -->
+    <circle cx="100" cy="892" r="40" fill="#ff8a3d" stroke="#ff8a3d" stroke-width="8"/>
+    <line x1="140" y1="872" x2="180" y2="832" stroke="#2fd6b1" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Connected nodes - bottom right -->
+    <circle cx="400" cy="892" r="40" fill="#2fd6b1" stroke="#2fd6b1" stroke-width="8"/>
+    <line x1="360" y1="872" x2="320" y2="832" stroke="#ff8a3d" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Center connection hexagon accent -->
+    <circle cx="256" cy="792" r="50" fill="none" stroke="#2fd6b1" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="256" cy="792" r="30" fill="none" stroke="#ff8a3d" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

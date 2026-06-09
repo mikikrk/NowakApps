@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<g transform="translate(0,-512)">
+    <!-- Deep navy background -->
+    <rect y="512" width="512" height="512" fill="#0D1B2A"/>
+    
+    <!-- Decorative outer circle (subtle depth) -->
+    <circle cx="256" cy="768" r="220" fill="none" stroke="url(#depthGradient)" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Main geometric form: Abstract "N" with dual layers -->
+    <!-- Left diagonal bar (back layer for depth) -->
+    <path d="M 140 892 L 220 652" stroke="url(#premiumGradient)" stroke-width="48" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    
+    <!-- Left diagonal bar (front layer) -->
+    <path d="M 140 892 L 220 652" stroke="url(#premiumGradient)" stroke-width="40" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Right diagonal bar (back layer) -->
+    <path d="M 292 892 L 372 652" stroke="url(#premiumGradient)" stroke-width="48" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    
+    <!-- Right diagonal bar (front layer) -->
+    <path d="M 292 892 L 372 652" stroke="url(#premiumGradient)" stroke-width="40" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Horizontal connecting bridge -->
+    <path d="M 165 792 L 347 792" stroke="url(#premiumGradient)" stroke-width="36" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+    
+    <!-- Bottom accent: horizontal bar anchoring the design -->
+    <path d="M 130 902 L 382 902" stroke="url(#premiumGradient)" stroke-width="32" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Premium highlight: small circle accent -->
+    <circle cx="256" cy="652" r="20" fill="url(#premiumGradient)" opacity="0.8"/>
+  </g>
+</svg>

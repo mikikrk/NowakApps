@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Preview — Concepts</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f2f2f7;
+    color: #1c1c1e;
+    padding: 2rem;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  h1 { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { font-size: 0.8rem; opacity: 0.5; margin-top: 2px; }
+  .badge {
+    font-size: 0.75rem;
+    background: #0D1B2A;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .card { border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .variant-row { display: flex; }
+  .variant {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    gap: 0.5rem;
+  }
+  .variant.light { background: #ffffff; }
+  .variant.dark { background: #0D1B2A; }
+  .variant img { width: 96px; height: 96px; object-fit: contain; }
+  .variant-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+  .variant.light .variant-label { color: #8e8e93; }
+  .variant.dark .variant-label { color: #636366; }
+  .card-footer {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: #ffffff;
+    border-top: 1px solid #f2f2f7;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: #1c1c1e; color: #fff;
+    font-size: 0.7rem; font-weight: 700; flex-shrink: 0;
+  }
+  .size-check { margin-top: 1rem; }
+  .size-check h2 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; opacity: 0.7; }
+  .size-row { display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-end; }
+  .size-item { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .size-item span { font-size: 0.65rem; opacity: 0.5; }
+  .divider { width: 1px; background: #ddd; align-self: stretch; margin: 0 0.5rem; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Logo Preview — Concepts</h1>
+    <div class="subtitle">NowakApps · light &amp; dark variants</div>
+  </div>
+  <div class="badge">SVG + PNG</div>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="variant-row">
+      <div class="variant light">
+        <img src="concepts/concept-1-light.png" alt="Minimalist N light">
+        <div class="variant-label">Light</div>
+      </div>
+      <div class="variant dark">
+        <img src="concepts/concept-1-dark.png" alt="Minimalist N dark">
+        <div class="variant-label">Dark</div>
+      </div>
+    </div>
+    <div class="card-footer"><span class="num">1</span> Minimalist N Monogram</div>
+  </div>
+  <div class="card">
+    <div class="variant-row">
+      <div class="variant light">
+        <img src="concepts/concept-2-light.png" alt="Geometric Blocks light">
+        <div class="variant-label">Light</div>
+      </div>
+      <div class="variant dark">
+        <img src="concepts/concept-2-dark.png" alt="Geometric Blocks dark">
+        <div class="variant-label">Dark</div>
+      </div>
+    </div>
+    <div class="card-footer"><span class="num">2</span> Geometric Blocks</div>
+  </div>
+  <div class="card">
+    <div class="variant-row">
+      <div class="variant light">
+        <img src="concepts/concept-3-light.png" alt="Playful Character light">
+        <div class="variant-label">Light</div>
+      </div>
+      <div class="variant dark">
+        <img src="concepts/concept-3-dark.png" alt="Playful Character dark">
+        <div class="variant-label">Dark</div>
+      </div>
+    </div>
+    <div class="card-footer"><span class="num">3</span> Playful Character</div>
+  </div>
+  <div class="card">
+    <div class="variant-row">
+      <div class="variant light">
+        <img src="concepts/concept-4-light.png" alt="Premium Gradient light">
+        <div class="variant-label">Light</div>
+      </div>
+      <div class="variant dark">
+        <img src="concepts/concept-4-dark.png" alt="Premium Gradient dark">
+        <div class="variant-label">Dark</div>
+      </div>
+    </div>
+    <div class="card-footer"><span class="num">4</span> Premium Gradient</div>
+  </div>
+  <div class="card">
+    <div class="variant-row">
+      <div class="variant light">
+        <img src="concepts/concept-5-light.png" alt="Combined Metaphor light">
+        <div class="variant-label">Light</div>
+      </div>
+      <div class="variant dark">
+        <img src="concepts/concept-5-dark.png" alt="Combined Metaphor dark">
+        <div class="variant-label">Dark</div>
+      </div>
+    </div>
+    <div class="card-footer"><span class="num">5</span> Combined Metaphor</div>
+  </div>
+</div>
+<div class="size-check">
+  <h2>Size Check (Small Display)</h2>
+  <div class="size-row">
+    <div class="size-item">
+      <span>Concept 1</span>
+      <img src="concepts/concept-1-light.png" width="64" height="64">
+      <span>64px</span>
+    </div>
+    <div class="size-item">
+      <img src="concepts/concept-1-light.png" width="32" height="32">
+      <span>32px</span>
+    </div>
+    <div class="size-item">
+      <img src="concepts/concept-1-light.png" width="16" height="16">
+      <span>16px</span>
+    </div>
+    <div class="divider"></div>
+    <div class="size-item">
+      <span>Concept 2</span>
+      <img src="concepts/concept-2-light.png" width="64" height="64">
+      <span>64px</span>
+    </div>
+    <div class="size-item">
+      <img src="concepts/concept-2-light.png" width="32" height="32">
+      <span>32px</span>
+    </div>
+    <div class="size-item">
+      <img src="concepts/concept-2-light.png" width="16" height="16">
+      <span>16px</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

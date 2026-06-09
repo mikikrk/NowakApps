@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 1024">
+  <!-- LIGHT VARIANT (0-512px) -->
+  <g id="light">
+    <!-- White background -->
+    <rect width="512" height="512" fill="#FFFFFF"/>
+    
+    <!-- Playful M Character -->
+    <g transform="translate(256, 256)">
+      <!-- Left leg of M -->
+      <path d="M -60 60 Q -70 -20 -50 -80 Q -40 -100 -20 -100 Q 0 -100 10 -80 L 30 40 Q 35 60 20 80 Q 0 100 -30 80 Q -50 70 -60 60 Z" fill="#2fd6b1" stroke="#2fd6b1" stroke-width="0"/>
+      
+      <!-- Right leg of M -->
+      <path d="M 60 60 Q 70 -20 50 -80 Q 40 -100 20 -100 Q 0 -100 -10 -80 L -30 40 Q -35 60 -20 80 Q 0 100 30 80 Q 50 70 60 60 Z" fill="#2fd6b1" stroke="#2fd6b1" stroke-width="0"/>
+      
+      <!-- Center valley (negative space of M) -->
+      <path d="M -10 -60 Q 0 -20 10 40" fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round"/>
+      
+      <!-- Left eye -->
+      <circle cx="-35" cy="-30" r="18" fill="#ff8a3d" opacity="0.85"/>
+      <circle cx="-35" cy="-30" r="12" fill="#FFFFFF"/>
+      <circle cx="-32" cy="-32" r="8" fill="#2fd6b1"/>
+      <circle cx="-30" cy="-34" r="4" fill="#0D1B2A"/>
+      
+      <!-- Right eye -->
+      <circle cx="35" cy="-30" r="18" fill="#ff8a3d" opacity="0.85"/>
+      <circle cx="35" cy="-30" r="12" fill="#FFFFFF"/>
+      <circle cx="32" cy="-32" r="8" fill="#2fd6b1"/>
+      <circle cx="30" cy="-34" r="4" fill="#0D1B2A"/>
+      
+      <!-- Playful smile curve -->
+      <path d="M -20 20 Q 0 35 20 20" fill="none" stroke="#ff8a3d" stroke-width="10" stroke-linecap="round"/>
+      
+      <!-- Left accent sparkle -->
+      <g transform="translate(-75, -60)">
+        <circle cx="0" cy="0" r="8" fill="#ff8a3d" opacity="0.7"/>
+        <path d="M 0 -12 L 0 12 M -12 0 L 12 0" stroke="#ff8a3d" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+      </g>
+      
+      <!-- Right accent sparkle -->
+      <g transform="translate(75, -60)">
+        <circle cx="0" cy="0" r="8" fill="#ff8a3d" opacity="0.7"/>
+        <path d="M 0 -12 L 0 12 M -12 0 L 12 0" stroke="#ff8a3d" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+      </g>
+      
+      <!-- Bottom accent dot -->
+      <circle cx="0" cy="100" r="10" fill="#ff8a3d" opacity="0.6"/>
+    </g>
+  </g>
+  
+  <!-- DARK VARIANT (512-1024px) -->
+  <g id="dark">
+    <!-- Deep navy background -->
+    <rect y="512" width="512" height="512" fill="#0D1B2A"/>
+    
+    <!-- Playful M Character (same design, optimized for dark) -->
+    <g transform="translate(256, 768)">
+      <!-- Left leg of M -->
+      <path d="M -60 60 Q -70 -20 -50 -80 Q -40 -100 -20 -100 Q 0 -100 10 -80 L 30 40 Q 35 60 20 80 Q 0 100 -30 80 Q -50 70 -60 60 Z" fill="#2fd6b1" stroke="#2fd6b1" stroke-width="0"/>
+      
+      <!-- Right leg of M -->
+      <path d="M 60 60 Q 70 -20 50 -80 Q 40 -100 20 -100 Q 0 -100 -10 -80 L -30 40 Q -35 60 -20 80 Q 0 100 30 80 Q 50 70 60 60 Z" fill="#2fd6b1" stroke="#2fd6b1" stroke-width="0"/>
+      
+      <!-- Center valley (negative space of M) -->
+      <path d="M -10 -60 Q 0 -20 10 40" fill="none" stroke="#0D1B2A" stroke-width="20" stroke-linecap="round"/>
+      
+      <!-- Left eye -->
+      <circle cx="-35" cy="-30" r="18" fill="#ff8a3d" opacity="0.9"/>
+      <circle cx="-35" cy="-30" r="12" fill="#0D1B2A"/>
+      <circle cx="-32" cy="-32" r="8" fill="#2fd6b1"/>
+      <circle cx="-30" cy="-34" r="4" fill="#FFFFFF"/>
+      
+      <!-- Right eye -->
+      <circle cx="35" cy="-30" r="18" fill="#ff8a3d" opacity="0.9"/>
+      <circle cx="35" cy="-30" r="12" fill="#0D1B2A"/>
+      <circle cx="32" cy="-32" r="8" fill="#2fd6b1"/>
+      <circle cx="30" cy="-34" r="4" fill="#FFFFFF"/>
+      
+      <!-- Playful smile curve -->
+      <path d="M -20 20 Q 0 35 20 20" fill="none" stroke="#ff8a3d" stroke-width="10" stroke-linecap="round"/>
+      
+      <!-- Left accent sparkle -->
+      <g transform="translate(-75, -60)">
+        <circle cx="0" cy="0" r="8" fill="#ff8a3d" opacity="0.8"/>
+        <path d="M 0 -12 L 0 12 M -12 0 L 12 0" stroke="#ff8a3d" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+      </g>
+      
+      <!-- Right accent sparkle -->
+      <g transform="translate(75, -60)">
+        <circle cx="0" cy="0" r="8" fill="#ff8a3d" opacity="0.8"/>
+        <path d="M 0 -12 L 0 12 M -12 0 L 12 0" stroke="#ff8a3d" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+      </g>
+      
+      <!-- Bottom accent dot -->
+      <circle cx="0" cy="100" r="10" fill="#ff8a3d" opacity="0.7"/>
+    </g>
+  </g>
+</svg>
