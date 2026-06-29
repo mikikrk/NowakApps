@@ -77,7 +77,7 @@ for (const variant of variantList) {
 
     // Headline: shrink from headlineBase until the longest line fits headlineMax.
     const longest = Math.max(
-      ...[loc.h1, loc.h2, loc.h3].map((l) => textWidth(l, v.headlineBase, 0.58, HEADLINE_LS)),
+      ...[loc.h1, loc.h2, loc.h3].filter(Boolean).map((l) => textWidth(l, v.headlineBase, 0.58, HEADLINE_LS)),
     );
     const headlineSize =
       longest > v.headlineMax ? Math.floor((v.headlineBase * v.headlineMax) / longest) : v.headlineBase;
