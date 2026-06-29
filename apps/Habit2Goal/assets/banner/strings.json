@@ -1,23 +1,42 @@
 {
   "_meta": {
-    "comment": "Per-locale copy for the Habit2Goal social/preview banner (Open Graph image). Edit text here, then run `node build.mjs` to regenerate assets/og-image-<locale>.png. Numeric fields (eyebrowWidth, headlineSize, ctaWidth) are layout hints so translators can fit longer strings without touching the SVG.",
-    "size": { "w": 1200, "h": 630 },
-    "default": "en"
+    "comment": "Copy + variant geometry for the Habit2Goal preview banners. Edit text in `locales`; run `node build.mjs` to render every variant × locale into assets/og-image-<variant>-<locale>.png. Box sizes (eyebrow pill, CTA button) and headline size are auto-fitted from the text in build.mjs, so translators only edit copy.",
+    "default": { "variant": "landscape", "locale": "en" },
+    "variants": {
+      "landscape": {
+        "w": 1200, "h": 630,
+        "align": "left",
+        "headlineBase": 64, "headlineMax": 585,
+        "eyebrowFont": 14, "ctaFont": 21,
+        "aspect": "1.91:1 — Open Graph / Facebook / LinkedIn / Slack / Discord / iMessage / X large card"
+      },
+      "square": {
+        "w": 1080, "h": 1080,
+        "align": "center",
+        "headlineBase": 72, "headlineMax": 960,
+        "eyebrowFont": 15, "ctaFont": 23,
+        "aspect": "1:1 — X/Twitter summary card / WhatsApp / Instagram feed"
+      },
+      "portrait": {
+        "w": 1080, "h": 1350,
+        "align": "center",
+        "headlineBase": 90, "headlineMax": 960,
+        "eyebrowFont": 16, "ctaFont": 25,
+        "aspect": "4:5 — Pinterest / Instagram & Facebook Stories / portrait feed"
+      }
+    }
   },
   "locales": {
     "en": {
       "lang": "en",
       "ogLocale": "en_US",
       "eyebrow": "THE HABIT ECONOMY",
-      "eyebrowWidth": 250,
       "h1": "Build habits.",
       "h2": "Earn points.",
       "h3": "Buy the thing.",
-      "headlineSize": 64,
       "sub1": "Turn daily habits into points that fund",
       "sub2": "the real-world rewards you set yourself.",
       "cta": "Download free",
-      "ctaWidth": 232,
       "stores": "Free · iOS & Android",
       "tagline": "nowakapps.com/apps/Habit2Goal"
     },
@@ -25,15 +44,12 @@
       "lang": "pl",
       "ogLocale": "pl_PL",
       "eyebrow": "EKONOMIA NAWYKÓW",
-      "eyebrowWidth": 250,
       "h1": "Buduj nawyki.",
       "h2": "Zdobywaj punkty.",
       "h3": "Kup, co chcesz.",
-      "headlineSize": 58,
       "sub1": "Zamień codzienne nawyki w punkty,",
       "sub2": "które finansują wybrane przez Ciebie nagrody.",
       "cta": "Pobierz za darmo",
-      "ctaWidth": 268,
       "stores": "Za darmo · iOS i Android",
       "tagline": "nowakapps.com/apps/Habit2Goal"
     }
