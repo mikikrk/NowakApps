@@ -72,19 +72,28 @@
     </g>
 
     <!-- Eyebrow (personal frame) -->
-    <g transform="translate(387 204)" text-anchor="start">
-      <rect x="0" y="0" width="306" height="44" rx="22" fill="#00C896" fill-opacity="0.12" stroke="#00C896" stroke-opacity="0.35"/>
+    <g transform="translate(401 204)" text-anchor="start">
+      <rect x="0" y="0" width="279" height="44" rx="22" fill="#00C896" fill-opacity="0.12" stroke="#00C896" stroke-opacity="0.35"/>
       <circle cx="24" cy="22" r="5" fill="#00C896"/>
-      <text x="44" y="29" font-size="17" font-weight="700" fill="#00C896" letter-spacing="2.5">MOJA PIERWSZA APKA!</text>
+      <text x="44" y="29" font-size="17" font-weight="700" fill="#00C896" letter-spacing="2.5">CZEŚĆ, TU MIKOŁAJ</text>
     </g>
 
-    <!-- Headline (2 lines) -->
-    <text x="540" y="338" font-size="96" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">Nawyki, które</text>
-    <text x="540" y="444" font-size="96" font-weight="900" fill="url(#teal-text)" letter-spacing="-1.5">płacą za cele.</text>
+    <!-- Headline — the debut hook (2 lines) -->
+    <text x="540" y="338" font-size="96" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">Moja pierwsza</text>
+    <text x="540" y="444" font-size="96" font-weight="900" fill="url(#teal-text)" letter-spacing="-1.5">aplikacja!</text>
 
-    <!-- Personal intro -->
-    <text x="540" y="514" font-size="29" fill="#FFFFFF" fill-opacity="0.78">Moja pierwsza apka — zainspirowana</text>
-    <text x="540" y="550" font-size="29" fill="#FFFFFF" fill-opacity="0.78">książką „Atomowe Nawyki”.</text>
+    <!-- "#1 app" seal -->
+    <g transform="translate(986 330) rotate(-11)" filter="url(#sticker-shadow)">
+      <circle r="54" fill="url(#gold)"/>
+      <circle r="54" fill="none" stroke="#3A2600" stroke-opacity="0.35" stroke-width="3"/>
+      <text y="-1" font-size="36" font-weight="900" fill="#3A2600">#1</text>
+      <text y="28" font-size="15" font-weight="800" fill="#3A2600" letter-spacing="1.5">APKA</text>
+      <use href="#sparkle" transform="translate(-48 -42) scale(0.55)" fill="#FFD66B"/>
+    </g>
+
+    <!-- Product + inspiration -->
+    <text x="540" y="512" font-size="27"><tspan font-weight="900" fill="url(#teal-text)">Habit2Goal</tspan><tspan font-weight="700" fill="#FFFFFF" fill-opacity="0.86"> — nawyki, które płacą za cele.</tspan></text>
+    <text x="540" y="552" font-size="24" fill="#FFFFFF" fill-opacity="0.6">Zainspirowana książką „Atomowe Nawyki”.</text>
   </g>
 
   <!-- ===== Phones scene with fun stickers ===== -->

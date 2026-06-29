@@ -78,13 +78,22 @@
       <text x="44" y="29" font-size="{{eyebrowFont}}" font-weight="700" fill="#00C896" letter-spacing="2.5">{{eyebrow}}</text>
     </g>
 
-    <!-- Headline (2 lines) -->
+    <!-- Headline — the debut hook (2 lines) -->
     <text x="540" y="338" font-size="{{headlineSize}}" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">{{h1}}</text>
     <text x="540" y="444" font-size="{{headlineSize}}" font-weight="900" fill="url(#teal-text)" letter-spacing="-1.5">{{h2}}</text>
 
-    <!-- Personal intro -->
-    <text x="540" y="514" font-size="29" fill="#FFFFFF" fill-opacity="0.78">{{sub1}}</text>
-    <text x="540" y="550" font-size="29" fill="#FFFFFF" fill-opacity="0.78">{{sub2}}</text>
+    <!-- "#1 app" seal -->
+    <g transform="translate(986 330) rotate(-11)" filter="url(#sticker-shadow)">
+      <circle r="54" fill="url(#gold)"/>
+      <circle r="54" fill="none" stroke="#3A2600" stroke-opacity="0.35" stroke-width="3"/>
+      <text y="-1" font-size="36" font-weight="900" fill="#3A2600">#1</text>
+      <text y="28" font-size="15" font-weight="800" fill="#3A2600" letter-spacing="1.5">APKA</text>
+      <use href="#sparkle" transform="translate(-48 -42) scale(0.55)" fill="#FFD66B"/>
+    </g>
+
+    <!-- Product + inspiration -->
+    <text x="540" y="512" font-size="27"><tspan font-weight="900" fill="url(#teal-text)">{{product}}</tspan><tspan font-weight="700" fill="#FFFFFF" fill-opacity="0.86"> — {{productTag}}</tspan></text>
+    <text x="540" y="552" font-size="24" fill="#FFFFFF" fill-opacity="0.6">{{inspired}}</text>
   </g>
 
   <!-- ===== Phones scene with fun stickers ===== -->
