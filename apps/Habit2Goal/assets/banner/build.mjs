@@ -37,7 +37,6 @@ const opt = (name) => {
 const onlyVariant = opt('variant');
 const onlyLocale = opt('locale');
 const variantList = onlyVariant ? [onlyVariant] : Object.keys(variants);
-const localeList = onlyLocale ? [onlyLocale] : Object.keys(data.locales);
 
 // --- helpers ------------------------------------------------------------
 const escapeXml = (s) =>
@@ -60,10 +59,15 @@ for (const variant of variantList) {
     process.exitCode = 1;
     continue;
   }
-  const template = readFileSync(resolve(here, 'templates', `${variant}.svg`), 'utf8');
+  const template = readFileSync(resolve(here, 'templates', `${v.template ?? variant}.svg`), 'utf8');
   const center = v.align === 'center';
 
-  for (const code of localeList) {
+  // Which locales this variant renders: its own list (default: all), narrowed
+  // by --locale if given.
+  let codes = v.locales ?? Object.keys(data.locales);
+  if (onlyLocale) codes = codes.filter((c) => c === onlyLocale);
+
+  for (const code of codes) {
     const loc = data.locales[code];
     if (!loc) {
       console.error(`✗ unknown locale "${code}"`);

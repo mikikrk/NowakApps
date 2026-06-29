@@ -1,11 +1,12 @@
 {
   "_meta": {
-    "comment": "Copy + variant geometry for the Habit2Goal preview banners. Edit text in `locales`; run `node build.mjs` to render every variant × locale into assets/og-image-<variant>-<locale>.png. Box sizes (eyebrow pill, CTA button) and headline size are auto-fitted from the text in build.mjs, so translators only edit copy.",
+    "comment": "Copy + variant geometry for the Habit2Goal preview banners. Edit text in `locales`; run `node build.mjs` to render. Box sizes and headline size are auto-fitted from the text in build.mjs, so translators only edit copy. Each variant lists which locales it renders (`locales`).",
     "default": { "variant": "landscape", "locale": "en" },
     "variants": {
       "landscape": {
         "w": 1200, "h": 630,
         "align": "left",
+        "locales": ["en", "pl"],
         "headlineBase": 64, "headlineMax": 585,
         "eyebrowFont": 14, "ctaFont": 21,
         "aspect": "1.91:1 — Open Graph / Facebook / LinkedIn / Slack / Discord / iMessage / X large card"
@@ -13,6 +14,7 @@
       "square": {
         "w": 1080, "h": 1080,
         "align": "center",
+        "locales": ["en", "pl"],
         "headlineBase": 72, "headlineMax": 960,
         "eyebrowFont": 15, "ctaFont": 23,
         "aspect": "1:1 — X/Twitter summary card / WhatsApp / Instagram feed"
@@ -20,6 +22,7 @@
       "portrait": {
         "w": 1080, "h": 1350,
         "align": "center",
+        "locales": ["en", "pl"],
         "headlineBase": 90, "headlineMax": 960,
         "eyebrowFont": 16, "ctaFont": 25,
         "aspect": "4:5 — Pinterest / portrait feed"
@@ -27,9 +30,19 @@
       "story": {
         "w": 1080, "h": 1920,
         "align": "center",
+        "locales": ["en", "pl"],
         "headlineBase": 96, "headlineMax": 960,
         "eyebrowFont": 17, "ctaFont": 27,
         "aspect": "9:16 — Instagram / Facebook / TikTok full-screen Story"
+      },
+      "story-personal": {
+        "w": 1080, "h": 1920,
+        "align": "center",
+        "template": "story-personal",
+        "locales": ["pl-personal"],
+        "headlineBase": 96, "headlineMax": 960,
+        "eyebrowFont": 17, "ctaFont": 27,
+        "aspect": "9:16 — Instagram Story, founder/personal voice ad. Explains the 3-step concept + asks for feedback."
       }
     }
   },
@@ -56,6 +69,23 @@
       "h3": "Kup, co chcesz.",
       "sub1": "Zamień codzienne nawyki w punkty,",
       "sub2": "które finansują wybrane przez Ciebie nagrody.",
+      "cta": "Pobierz za darmo",
+      "stores": "Za darmo · iOS i Android",
+      "tagline": "nowakapps.com/apps/Habit2Goal"
+    },
+    "pl-personal": {
+      "lang": "pl",
+      "ogLocale": "pl_PL",
+      "eyebrow": "MOJA PIERWSZA APLIKACJA",
+      "h1": "Zamień nawyki",
+      "h2": "w oszczędności",
+      "h3": "na swój cel.",
+      "sub1": "Zainspirowana „Atomowymi Nawykami”:",
+      "sub2": "buduj dobre nawyki, porzucaj złe.",
+      "step1": "Wyznacz cel — coś, co chcesz kupić.",
+      "step2": "Trzymasz nawyk? Odkładasz wirtualną kasę.",
+      "step3": "Uzbierasz kwotę — kupujesz bez wyrzutów.",
+      "feedback": "Będę wdzięczny za każdy feedback!",
       "cta": "Pobierz za darmo",
       "stores": "Za darmo · iOS i Android",
       "tagline": "nowakapps.com/apps/Habit2Goal"

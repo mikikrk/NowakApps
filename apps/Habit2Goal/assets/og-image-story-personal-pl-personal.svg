@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TEMPLATE story-personal 1080×1920 (9:16) — founder/personal-voice ad.
+     Copy lives in strings.json (locale pl-personal); run build.mjs. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920" lang="pl">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#0D1B2A"/><stop offset="0.5" stop-color="#112236"/><stop offset="1" stop-color="#0A1622"/>
+    </linearGradient>
+    <radialGradient id="glow-teal" cx="0.2" cy="0.07" r="0.5">
+      <stop offset="0" stop-color="#00C896" stop-opacity="0.40"/><stop offset="1" stop-color="#00C896" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-orange" cx="0.85" cy="0.95" r="0.45">
+      <stop offset="0" stop-color="#FF8C42" stop-opacity="0.28"/><stop offset="1" stop-color="#FF8C42" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="teal-text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00C896"/><stop offset="1" stop-color="#5FF1C5"/>
+    </linearGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M 54 0 L 0 0 0 54" fill="none" stroke="#00C896" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <filter id="cta-glow" x="-40%" y="-60%" width="180%" height="220%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="14"/><feOffset dx="0" dy="8" result="b"/>
+      <feFlood flood-color="#00C896" flood-opacity="0.5"/><feComposite in2="b" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip-icon"><rect x="-52" y="0" width="104" height="104" rx="24"/></clipPath>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+  <rect width="1080" height="1920" fill="url(#grid)"/>
+  <rect width="1080" height="1920" fill="url(#glow-teal)"/>
+  <rect width="1080" height="1920" fill="url(#glow-orange)"/>
+
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <!-- App icon -->
+    <g transform="translate(540 92)">
+      <rect x="-52" y="0" width="104" height="104" rx="24" fill="#0F1C2C" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <image href="app-icon.png" x="-52" y="0" width="104" height="104" clip-path="url(#clip-icon)"/>
+    </g>
+
+    <!-- Eyebrow (personal frame) -->
+    <g transform="translate(361 232)" text-anchor="start">
+      <rect x="0" y="0" width="359" height="44" rx="22" fill="#00C896" fill-opacity="0.10" stroke="#00C896" stroke-opacity="0.30"/>
+      <circle cx="24" cy="22" r="5" fill="#00C896"/>
+      <text x="44" y="29" font-size="17" font-weight="700" fill="#00C896" letter-spacing="2.5">MOJA PIERWSZA APLIKACJA</text>
+    </g>
+
+    <!-- Headline -->
+    <text x="540" y="420" font-size="96" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">Zamień nawyki</text>
+    <text x="540" y="526" font-size="96" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">w oszczędności</text>
+    <text x="540" y="632" font-size="96" font-weight="900" fill="url(#teal-text)" letter-spacing="-1.5">na swój cel.</text>
+
+    <!-- Personal intro -->
+    <text x="540" y="716" font-size="31" fill="#FFFFFF" fill-opacity="0.78">Zainspirowana „Atomowymi Nawykami”:</text>
+    <text x="540" y="758" font-size="31" fill="#FFFFFF" fill-opacity="0.78">buduj dobre nawyki, porzucaj złe.</text>
+  </g>
+
+  <!-- The 3-step concept -->
+  <g font-family="Helvetica, Arial, sans-serif">
+    <g transform="translate(120 866)">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="url(#teal-text)"/>
+      <text x="32" y="44" text-anchor="middle" font-size="34" font-weight="900" fill="#06231B">1</text>
+      <text x="92" y="44" font-size="31" font-weight="600" fill="#FFFFFF" fill-opacity="0.92">Wyznacz cel — coś, co chcesz kupić.</text>
+    </g>
+    <g transform="translate(120 982)">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="url(#teal-text)"/>
+      <text x="32" y="44" text-anchor="middle" font-size="34" font-weight="900" fill="#06231B">2</text>
+      <text x="92" y="44" font-size="31" font-weight="600" fill="#FFFFFF" fill-opacity="0.92">Trzymasz nawyk? Odkładasz wirtualną kasę.</text>
+    </g>
+    <g transform="translate(120 1098)">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="url(#teal-text)"/>
+      <text x="32" y="44" text-anchor="middle" font-size="34" font-weight="900" fill="#06231B">3</text>
+      <text x="92" y="44" font-size="31" font-weight="600" fill="#FFFFFF" fill-opacity="0.92">Uzbierasz kwotę — kupujesz bez wyrzutów.</text>
+    </g>
+  </g>
+
+  <!-- Feedback note (personal ask) + CTA + footer -->
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="540" y="1300" font-size="32" font-weight="700" fill="#5FF1C5">Będę wdzięczny za każdy feedback!</text>
+
+    <g transform="translate(356 1448)" filter="url(#cta-glow)">
+      <rect x="0" y="0" width="368" height="76" rx="38" fill="url(#teal-text)"/>
+      <text x="184" y="50" text-anchor="middle" font-size="27" font-weight="800" fill="#06231B">Pobierz za darmo  ↓</text>
+    </g>
+    <text x="540" y="1574" font-size="22" font-weight="600" fill="#FFFFFF" fill-opacity="0.64">Za darmo · iOS i Android</text>
+
+    <text x="540" y="1648" font-size="19" fill="#FFFFFF" fill-opacity="0.5" letter-spacing="0.5"><tspan font-weight="800" fill="#FFFFFF" fill-opacity="0.85">Habit2Goal</tspan>  ·  nowakapps.com/apps/Habit2Goal</text>
+  </g>
+</svg>

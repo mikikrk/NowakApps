@@ -21,7 +21,13 @@ so translating is just editing copy.
 | `landscape` | 1200×630  | 1.91:1 | Open Graph default — Facebook, LinkedIn, Slack, Discord, iMessage, X large card |
 | `square`    | 1080×1080 | 1:1    | X/Twitter `summary` card, WhatsApp, Instagram feed |
 | `portrait`  | 1080×1350 | 4:5    | Pinterest, portrait feed |
-| `story`     | 1080×1920 | 9:16   | Instagram / Facebook / TikTok full-screen Story (ad) |
+| `story`     | 1080×1920 | 9:16   | Instagram / Facebook / TikTok full-screen Story (punchy product copy) |
+| `story-personal` | 1080×1920 | 9:16 | Instagram Story ad in a **founder / personal voice** — explains the 3-step concept + asks for feedback (PL: `pl-personal`) |
+
+Each variant declares which locales it renders via `_meta.variants.<v>.locales`,
+and may point at a shared template with `template` (e.g. a second 9:16 layout).
+`story-personal` uses its own template + the `pl-personal` copy block so the
+punchy link-preview banners stay untouched.
 
 ## Rebuild
 
