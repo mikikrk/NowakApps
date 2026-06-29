@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TEMPLATE story 1080×1920 (9:16) — copy lives in strings.json; run build.mjs.
+     Key content kept inside the central safe zone (top/bottom ~180px reserved
+     for the Instagram/TikTok UI overlays). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920" lang="pl">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#0D1B2A"/><stop offset="0.5" stop-color="#112236"/><stop offset="1" stop-color="#0A1622"/>
+    </linearGradient>
+    <radialGradient id="glow-teal" cx="0.2" cy="0.08" r="0.5">
+      <stop offset="0" stop-color="#00C896" stop-opacity="0.42"/><stop offset="1" stop-color="#00C896" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-orange" cx="0.85" cy="0.95" r="0.45">
+      <stop offset="0" stop-color="#FF8C42" stop-opacity="0.30"/><stop offset="1" stop-color="#FF8C42" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="teal-text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00C896"/><stop offset="1" stop-color="#5FF1C5"/>
+    </linearGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M 54 0 L 0 0 0 54" fill="none" stroke="#00C896" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="22"/><feOffset dx="0" dy="22" result="o"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cta-glow" x="-40%" y="-60%" width="180%" height="220%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="14"/><feOffset dx="0" dy="8" result="b"/>
+      <feFlood flood-color="#00C896" flood-opacity="0.5"/><feComposite in2="b" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="screen-back"><rect x="11" y="11" width="250" height="584" rx="30"/></clipPath>
+    <clipPath id="screen-front"><rect x="12" y="12" width="276" height="644" rx="34"/></clipPath>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+  <rect width="1080" height="1920" fill="url(#grid)"/>
+  <rect width="1080" height="1920" fill="url(#glow-teal)"/>
+  <rect width="1080" height="1920" fill="url(#glow-orange)"/>
+
+  <!-- Copy (centred) -->
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(407 196)" text-anchor="start">
+      <rect x="0" y="0" width="266" height="44" rx="22" fill="#00C896" fill-opacity="0.10" stroke="#00C896" stroke-opacity="0.30"/>
+      <circle cx="24" cy="22" r="5" fill="#00C896"/>
+      <text x="44" y="29" font-size="17" font-weight="700" fill="#00C896" letter-spacing="2.5">EKONOMIA NAWYKÓW</text>
+    </g>
+
+    <text x="540" y="400" font-size="96" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">Buduj nawyki.</text>
+    <text x="540" y="512" font-size="96" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">Zdobywaj punkty.</text>
+    <text x="540" y="624" font-size="96" font-weight="900" fill="url(#teal-text)" letter-spacing="-1.5">Kup, co chcesz.</text>
+
+    <text x="540" y="706" font-size="31" fill="#FFFFFF" fill-opacity="0.76">Zamień codzienne nawyki w punkty,</text>
+    <text x="540" y="748" font-size="31" fill="#FFFFFF" fill-opacity="0.76">które finansują wybrane przez Ciebie nagrody.</text>
+  </g>
+
+  <!-- Phones (centred) -->
+  <g transform="translate(252 916) rotate(-7)" filter="url(#card-shadow)">
+    <rect x="0" y="0" width="272" height="606" rx="40" fill="#0A1622" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="2"/>
+    <image href="screenshots/goal-progress.png" x="11" y="11" width="250" height="584" preserveAspectRatio="xMidYMid slice" clip-path="url(#screen-back)"/>
+  </g>
+  <g transform="translate(390 884)" filter="url(#card-shadow)">
+    <rect x="0" y="0" width="300" height="668" rx="44" fill="#0A1622" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="2"/>
+    <image href="screenshots/today.png" x="12" y="12" width="276" height="644" preserveAspectRatio="xMidYMid slice" clip-path="url(#screen-front)"/>
+  </g>
+
+  <!-- Download CTA + footer (centred, above bottom safe zone) -->
+  <g font-family="Helvetica, Arial, sans-serif">
+    <g transform="translate(356 1648)" filter="url(#cta-glow)">
+      <rect x="0" y="0" width="368" height="72" rx="36" fill="url(#teal-text)"/>
+      <text x="184" y="47" text-anchor="middle" font-size="27" font-weight="800" fill="#06231B">Pobierz za darmo  ↓</text>
+    </g>
+    <text x="540" y="1764" text-anchor="middle" font-size="22" font-weight="600" fill="#FFFFFF" fill-opacity="0.64">Za darmo · iOS i Android</text>
+
+    <text x="540" y="1816" text-anchor="middle" font-size="19" fill="#FFFFFF" fill-opacity="0.5" letter-spacing="0.5"><tspan font-weight="800" fill="#FFFFFF" fill-opacity="0.85">Habit2Goal</tspan>  ·  nowakapps.com/apps/Habit2Goal</text>
+  </g>
+</svg>

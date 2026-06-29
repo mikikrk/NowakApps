@@ -20,7 +20,8 @@ so translating is just editing copy.
 |-------------|-----------|--------|---------|
 | `landscape` | 1200×630  | 1.91:1 | Open Graph default — Facebook, LinkedIn, Slack, Discord, iMessage, X large card |
 | `square`    | 1080×1080 | 1:1    | X/Twitter `summary` card, WhatsApp, Instagram feed |
-| `portrait`  | 1080×1350 | 4:5    | Pinterest, Instagram/Facebook Stories, portrait feed |
+| `portrait`  | 1080×1350 | 4:5    | Pinterest, portrait feed |
+| `story`     | 1080×1920 | 9:16   | Instagram / Facebook / TikTok full-screen Story (ad) |
 
 ## Rebuild
 

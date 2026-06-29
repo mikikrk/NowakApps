@@ -22,7 +22,14 @@
         "align": "center",
         "headlineBase": 90, "headlineMax": 960,
         "eyebrowFont": 16, "ctaFont": 25,
-        "aspect": "4:5 — Pinterest / Instagram & Facebook Stories / portrait feed"
+        "aspect": "4:5 — Pinterest / portrait feed"
+      },
+      "story": {
+        "w": 1080, "h": 1920,
+        "align": "center",
+        "headlineBase": 96, "headlineMax": 960,
+        "eyebrowFont": 17, "ctaFont": 27,
+        "aspect": "9:16 — Instagram / Facebook / TikTok full-screen Story"
       }
     }
   },
